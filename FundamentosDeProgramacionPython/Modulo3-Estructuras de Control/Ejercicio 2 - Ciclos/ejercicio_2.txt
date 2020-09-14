@@ -1,0 +1,16 @@
+# Solucion
+
+Solución:
+string cripto
+float cant, cotiz, valor
+int i
+i=0
+valor=0.0
+while i < 5 do
+cripto = read(“ingrese el nombre la moneda: “)
+cant = float(read(“Ingrese la cantidad de la moneda: “))
+cotiz = float(read(“Ingrese la cotización en USD de la moneda: “))
+valor = valor + (cant*cotiz)
+enwhile
+
+print(“Usted tiene “+valor+” Dólares Americanos”)
