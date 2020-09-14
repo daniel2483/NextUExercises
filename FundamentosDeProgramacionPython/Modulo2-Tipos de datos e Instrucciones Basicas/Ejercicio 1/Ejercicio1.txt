@@ -1,0 +1,45 @@
+DESAFÍO
+PRÁCTICO
+
+Felicitaciones por llegar hasta aquí! Eso significa que ya revisaste el material del curso correspondiente a las variables, constantes, tipos de datos, declaraciones y operaciones básicas de lectura y escritura. Vas avanzando muy bien. Con este ejercicio podrás consolidar y aplicar los conocimientos adquiridos.
+
+Escribe un algoritmo en pseudocódigo que le permita al usuario conocer el monto en dólares americanos que tiene acumulado en su 
+wallet o billetera digital correspondiente a una criptomoneda particular. En tal sentido, el algoritmo debe leer el nombre de 
+la criptomoneda, la cantidad acumulada de esa criptomoneda y su cotización por US$ del momento. Luego, debe calcular el monto 
+total en US$ que posee el usuario e imprimir el siguiente mensaje: “Ud. posee un total de US$” seguido del cálculo realizado.
+
+Recomendaciones:
+
+Declara las variables con nombres mnemotécnicos; es decir; que describan su contenido
+Recuerda que la estructura general de un algoritmo es:
+Declaraciones de variables
+Entrada de datos (read)
+Solución del problema
+Salida de resultados (print)
+Los nombres tienen valores de tipo texto, las cantidades de criptomonedas y su cotización son números reales
+
+Solucion:
+
+crytoCoin = read("Blabla")
+crytoConvertoDolar = 24.5
+crytoAmount = read(value)
+
+dolarAmount = crytoAmount * crytoConvertoDolar 
+
+print ("Ud. posee un total de US$" + string(dolarAmount ))
+
+
+
+Solucion de NextU:
+RETROALIMENTACIÓN
+¡Gracias! Por el esfuerzo invertido en resolver este ejercicio planteado. Como referencia, te
+ofrecemos nuestra propuesta de solución, así la puedes comparar con la tuya. Sigue avanzando
+y poniendo en práctica lo visto, es una de las mejores formas de consolidar tus conocimientos.
+¡Éxito!
+VariablesTexto nombreCripto
+VariablesReales cantCripto, cotizacion, valorTotal
+nombreCripto = leer(“Nombre de la Criptomoneda: “)
+cantCripto = float(leer(“Cantidad acumulada de la Criptomoneda: “))
+cotizacion= float(leer(“Cotización por US$ del día de la Criptomoneda: “))
+valorTotal = cantCripto * cotizacion
+escribir(“Ud. Posee un total de US$ ” + convertirATexto(valorTotal))
