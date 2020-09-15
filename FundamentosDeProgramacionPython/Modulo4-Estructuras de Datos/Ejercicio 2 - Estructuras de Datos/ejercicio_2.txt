@@ -1,0 +1,25 @@
+
+record cripto_record
+String nombre
+float cantidad
+float cotizacion
+endrecord
+
+cripto_record cripto[5]
+
+int i=0
+
+while i<5 do
+	cripto[i].nombre=read(“Ingrese el nombre de la moneda: ”)
+	cripto[i].cant=float(read(“Ingrese la cantidad de
+	“+cripto[i].nombre+”:”)
+	cripto[i].cotiz=float(read(“Ingrese la cotización en USD de
+	“+cripto[i].nombre+”:”)
+	i=i+1
+enwhile
+
+i=0
+while i<5 do
+	print(“Moneda: “+cripto[i].nombre+”, cantidad:“+cripto[i].cant+”, precio en USD: “+cripto[i].cotiz)
+	i=i+1
+endwhile
