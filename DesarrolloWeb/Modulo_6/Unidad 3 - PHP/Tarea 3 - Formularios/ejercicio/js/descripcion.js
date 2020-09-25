@@ -9,6 +9,8 @@ $(document).ready(function() {
       $( ".preloader-wrapper" ).hide();
     });
 
+    //console.log("Is working!");
+
     // Código para el uso de AJAX para envio de datos de un form POST
     $('.desc-form').submit(function(event){
       //console.log("TEST")
@@ -19,15 +21,15 @@ $(document).ready(function() {
 
       event.preventDefault(); // Para evitar que el formulario se envíe por defecto
 
-      //$.ajax(
-      //  {
-      //    url:'./descripcion.php',
-      //    type:'post',
-      //    data: {user:user1, password:password1}
-      //  }
-      //).done(function(data){
-      //  alert(data);
-      //})
+      $.ajax(
+        {
+          url:'./descripcion.php',
+          type:'post',
+          data: {categoria:categoria, descripcion:descripcion}
+        }
+      ).done(function(data){
+        alert(data);
+      })
     })
 
 
