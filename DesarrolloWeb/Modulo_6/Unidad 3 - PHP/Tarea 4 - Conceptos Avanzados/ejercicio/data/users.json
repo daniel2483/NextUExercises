@@ -2,10 +2,10 @@
   {
     "username":"juan.camilo@mail.com",
     "password":"12345",
-    "nombre":"",
-    "apellido":"",
+    "nombre":"Juan",
+    "apellido":"Camilo",
     "profile_img":"",
-    "descripcion":"",
+    "descripcion":"Experto en diferentes tecnologías de Páginas Web",
     "categoria":"",
     "tipo_id":"",
     "id":"",

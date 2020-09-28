@@ -5,13 +5,11 @@
     $file = fopen($fileUsers,"r");
     //$response["contenido"] = fread($file,filesize("./".$titulo));
     //$response["titulo"] = $titulo;
-
     $fileRead = fread($file,filesize($fileUsers));
     $arrayUsers = json_decode($fileRead,true);
     //echo $arrayUsers;
     //echo json_encode($response);
     fclose($file);
-
     return $arrayUsers;
   }
 
@@ -34,17 +32,27 @@
         }
         break;
       }
-
     }
-
     return array($user_exist,$password_correct);
-
   }
 
 
   function returnValue ($username,$field){
     $arrayUsers = readUsers();
+    $key = ""; // To find the key in array List
+    for($i=0;$i<sizeof($arrayUsers);$i++){
+      if($arrayUsers[$i]['username'] == $username){
+        $key = $i;
+        break;
+      }
+    }
+    $fieldValue = $arrayUsers[$key][$field];
+    return $fieldValue;
+  }
 
+
+  function editFieldJSON($username,$field,$new_value){
+    $arrayUsers = readUsers();
     $key = ""; // To find the key in array List
     for($i=0;$i<sizeof($arrayUsers);$i++){
       if($arrayUsers[$i]['username'] == $username){
@@ -53,9 +61,14 @@
       }
     }
 
-    $fieldValue = $arrayUsers[$key][$field];
+    $arrayUsers[$key][$field] = $new_value;
 
-    return $fieldValue;
+    $fileUsers = "./data/users.json";
+    $file = fopen($fileUsers,"w");
+    fwrite($file,json_encode($arrayUsers));
+    //echo $arrayUsers;
+    //echo json_encode($response);
+    fclose($file);
   }
 
   //$array = accessUser("juan.camilo@mail.com","12345",$users_array);
@@ -66,5 +79,8 @@
   // Testing function
   //$value = returnValue("juan.camilo@mail.com",'nombre');
   //echo $value;
+
+  // Testing Editing JSON
+  //editFieldJSON("juan.camilo@mail.com",'apellido','Sánchez Sancho');
 
  ?>

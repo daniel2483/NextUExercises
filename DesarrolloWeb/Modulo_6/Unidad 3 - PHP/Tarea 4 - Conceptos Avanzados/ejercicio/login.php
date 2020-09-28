@@ -28,7 +28,7 @@
     else{
       // Se crea una variable de sesión
       //Setcookie(“nombre”,”valor”,”tiempo”,”directorio_donde_sera_almacenada”)
-      Session_start();
+      session_start();
       $_SESSION['username'] =  $username;
       //$_SESSION['nombre'] =  $arrayUsers[$key]['nombre'];
 
