@@ -1,7 +1,7 @@
 $(function(){
 
-  $('form').submit(function(event){
-  console.log("TEST")
+  $('#login-form').submit(function(event){
+  //console.log("TEST")
   var user = $('#user').val();
   var passwd = $('#password').val();
   console.log("User: "+user);
@@ -9,10 +9,11 @@ $(function(){
   event.preventDefault(); // Para evitar que el formulario se envíe por defecto
   $.ajax(
     {
-      url:'./login.php',
+      url:'login.php',
       type:'post',
       data: {user:user,passwd:passwd},
       success: function(value) {
+                //value = JSON.parse(value);
                 console.log(value.msg);
                 //window.location.assign("http://localhost:8080/ejercicio5/index.html");
                 if (value.msg == 'true') {

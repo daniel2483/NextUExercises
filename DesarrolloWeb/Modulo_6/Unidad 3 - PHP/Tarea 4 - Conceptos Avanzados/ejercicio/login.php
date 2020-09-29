@@ -2,8 +2,11 @@
 
   require "library.php";
 
-  $username = $_POST['user'];
-  $password = $_POST['passwd'];
+  header('Content-Type: application/json');
+
+  if(isset($_POST['user'])){$username = $_POST['user'];}else{$username = "";}
+
+  if(isset($_POST['passwd'])){$password = $_POST['passwd'];}else{$password="";}
 
   // Obtengo lista de usuarios existentes
   $arrayUsers = readUsers();
@@ -21,7 +24,6 @@
     if($userAccess[1] == 0){
       //echo $username." has digitado mal la contraseña!";
       $value =  array('msg' => 'false' );
-      header('Content-Type: application/json');
       echo json_encode($value);
       exit;
     }
@@ -33,7 +35,6 @@
       //$_SESSION['nombre'] =  $arrayUsers[$key]['nombre'];
 
       $value =  array('msg' => 'true' );
-      header('Content-Type: application/json');
       echo json_encode($value);
       exit;
       // Se redirecciona a la página principal
