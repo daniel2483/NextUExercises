@@ -65,4 +65,13 @@
 
   6.3. Carga de archivos
 
+  6.4. Variables de Sesión y Cookies
+  
+  6.5. Actividad 1
+  
+  6.6. Actividad 2
+  
+  6.7. Ejercicio de codificación
+  
+7. UNIDAD 3: Prueba
   
