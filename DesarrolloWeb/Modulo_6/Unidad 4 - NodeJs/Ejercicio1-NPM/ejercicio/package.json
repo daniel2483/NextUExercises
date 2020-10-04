@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio1-npm",
+  "version": "1.0.0",
+  "description": "This is a first example of NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && NODE_PATH=./ node dist/src/server",
+    "public": "mkdir -p public && cp -r src/client/css public/ && cp src/client/index.html public/",
+    "build-js": "NODE_PATH=. browserify src/client/js/index.js -o public/app.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "npm run compile-server && npm run public && npm run build-js",
+    "compile-server": "babel src/server/index.js src/server/**/*.js --out-dir dist --presets es2015"
+  },
+  "author": "Jose Daniel Rodriguez Sanchez",
+  "license": "ISC"
+}
