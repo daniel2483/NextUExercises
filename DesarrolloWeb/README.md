@@ -10,4 +10,4 @@ Este repositorio contiene ejemplos, ejercicios y desarrollos web. Los módulos s
 - Módulo 6 -
 - Módulo 7 -
 - Módulo 8 -
-- Módulo Extra -
+- Módulo Extra - Control de versiones y GIT
