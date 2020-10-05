@@ -1,4 +1,4 @@
-//-----FUNCIONES DEL DISEÑO ADAPTATIVO------//
+//-----FUNCIONES DEL DISEÑO ADAPTATIVO------// Para dispositivos móviles
 function isMobile(){
   var screenSize = screen.width;
   if(screenSize<992){
