@@ -43,3 +43,17 @@ UNIDAD 4: NODE.js
 	4.6. Actividad
 	
 	4.7. Ejercicio de codificación
+
+5. Lección 4: Realtime
+
+	5.1. Qué es el Realtime y su filosofía
+	
+	5.2. WebSockets y Socket.io
+	
+	5.3. Agregar la funcionalidad Realtime al chat
+
+	5.4. Actividad 1
+
+	5.5. Actividad 2
+	
+	5.6. Ejercicio de codificación
