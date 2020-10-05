@@ -57,3 +57,23 @@ UNIDAD 4: NODE.js
 	5.5. Actividad 2
 	
 	5.6. Ejercicio de codificación
+
+6. Lección 5: ECMAScript 6
+
+	6.1. let, const
+
+	6.2. Arrow functions, lexical this
+
+	6.3. Parametros por defecto, template string
+
+	6.4. Clases, modulos, object/array destructuring
+
+	6.5. Reescribiendo el proyecto en ES6
+
+	6.6. Actividad
+
+	6.7. Ejercicio de codificación
+
+7. UNIDAD 4: Prueba
+
+EVALUACIÓN FINAL
