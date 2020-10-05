@@ -1,7 +1,7 @@
 {
   "name": "tictactoe",
   "version": "0.1.0",
-  "description": "c6u4 nextu web",
+  "description": "Ejercicio 2 - NodeJS por Jose Daniel Rodriguez Sanchez",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node dist/src/server",
