@@ -21,14 +21,15 @@ var port = 8082; /*
 var app = (0, _express2.default)();
 
 app.use(_express2.default.static('public'));
-var Server = _http2.default.createServer(app);
 
+var Server = _http2.default.createServer(app);
 var io = (0, _socket2.default)(Server);
 
 var currentUsers = [];
 var currentRoom = '';
 var firstSocket = '';
 
+//3
 io.on('connection', function (socket) {
     console.log('New user connected to the game, id: ' + socket.id);
     socket.on('newUser', function (user) {
