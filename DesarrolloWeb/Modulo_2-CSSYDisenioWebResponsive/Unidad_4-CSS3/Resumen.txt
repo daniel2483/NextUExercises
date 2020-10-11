@@ -1,0 +1,136 @@
+Efectos Especiales
+
+1- Transformaciones: Rotate, Scale, Perspective, Translate, skew
+	Se deben llamar en el css con 
+	tranform: funcion();
+		Ejemplo:
+		xxxx{
+			tranform:rotate(-30deg); # positivo rota en sentido manecillas del reloj, negativo rota en sentido contrario a manecillas del reloj
+			tranform:scale(5,4); # escala en ancho y alto
+		}
+	
+	Perspective se puede definir en cada elemento o en un elemento padre
+	Normalmente Perspetive debe definirse en el elemento padre
+	y también perspective-origin que recibe dos parámetros el primero es el eje x y el segundo es el eje y
+	Los valores de rotateX, rotateY o rotateZ se deben definir en el elemento al que le estamos añadiendo perspectiva
+	
+	perspective-origin puede recibir los valores de Top, Center, Bottom o Left,Center, Right o valores definidos en px,cm,em,etc
+	
+	Translate recibe dos parámetros el valor del desplazamiento horizontal y el valor del desplazamiento vertical
+	números positivos en horizontal desplaza hacia la derecha y números negativos a la izquierda
+	números positivos en vertical desplaza hacia abajo y números negativos hacia arriba
+	
+	Formas de Uso de translate
+	xxxxx {
+		trasform: translate(none);
+		trasform: translate(50px);
+		trasform: translateX(50px);
+		trasform: translateY(50px);
+		trasform: translateZ(50px);
+		trasform: translate3d(-10,50,5); #(x,y,z) (derecha o izquierda, arriba o abajo, adelante o atras)
+	}
+	
+	Formas de uso de skew: numeros positivos indica movimientos hacia la derecha y hacia abajo, numeros negativos indica hacia la izquierda y hacia arriba
+	xxxx {
+		transform: skew(20deg,30deg); # eje x y y respectivamente
+		transform: skew(0deg,40deg); # solo modificamos inclinacion en eje Y
+		transform: skew(30deg,0deg); # solo modificamos inclinacion en eje X
+		transform: skewY(30deg);
+		transform: skewX(40deg);
+	}
+	
+	Ejercicio 1 transform, rotate, scale
+	Ejercicio 2 perspective, translate
+
+
+2- Animaciones
+
+	Transition y propiedades
+
+	transition puede recibir dos valores propiedad y tiempo,
+	Tiempo es el tiempo en el que dura la animacion por ejemplo 4s
+	Propiedad es la propiedad a la que le estamos realizando la animacion por ejemplo width o height
+
+	forma de uso:
+	xxxxx {
+		transition: propiedad tiempo; # Se debe agregar dentro del selector (que normalmente es un ID) 
+		transition: background 4s;
+	}
+
+	Luego se debe de crear el evento que va a iniciar la animacion
+	Por ejemplo
+	xxxxx:hover{
+		background-color:red
+	}
+
+	Si se quiere animar varias propiedades a la vez se utiliza transition-property y transition-duration, de la siguiente manera
+	xxxxx{
+		transition-property: width, height;
+		transition-duration: 1s, 4s;
+	}
+	
+	xxxxx:hover{
+		width:100%;
+		height:100%;
+	}
+
+	Ejercicio 3
+
+	Animation y propiedades keyframes
+	
+	Esto pertenece a las animaciones personalizadas se debe usar de la siguiente manera
+	@-webkit-keyframe miAnimacion{
+		from
+		{
+			tranform:rotate(45deg);
+		}
+
+		to
+		{
+			height:0;
+		}
+	}
+
+	Luego en el selector:
+	xxxxx {
+		...
+		animation: miAnimacion 4s;
+	}
+	
+
+	Otro ejemplo de animacion:
+	@-webkit-keyframe miAnimacion{
+		0%
+		{...}
+		25%
+		{...}
+		50%
+		{...}
+		75%
+		{...}
+		100%
+		{...}
+	}
+	
+	xxxx {
+		animation-name: miAnimacion;
+		animation-duration: 4s;
+	}
+	
+	Ejercicio 4
+
+3. Filtros de imagenes
+
+	Tienen sus origines en SVG
+	En 2008 se definio
+	Actualmente solo funciona anteponiendo webkit a filter
+	
+	Ejemplo:
+	#container img{
+		width: 100%;
+		-webkit-filter: grayscale(80%);
+		filter: grayscale(80%);
+	}
+	
+	Todos las funciones toman un valor de porcentaje excepto blur() y dropshadow()
+	Ya que blur recibe un valor en px mientras que dropshadow recibe tres valores en px y un color

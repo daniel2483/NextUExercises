@@ -1,0 +1,66 @@
+git config --global user.email "jdrs@gmail.com"
+
+git config --global user.name "daniel2483"
+
+git config --global core.editor atom
+			Configurar atom como manejador de git
+
+git add -A
+			anade cambios de nuevos archivos y cambios en los archivos
+			
+git commit -am "Comment"
+			Para hacer commit de un branch
+
+git log
+	Ver cambios
+	
+git log --oneline
+	Ver Changelog del head
+
+git log --stat
+	Ver estadisticas
+	
+git log -p
+
+
+git show b1efd742499b00eef970feeef84dc64f301db61f
+	Ver un commit especifico
+	
+
+git remote add origin C:/Users/Daniel/FrontEnd_Cine/.git
+	Para inicializar un origen remoto
+
+rm -rf .git 
+	Para volver al estado anterior al git init
+
+
+Proceso para añadir un nuevo repositorio
+
+1. Ir al repositorio: git init
+2. Añadir el repositorio local o remoto: 
+	git remote add origin
+	o
+	git remote add origin /directiorio/del/repositorio/remoto
+
+	o hacer un git pull del repositio ya giteado con 
+	git pull https://github.com/daniel2483/FrontEnd_Cine.git master
+	
+	En caso de no existir ningun archivo en el repositorio remoto se debe de crear un file para definir el branch master
+3. Añado los archivos en el repositio git local (repositiorio nuevo)
+	git add -A
+4. ejecuto un git commit para efectuar los cambios
+	git commit -am "Comentario"
+
+5. Envio los cambios al reporitorio remoto
+	git push https://github.com/daniel2483/FrontEnd_Cine.git master
+	
+Para agregar origin remoto
+
+git remote add origin ssh://login@IP/path/to/repository
+
+Using HTTP
+
+git remote add origin http://IP/path/to/repository
+
+
+git remote add origin https://github.com/daniel2483/FrontEnd_Cine.git

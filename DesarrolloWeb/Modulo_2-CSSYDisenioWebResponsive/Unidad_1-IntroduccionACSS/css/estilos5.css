@@ -1,0 +1,30 @@
+
+textarea
+{
+	rows:3;
+	cols:30;
+}
+
+.etiqueta
+{
+	width:200px
+}
+
+body
+{
+	margin-bottom:20px;
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px
+	
+}
+
+input[name$=Email]
+{
+	background-color:#eeeeee;
+}
+
+p,label
+{
+	font-family:Tahoma;
+}

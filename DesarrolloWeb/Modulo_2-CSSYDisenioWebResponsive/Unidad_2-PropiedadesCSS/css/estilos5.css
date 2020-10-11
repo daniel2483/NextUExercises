@@ -1,0 +1,54 @@
+#menu-principal ul
+{
+	float:left;
+	width:200px;
+	padding:0;
+	margin:0;
+}
+
+#contenido
+{
+	margin:10px 0 10px 200px;
+	width:80%;
+	background-color:lightyellow;
+	padding:10px 5px 10px 5px;
+	background-image:url(../img/imagen3.jpg);
+	border-radius:6px
+}
+
+#contenido p img
+{
+	float:right;
+	border:solid 2px #605B56;
+	border-radius:4px;
+	margin:3px 3px 3px 3px
+}
+
+li
+{
+	list-style-type:none;
+	padding:10px
+}
+
+header
+{
+	padding: 3px 10px;
+	margin-bottom: 5px;
+	background: -moz-linear-gradient(right, #5CA861 , #BADFBC);
+	border-radius: 10px;
+}
+
+body{
+	color:grey;
+	font-family:Verdana;
+	width:70%;
+	margin-left: 15%;
+}
+
+footer
+{
+	text-align:center;
+	border-top: solid 2px black;
+	padding-top: 10px;
+	margin-top: 15px;
+}

@@ -1,0 +1,50 @@
+CSS Adaptativo
+
+Unidad 3
+1. Diseño adaptativo: width con %
+	Se observa que cambiando el width con valores de % se mantiene la proporción a la hora de encoger el navegador
+	Ejercicio 1
+
+2. Uso del Viewport
+	Uso de vh y vw en letras y en contenedores
+	Ejercicio 2
+
+3. Uso Adaptativo de imagenes y videos
+	Etiquetas picture, figure (figcaption) e img, se pueden colocar
+	Ejercicio 3
+
+4. Media Queries
+    print - Vista de Impresión.
+    min-width - Tamaño mínimo en horizontal.
+    max-width - Tamaño máximo en horizontal.
+    min-height - Tamaño mínimo en vertical.
+    max-height - Tamaño máximo en vertical.
+    orientation - Posición en la que se encuentre el dispositivo.
+    resolution - Tamaño ocupado por el browser en píxeles.
+    color - Detecta si la pantalla en que se visualiza el sitio es a color o en blanco y negro.
+    light-level - Densidad de la luz del dispositivo.
+
+	Ventaja: Personaliza la página según el disposistivo y mejora la visualización de diseño adaptable
+
+	Desventaja: Hay que añadir código repetido en el archivo css
+
+	Se usa añadiendo @media media-type { ... } para especificar comportamiento de la web en casos puntuales
+
+	Ejercicio 4
+
+
+5. Patrones de diseño adaptativo:
+	-Tiny Tweaks	- Muy simple solo una columna, muy usado
+	-Most Fluid	- Simple varias columnas, muy usado, las columnas se acomodan según la anchura
+	-Column Drop	- Normal varias columnas, usado, las columnas se acomodan en un orden específico se debe usar order para ordenarlas
+	-Layout Shifter	- Complejidad media, los contenedores se acomodan en cualquier orden
+	-Off Canvas	- Complejo, se usa mucho en dispositivos, no tiene mucha utilidad en web pensadas para PC
+
+	Ejercicio 5 y 6
+
+
+
+-webkit- 	Chrome, Safari, Android, iOs, chromesafari
+-moz- 	Firefox 	firefox
+-o- 	Opera 	chrome
+-ms- 	Microsoft Internet Explorer

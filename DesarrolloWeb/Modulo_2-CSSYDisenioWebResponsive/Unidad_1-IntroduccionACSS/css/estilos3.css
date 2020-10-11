@@ -1,0 +1,33 @@
+body
+{
+	background-color:black;
+	color: white !important;
+}
+
+div
+{
+	margin-top:10px;
+	margin-left:20px;
+}	color: inherit;
+
+
+h1 
+{
+	font-style:Arial;
+}
+
+p
+{
+	font-style:verdana;
+	color:blue;
+}
+
+a
+{
+	color:inherit;
+}
+
+body p
+{
+	color:green
+}

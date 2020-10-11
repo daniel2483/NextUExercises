@@ -1,0 +1,310 @@
+body{
+  font-family: 'Dancing Script', cursive;
+  animation-name: AnimacionCargaPagina;
+  animation-duration: 0.5s;
+  background: black;
+}
+
+#Principal{
+  width:100%;
+  background: black;
+}
+
+header {
+  background: #5b7989;
+  padding: 15px 15px 15px 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+a[href=".\/index.html"] {
+  text-decoration: none;
+}
+
+a[href="../src/paisajes.html"] {
+  text-decoration: none;
+}
+
+a[href="../src/retratos.html"] {
+  text-decoration: none;
+}
+
+header a{
+  color:inherit;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+a:visited{
+  color:white;
+}
+
+.contenedor {
+display: flex;
+flex-direction: column;
+}
+
+header h1{
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  -webkit-text-shadow: 2px 2px #02010a;
+}
+
+footer{
+  text-align: center;
+  padding-top: 20px;
+  background: #C6d5c5;
+  border-radius: 0px 0px 10px 10px
+}
+
+footer #redes a{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: normal;
+  color:black;
+}
+
+footer #redes a::after:visited{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: normal;
+  color:black;
+}
+
+footer p{
+  text-align: justify;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#titulo{
+  width:100%;
+}
+
+#menu{
+  width:100%;
+  text-align: center;
+  color: white;
+}
+
+#section1 {
+  background: #82c3a6;
+  padding-bottom: 40px;
+}
+
+#section2{
+  background: #d5c75f;
+  padding-bottom: 40px;
+}
+
+#imagen1{
+  padding-top: 5%;
+}
+
+#imagen1 img{
+  margin:auto;
+  display: block;
+  width: 90%;
+}
+
+#imagen2 img,#imagen3 img{
+  width: 90%;
+  margin:auto;
+  display: block;
+  border: 1px solid;
+
+}
+
+
+#imagen2,#imagen3{
+  width:100%;
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+}
+
+#imagen2 img:hover{
+  animation-name: InclinacionImagen;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+#imagen3 img:hover{
+  animation-name: MoverImagen;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+img[src$=".png"]{
+  width:20px
+}
+
+img{
+  box-shadow: 2px 2px  #02010a;
+}
+
+
+#section2{
+  padding: 5% 0 5% 0;
+}
+
+#section1{
+  display: flex;
+  flex-direction: column;
+}
+
+#destacados .contenedor > div {
+  text-align: center;
+  width: 50%;
+}
+
+#contacto,#terminos,#redes,#derechos{
+  width:100%;
+}
+
+#contacto h1,#terminos h1,#redes h1,#derechos h1{
+  text-align: center;
+}
+
+#img1,#img2,#img3,#img4,#img5,#img6 {
+  width:100%;
+}
+
+#img1 img{
+  filter:blur(10px);
+  order:1;
+}
+
+#imagenes img:nth-child(2,4,6){
+  filter:grayscale(100%);
+}
+
+#img3 img{
+  filter:sepia(90%);
+}
+
+.filtros #row1,.filtros #row2
+{
+  display:flex;
+  flex-direction: column;
+  padding:0px 0px 0px 0px;
+  text-align: center;
+}
+
+.filtros img{
+  width:95%;
+}
+
+.filtros #row1 img,.filtros #row2 img{
+  margin-bottom: 10px;
+}
+
+.filtros #row1 > div:nth-child(2){
+  filter:grayscale(100%);
+}
+
+.filtros #row2 > div:nth-child(1){
+  filter:grayscale(100%);
+}
+
+.filtros #row2 > div:nth-child(3){
+  filter:grayscale(100%);
+}
+
+@media (min-width:900px){
+  #Principal{
+    width:900px;
+    margin-left: 20%;
+    background: black;
+  }
+
+  h1{
+    text-align: left;
+  }
+
+  #titulo{
+    width:50%;
+  }
+
+  #menu{
+    display: block;
+    text-align: right;
+    width:50%;
+  }
+
+  #imagen2,#imagen3{
+    width:50%;
+    text-align: center
+  }
+
+  #contacto,#terminos,#redes,#derechos{
+    width:25%;
+  }
+
+  footer p{
+    text-align: justify;
+    padding-left: 21%;
+    padding-right: 21%;
+  }
+
+  .contenedor {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .filtros #row1,.filtros #row2
+  {
+    display:flex;
+    flex-direction: row;
+    padding:10px 10px 10px 10px;
+    text-align: center;
+  }
+
+  .filtros img{
+    width:90%;
+  }
+
+}
+
+
+@-webkit-keyframes AnimacionCargaPagina{
+  0%{
+    margin-top: 150%;
+  };
+  60%{
+    margin-top: -5%;
+  };
+  100%{
+    margin-top: 0%;
+  };
+}
+
+@-webkit-keyframes InclinacionImagen{
+		from
+		{
+		}
+
+		to
+		{
+			transform:rotate(15deg);
+      box-shadow: 2px 2px #82c3a6;
+		}
+}
+
+@-webkit-keyframes MoverImagen{
+		from
+		{
+    }
+
+		to
+		{
+			transform:translate(20px,-5px);
+      box-shadow: 2px 2px #82c3a6;
+      border: 2px solid;
+		}
+}
