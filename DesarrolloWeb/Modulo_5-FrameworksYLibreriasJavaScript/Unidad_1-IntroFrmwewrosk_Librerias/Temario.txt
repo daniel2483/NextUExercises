@@ -1,0 +1,48 @@
+UNIDAD 1: Introducción a los Frameworks y Librerías, usos y diferencias
+
+    
+1. UNIDAD 1: Introducción
+    
+2. Lección 1: Qué es un framework de JavaScript
+        
+2.1. Qué es un framework
+        
+2.2. Lectura: Por qué debería usar un framework
+        
+2.3. Lectura: Ventajas y desventajas
+        
+2.4. Actividad
+    
+3. Lección 2: Qué es una librería de JavaScript
+        
+3.1. Qué es una librería
+        
+3.2. Lectura: Por qué usar librerías
+        
+3.3. Actividad 
+    
+4. Lección 3: Frameworks y librerías de JavaScript más usados
+        
+4.1. Frameworks JS más populares
+        
+4.2. Actividad 1
+        
+4.3. Librerías JS más populares
+        
+4.4. Actividad 2
+    
+5. Lección 4: Canvas y sus frameworks
+        
+5.1. Qué es Canvas
+        
+5.2. Actividad 1
+        
+5.3. Introducción a Canvas
+        
+5.4. Actividad 2
+        
+5.5. Lectura: Konva
+        
+5.6. Ejercicio de codificación
+    
+6. UNIDAD 1: Prueba

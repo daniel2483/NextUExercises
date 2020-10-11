@@ -1,0 +1,196 @@
+Leccion 1 - Que es Prototype y como funciona
+	
+	- Que es?
+	Prototype es un framework JavaScript creado por Sam Stephenson con el fin de optimizar y simplificar 
+	el desarrollo de páginas web. Esta librería se encarga, entre otras cosas, de facilitar la selección 
+	de elementos del DOM, manipularlos, e integrarlos para realizar páginas web altamente interactivas y 
+	dinámicas.
+
+	prototypejs
+
+
+	El enfoque principal de Prototype es la codificación orientada a objetos, es decir, manipular y crear 
+	elementos del DOM que sean afines al manejo de clases, atributos y métodos. Este framework incluye 
+	funcionalidades compatibles con Ajax y Ruby on Rails. Actualmente se encuentra en la versión 1.7.3, 
+	lanzada el 22 de Septiembre de 2015.
+	
+	
+	Al ser un framework JavaScript, Prototype es una alternativa a jQuery, por tal motivo es importante 
+	decidir qué tipo de librería se va a usar en un proyecto web, de acuerdo con las características y 
+	funcionalidades que puede aportar. Prototype es un framework recomendado para proyectos que integran 
+	Ruby on Rails, o para desarrolladores familiarizados con este, ya que su sintaxis y nomenclatura son 
+	muy similares a las de Prototype. A su vez, es muy útil en proyectos en los que hay un manejo 
+	predominante de clases y objetos.
+
+	
+	- Sintaxis de Prototype
+	
+	La sintaxis de Prototype es muy sencilla, ya que encapsula muchas funcionalidades y características 
+	JavaScript en sencillas funciones y objetos. En general maneja una sintaxis muy similar a la usada en 
+	jQuery involucrando tres partes principales: selector, punto y función.
+
+	selector.función
+
+	El selector indica un elemento del DOM sobre el cual se realizarán las acciones, el punto es el carácter 
+	que indica la invocación de una función a un elemento determinado, y la función indica las acciones 
+	que se asignan al ítem seleccionado. Sin embargo, dado que Prototype es un framework basado en la 
+	programación orientada a objetos, involucra la sintaxis propia de la definición de objetos en 
+	JavaScript. Esto es, el uso de las llaves para encerrar la definición de un objeto, así como la 
+	presencia de un método initialize que se ejecuta al instanciar un objeto de la clase definida.
+	
+	Adicionalmente en Prototype se usan objetos propios de la librería como Class, Element y Object que se 
+	usan en lugar del selector en la sintaxis descrita anteriormente.
+	
+	http://prototypejs.org/download/
+
+Leccion 2 - Selectores en Prototype
+
+	- Selectores id y css
+		- Selector id: $('id')
+		- Selector css: $$('.reglaCSS')
+	
+	- Funciones de seleccion
+		$F('idElemento')  --> Para seleccionar el atributo value de un elemento
+		
+		Funciones previous y next --> Permiten seleccionar elementos hermanos de un objecto especificado
+		.previous() y .next()
+		$('nombre').previous('label')
+		$$('h2')[0].next()
+		
+		funcion .childElements()
+		devuevlo los valores hijos de un elemento
+
+		Ej: $$('.item-form')[0].childElements()
+
+		Los hijos de sus hijos
+		.descendants()
+		
+		Ej: $('formulario').descendants()
+		
+		.acentors(), retorna en cadena todos los elementos padres
+
+		Ej: $('email').ancestors()
+
+	- Busqueda sobre una seleccion
+		
+		.select() - Filtrar elementos a partir de una seleccion
+		$('idSeleccion').select('reglaCSS')
+		
+		Ej: 	$('formulario').select('input') 
+			$$('div.item-form')[3].select('input')
+		
+		var objetoSelec = new Selector('reglaCSS')
+		
+		.findElements() --> Arreglo de elementos
+		.match() --> Boolean
+		
+		Ej: 
+		var s = new Selector('label')
+		s.findElements()
+		s.findElements($$('.item-form:first')[0])
+		s.match($$('.titulo-row')[0])
+		s.match($$('.item-form label')[0])
+
+Leccion 3 - Objetos en Prototype
+	- Function:
+		- argumentNames
+		- bind
+		- bindAsEventListener
+		- curry
+		- defer
+		- delay
+		- methodize
+		- wrap
+	
+		
+		- argumentNames
+			Nombre de los parametros que la funcion espera
+			Ej: var functionParams = FunctionName.argumentNames();
+
+		- bind
+			Se encarga de asignar un contexto especifico a una funcion
+		
+		- defer
+			Aplazar una funcion
+		
+		- delay 
+			Timeout para ejecutar la funcion, este valor es en segundo
+
+	- Object:
+		Array, String y Number heredan del objeto object
+		Metodos estaticos
+			isArray
+			isDate
+			isElement
+			isFunction
+			isNumber
+			isString
+			isUndefined
+		
+		Sirven para hacer validaciones
+
+		isArray Ej: Object.isArray(NombreArrayAEvaluar)
+		
+		isDate, devuelve true si el valor es de fecha Ej: Object.isDate(Nombre)
+		
+		isElement, es una instancia o un elemento del DOM Ej: Object.isElemet(Nombre)
+		
+	- String
+		Metodos y propiedades que se agrega al metodo String
+
+		camelize - reemplaza cualquier - a notacion camel case
+		capitalize - reemplaza la letra inicial de una cadena de texto por una mayuscula
+		empty - verifica si una cadena de texto esta vacia
+		include - Sirve para analizar una cadena de texto especificando una cadena secundaria. Es sensible a mayusculas y minusculas
+		
+		Ej: string.include(stringVar)
+
+	Otros
+		Método - String.prototype.anchor()
+		Funcionalidad - Permite añadir un elemento DOM de tipo <a> con el texto String y la cadena de caracteres que se pase 
+		como parámetro al método que en el innerHTML.
+
+		Metodo - String.prototype.bold()
+		Funcionalidad - Permite añadir un elemento DOM de tipo <b> con el texto del String, al que se asocia el método, 
+		en el innerHTML.
+
+		Metodo - String.prototype.link()
+	
+		Funcionalidad - Permite crear un link con la cadena de caracteres a la que se le aplique el método prototype.link 
+		y asignarle el url que se pase como parámetro de esta función.
+		Ejemplo: cadena_caracteres.prototype.link(url);
+
+		Metodo - String.prototype.italics()
+		Funcionalidad - Permite crear un elemento DOM de tipo <i> con el texto en el innerHTML que se pase como atributo.
+
+		Metodo - String.prototype.sub()
+		Permite crear un elemento DOM con el texto del objeto String al que se asocia el método.
+
+Leccion 4. - Eventos cn Prototype
+	- Definicion de Eventos
+		Clave event o directamente en los objetos del DOM
+		observe
+		Clase y luego se invoca el metodo observe, el id del Elemento, el evento y por ultimo la funcion(handler) que se ejecutara
+		
+		Ej: document.observe("dom:loaded",function(){
+			Event.observe('boton-cancelar','click',function(){
+				alert("Test");
+			})
+		})
+
+		Estructura para definir un evento a un objeto del DOM
+		1- Definimos el objeto del DOM mediante selector de ID
+		2- Luego indicamos el metodo observe
+		3- y en los parametros el tipo de evento
+		4- Por ultimo el handler o la funcion a disparar
+
+	- Manejo del contexto en eventos
+		Contexto hace referencia al objeto
+
+	- Control de Eventos
+		eventos y manejar el contexto
+		.stopObserving(EventoQueSeDetendra) - Remueve un evento
+		metodo getValue
+		
+		.delay() para retardar la accion de una funcion
+		functionName.delay(Segundos,Parametro1, Parametro2, ...)

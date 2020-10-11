@@ -1,0 +1,32 @@
+
+Conclusión del curso
+
+¡Felicitaciones!
+
+
+Has llegado al final del Curso: Frameworks y librerías de JavaScript
+
+El desarrollo en JavaScript es muy común en la construcción de sitios web. Sin embargo, nunca viene mal ayudarse de unas cuantas herramientas para hacer más fácil los procesos de desarrollo. Para esto existen los frameworks y librerías de JavaScript.
+
+Cuando se decide implementar alguno de estos en un proyecto, la reducción en cantidad de código, tiempo y esfuerzo es notable. Por tal motivo, es altamente recomendable dominar las bases de algún framework o librería para que el desarrollo se vuelva más eficiente y así puedas crear proyectos más grandes en menor tiempo.
+
+Sin duda alguna, usar un framework o librería de JavaScript te ahorrará muchos dolores de cabeza en el desarrollo web.
+
+Gracias a este curso y lo que con esfuerzo y dedicación practicaste con los ejercicios, estás en capacidad de:
+
+    Describir qué es un framework JavaScript.
+
+    Gracias a los videos conociste la definición de Framework JavaScript que se refiere a un marco de aplicación o conjunto de bibliotecas orientadas a la reutilización a muy gran escala de componentes software para el desarrollo rápido de aplicaciones, en consecuencia, tiene como principal ventaja el desarrollo rápido de aplicaciones. Los componentes incluidos en un framework constituyen una capa que libera al programador de la escritura de código de bajo nivel.
+    Comprender qué es una librería JavaScript.
+
+    Descubriste los conceptos fundamentales de librerías, en especial que éstas se refieren a un conjunto de implementaciones funcionales, codificadas en un lenguaje de programación JavaScript, que ofrece una interfaz bien definida para la funcionalidad que se invoca.
+    Implementar aplicaciones con frameworks y librerías JavaScript.
+
+    Identificaste las formas de crear efectos y animaciones sobre elementos del DOM, creando animaciones personalizadas y manipulando su ejecución en la página. Además, conociste jQueryUI y aprendiste cómo usar sus herramientas en la estructura de la página web.
+    Comprender qué es jQuery y cómo funciona.
+
+    Conociste jQuery y su sintaxis básica, pudiendo seleccionar cualquier tipo de elemento del DOM haciendo uso de las herramientas que jQuery ofrece para hacer estas selecciones más fácilmente. Adicionalmente, aprendiste a manipular los elementos del DOM en sus estilos, atributos y contenidos, así como la creación de eventos sobre distintos elementos.
+    Comprender qué es Prototype y cómo funciona.
+
+    Conociste la librería Prototype, identificando sus fortalezas y situaciones en las cuales es recomendable aplicarla. Además, conociste sus selectores, el manejo de objetos y la asignación y gestión de eventos mediante las funciones y objetos nativos de la librería.
+

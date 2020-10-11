@@ -1,0 +1,165 @@
+Unidad 3.  jQuery animaciones y efectos 
+
+Leccion 1. - Efectos para mostrar y ocultar elementos.
+	- Mostrar elementos.
+		show() para mostra elementos ocultos en la pagina
+		Ejemplo $(selector).show()
+		Para que funcione debe estar el elemento escondido o con display:none
+		Puede recibir parametros para modificar la forma en que se muestran los elementos
+		- Por ejemplo velocidad de aparicion: slow o fast o en milisegundos
+		Ej: $("selector").show("slow"); $("selector").show("fast); $("selector").show(5000); // 5 segundos
+		- Otro parametro se denomina easing, para especificar la velocidad del efecto en determinados puntos
+		Puede tomar dos valores: 
+		Ej: $("selector").show("slow","swing"); // Hace que la animacion se mueva mas lento al inicio y fin, este es por defecto.
+		Ej: $("selector").show("slow","linear"); // 
+		- Callback, funcion a realizar una vez el efecto haya concluido.
+		Ej: $("#oveja").show(10000, function(){$("#mensaje").text("Obeja")});
+	
+	- Ocultar elementos
+		metodo hide()
+		$("selector").hide(), debe estar visible en pantalla
+		Ej: $("#vaca").hide()
+		Puede recibir 3 parametros: velocidad, easing y callback
+		.hide(2000,"linear",function(){})
+
+		Un metodo similar a hide y show es toggle()
+		Este se encarga de alternar cada vez que se incova entre ocultar y mostrar un elemento seleccionado
+		
+		Este metodo recibe los mismos parametros que show y hide
+		
+	- Efectos para mostrar/ocultar elementos
+		- a partir de eventos
+		Eventos - cada vez que suceda algo en la pagina
+		Estructura basica
+		$("SelectorDisparador").evento(function(){
+		$("SelectorObjetivo").show();
+		})
+
+		Los eventos pueden ser: on,hover,click,keypress,mousemove,etc
+		Puede ser una funcion anonima o una ya una definida.
+
+Leccion 2. - Manipulacion Avanzada del DOM.
+
+	- Eliminando Elementos:
+		Eliminar items
+		- .remove(), permite eliminar un elemento del DOM completamente, junto con todos sus hijos,contenido,
+		eventos y datos jQuery 
+		asociados
+		Ejemplo: $("#c1 div :first-child").remove()
+		- .detach(), es muy similar a remove pero no elimina todos los datos JQuery asociados al elemento 
+		eliminado. Remueve un objeto del DOM, pero si se volviese a insertar todos los eventos JQuery 
+		permanecerian
+		Ej: $("#c2").detach()
+		- empty(), este metodo se encarga de elminar el contenido y todos los descendientes de elemento seleccionado
+		se encargado de dejar vacio un elemento
+		Ej: $("#c3 .card-content").empty()
+		- unwrap(), elimina el padre del elemento seleccionado, sube un nivel en el arbol DOM, este metodo
+		reubica el elemento
+		Ej: $("#c4 .card-content").unwrap()
+		
+	- Reemplazando Elementos
+		Eliminar y reemplazar elementos del DOM.
+		replaceWith(), es el metodo, elemento selector que lo invoque
+		Elemento a reemplazar se elimina y el elemento nuevo existente, se mueve a su posicion original y
+		ocupa el lugar del elemento reemplazado
+		Metodo .replaceAll(), contrario a replaceWith se debe indicar lo que se va a reemplazar y luego se le
+		aplica el replaceAll
+
+	- Ordenamiento de elementos 
+		.sort(), este metodo ordena elementos en un arreglo de cadenas de texto o numeros, alfabeticamente o de 
+		menor a mayor respectivamente.
+		Se debe invocar desde un arreglo que contenga los elementos a ordenar
+		.reverse(), para dar la direccion de abajo a arriba de menor a mayor, invierte el orden de los elementos
+
+Leccion 3. - Manejos de Tiempos y Animaciones
+	
+	- Efectos Basicos
+		.fadeIn('slow') - Difuminado - Lento - Aparicion
+		.fadeIn('fast') - Rapido
+		.fadeIc(3000) - Milisegundos
+
+		.fadeIn('slow','linear',function(){}) - velocidad, forma y callback
+
+		.fadeOut()	- Difuminado - Desaparicion	
+
+		.fadeToggle()	- Permite alternar entre los 2 efectos FadeIn  FadeOut	
+
+		.slideDown(500)	- Muestra un elemento mediante un efecto de deslizado descendente. 0.5 segundos
+		.slideUp(500)
+		.slideToggle(500)
+		
+	- Animate - Efecto
+		.animate(), cualquier tipo de efecto sobre los elementos.
+		el Selector se encarga de determinar el elemento del DOM al cual le vamos a aplicar la animacion
+		
+		Selector.animate({Propiedades CSS},duracion en ms,easing,callback) - camel case, separadas por coma al igual que CSS
+		easing por defecto swing
+		
+	- Efectos Avanzados
+		Usando Animate
+		
+		animacion recurvisa - se repite indef
+		.stop() - Para detener la animacion en JQuery.
+		{step: } - Permite realizar animaciones mientras se realiza la animacion, now(es propio de animate)
+				y obtienen el valor inicial de un elemento.
+		
+		.animate(
+
+				{
+width: "-=70"
+},
+			
+        {
+step: function(now){
+
+					$(this).css("transform","rotate("+now*10+"deg)")
+
+				        },
+
+					queue: false,
+
+					duration: 1200
+}
+)
+		
+				1. queue es propia de animate y puede determinar 2 cosas que la animacion en cuestion
+				debe esperar la anterior para ejecutarse "true".
+
+				2. La animacion debe ejecutarse en simultanea con el disparo del evento, en cuyo
+				caso sera falso.
+		
+				funcion delay() - sirve para indicar un retraso luego de la siguiente animacion
+				
+				
+				
+Leccion 4 - Introduccion al JQuery UI
+	- Efectos
+		Libreria construida apartir de JQuery
+			AddClass
+			RemoveClass
+			ToggleClass
+			SwitchClass (clase1,clase2,tiempo)
+		
+		Uso
+		$(elemento).hide("animation",duration)
+		$(elemento).show("animation",duration)
+		$(elemento).toggle("animation",duration)
+		$(elemento).effect("animation",duration)
+
+		Color Animation: Mediante el metodo animate para personalizar
+		las animaciones solo podiamos modificar propiedades de estilo con 
+		valores numericos. JQuery UI nos permite modificar propiedades de color 
+		en la funcion animate
+	
+	- Widgets - Es probable que tengan incompatibilidad con Frameorks CSS
+		Accordeon	$(elemento).accordion();
+		Dialog		$(elemento).dialog({...})
+		Progressbar
+		datepicker	$(elemento).datepicker();
+	
+	- Interacciones
+		Lo mas util
+		Manipular elementos de la pagina seleccionada
+		.draggable()	Elemento arrastrable
+		.dropabble()	Elemento pueda o no pueda ser depositado en un contenedor	
+		

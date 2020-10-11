@@ -1,0 +1,164 @@
+Leccion 1 - Que es un Framework de Javascript
+	Paquete de librerias del lado del cliente
+	Patron de desarrollo de un Framework a MVC
+	
+	Que buscar en un Framework
+	- Documentacion	
+	- Tiempo en el mercado
+	- Mantenimiento
+	- Que se adapte a requerimientos
+	- Aplicaciones ya hechas (revisar desempeño)
+	- Popularidad
+	- Desarrollador (no dejarse cegar) son mas importantes los primeros puntos
+	
+	Rapido y Mejor
+	
+	¿Por qué usar un framework?
+	Los frameworks pueden compararse a casas prefabricadas. 
+	Vienen con muchas cosas ya hechas, tienen una estructura ya definida 
+	a la cual hay que adaptarse.Existen principios básicos por los cuales 
+	se desarrollaron los frameworks:
+	- Hacer menos codigo
+	- No reinventar la rueda
+	- Eficiencia
+	- Arquitectura
+	
+	¿Cuándo usar un framework?
+	Depende de lo que se vaya a hacer así se determina si usar un framework o no. 
+	Algunos consejos son:
+	- Complejidad: cuando lo que se va a desarrollar es varias veces más 
+	complejo que un “Hola mundo”.
+	- Cuando exista un framework que ya haga gran parte de lo que necesitas.
+	- Si se sabe que la aplicación va a crecer en el futuro.
+	- Si se va a ahorrar tiempo y esfuerzo. Cuando se necesita entregar 
+	con prontitud un proyecto.
+	- Falta de recursos (financieros o humanos): Puede que al equipo le falte 
+	profesionales que hagan mejor el trabajo de lo que lo puede hacer el framework.
+	
+	Ventajas:
+	- Legado: Si el framework tiene buena documentación, los futuros desarrolladores 
+	que mantendrán el código tendrán una buena base para hacer mantenimiento. 
+	Aunque, por supuesto, queda por tu parte hacer un código limpio y legible.
+	- Estructura: Los frameworks brindan estructura al proyecto.
+	- Soporte: Si se utiliza un buen framework, este tendrá una buena comunidad de 
+	desarrolladores que ayudarían a dar soporte al mismo.
+	
+	Desventajas:
+	- Sobrecarga: Cargar 200kb en un equipo core I7 de 8Gb de memoria con internet 
+	de 5Mb puede parecer rápido, pero cuando se trata de dispositivos móviles es 
+	otra cuestión.
+	- Curva de aprendizaje: Todo framework requiere una curva de aprendizaje y debe 
+	tenerse en cuenta a la hora de estimar el tiempo de proyecto. Cuando estudias 
+	un framework aprendes el framework, no el lenguaje.
+	- Te casas con él: Los frameworks determinan cómo se deben hacer las cosas. 
+	Entre más completo sea el framework menos libertad tiene el desarrollador.
+
+Leccion 2 - Qué es una librería de JavaScript
+	Son un conjunto de operaciones especificas y bien definidas
+	para reusar codigo hecho por otros desarrolladores para evitar codigo repetido
+
+	Diferencia entre Framework y librerias
+	Framework hacen un llamado al codigo propio
+	las librerias no
+	Las librerias son facilmente reemplazables mientras que los frameworks no,
+	habria que sobreescribir todo el codigo base
+	
+	¿Por qué utilizar LIBRERÍAS?
+	Hay miles de librerías de javascript que puedes usar en tus proyectos. Estas 
+	librerías pueden ayudarte en aspectos como animación, AJAX, manipulación del 
+	DOM, manejo de eventos del DOM, creación de gráficos, entre otros. Si debes 
+	decidir entre si usar una librería o escribir el código por tí mismo, a 
+	continuación encontrarás razones de por qué usar librerías:
+
+	- Código testeado: Por lo general el código de las librerías incluye tests que 
+	garantizan el buen funcionamiento de estas. Además los desarrolladores ya se 
+	habrán enfrentado a errores de código, descubierto por ellos o por la comunidad, 
+	lo cual hace que el código sea algo estable.
+	
+	- Te enfocas en la lógica del negocio: Al usar librerías en las que ya se han 
+	considerado los casos aislados, las incompatibilidades y particularidades de los 
+	navegadores, ahorras tiempo que puedes invertir en desarrollar propiamente tu 
+	aplicación.
+	
+	- Reusar código: Si encuentras una librería que soluciona lo que estás buscando, 
+	lo hace de una forma óptima y con buenas prácticas, es una buena opción utilizarla. 
+	Si la solución no se adapta a lo que necesitas puedes considerar hacer una 
+	contribución al desarrollo de la librería añadiendo tu funcionalidad, si tu 
+	contribución es aceptada, ¡excelente!, puedes usar la librería. Recuerda que 
+	una buena práctica es nunca modificar librerías de terceros localmente. 
+	Esto puede traer problemas de mantenimiento a la hora de actualizar la librería 
+	a una versión nueva.
+	
+	Como desarrollador muchas veces te enfrentarás a la decisión de qué librería 
+	usar para un reto en particular. En ocasiones existen múltiples librerías 
+	diseñadas para dar solución al mismo problema, ¿cuál debes escoger? A 
+	continuación unos consejos:
+
+	- El desempeño debe ser bueno, de manera que no impacte de forma negativa el tiempo
+	de respuesta de tu aplicación web.
+	- Que exista una comunidad de desarrollo activa.
+	- Buena documentación.
+	- Código Limpio.
+	- Que haya fácil integración con el proyecto.
+	- En lo posible, que las librerías en cuestión no dependan de otras librerías 
+	para su funcionamiento.
+
+	Recuerda añadir solo las librerías estrictamente necesarias, a menor cantidad de 
+	librerías será más sencillo tener control del desempeño de tu código y hacer 
+	debug para encontrar cuellos de botella.
+
+Lección 3 - Frameworks y librerías de JavaScript más usados
+	- Frameworks mas populares:
+	
+	Angular JS - soportado por Google una herramienta extender el vocabulario HTML,
+	altamente expresivo, legible y rapido de desarrollar. Buenas practicas - Es para
+	alta complejidad
+	Ember JS - amigable API. FRamework que funcione
+	Aurelia - Framework de JS para aplicaciones de escritorio y moviles que ofrece aprovechar
+	las convenciones simples y potenciar la creatividad, se enfoca en componentes Web y al
+	al igual que Angular promueve la elaboracion de codigo testeable.
+	Mocha JS - Es un Framework para tests de aplicaciones
+	Para Single Page aplication.
+	
+	- Librerias JS mas populares:
+	JQuery - promueve la simplicidad para manipular el DOM, manejar eventos y hacer animaciones
+	API facil de usar que funciona en muchos navegadores, gran soporte y mucha documentacion
+	JQUery UI - Herramientas que ayudan a mejorar la interaccion con el usuario como por 
+	ejemplo: date pickers, sliders, drag and drop. www.jqueryui.com
+	React.js - Soportado por Facebook, es una libreria para crear interfaces de usuario
+	en la que se fomenta la creacion de componentes de interfaz de usuarios reutilizables
+	Resolver el problema de crear aplicaciones grandes con datos que cambian en el tiempo
+	Backbone JS - Libreria que se utiliza para dar estructuras a aplicaciones Web 
+	Patron Modelo Vista Controlador, cuando se requiere elaborar un sitio Web de pagina
+	unica. Y que la curva de aprendizaje nos sea tan alta
+	_.js y lodash.js - a veces las funciones preconstruidas de javascript no son suficientes
+	para una buena productividad.
+	Paginas: underscorejs.org y lodash.com
+	highcharts - Crear graficos interactivos facilmente
+	handlebars y mustacheJS son librerias para trabajar plantillas dinamicas.
+	handlebarsjs.com y github.com/janl/mustache.js
+	Grunt and Gulp - Proveen herramientas necesarias para que tareas como minimizacion de JS - Grunt es una libreria para automatizar tareas
+	y CSS compilacion de coffeScript y TypeScript las pruebas unitarias no sean dolor de cabeza
+	mediante automatizacion de tareas:
+	Paginas: gruntjs.com y gulpjs.com
+	Chai - Libreria para realizar tests mas populares. Pagina: chaijs.com
+	
+
+Lección 4 - Canvas y sus frameworks
+	- Que es canvas
+		etiqueta canvas de HTML5
+		el contenido de canvas es generado exclusivamente por Javascript
+		Sin embargo puede agregarse un texto vacio como texto para verificar si el navegador lo soporta
+		Canvas ---> lienzo para "pintar"
+		Canvas solo tiene 2 atributos width y height por defecto 300 y 150 respectivamente
+		Ejemplos: Imgtfy.com/?q=cool+html5+canvas+examples
+
+	- Frameworks
+		El contexto es el que permite dibujar
+	
+	- Konva
+		Konva es un framework para canvas que permite añadir interactividad, hacer animaciones con buen 
+		desempeño, transiciones, capas, filtrado y más para aplicaciones de escritorio y móviles. 
+		A continuación haremos una comparación de los elementos antes vistos ahora utilizando Konva:
+	
+		

@@ -1,0 +1,33 @@
+UNIDAD 2: Selectores del DOM, sintaxis y eventos jQuery
+
+    1. UNIDAD 2: Introducción
+    2. Lección 1: Qué es jQuery y cómo funciona
+        2.1. Lectura: Qué es jQuery
+        2.2. Lectura: Sintaxis de jQuery
+        2.3. Ejemplos básicos
+        2.4. Actividad 1
+    3. Lección 2: Selectores jQuery
+        3.1. Selectores id, clase, etiqueta
+        3.2. Actividad 1
+        3.3. Búsqueda sobre una selección
+        3.4. Actividad 2
+        3.5. Ejercicio de codificación
+    4. Lección 3: Manipulación y modificación de elementos, atributos y estados con jQuery
+        4.1. Modificación de estilos
+        4.2. Actividad 1
+        4.3. Modificación de atributos
+        4.4. Actividad 2
+        4.5. Modificación de contenido parte 1
+        4.6. Actividad 3
+        4.7. Modificación de contenido parte 2
+        4.8. Actividad 4
+        4.9. Ejercicio de codificación
+    5. Lección 4: Manejo de Eventos con jQuery
+        5.1. Eventos de objetos nativos
+        5.2. Actividad 1
+        5.3. Eventos sobre los elementos del DOM
+        5.4. Actividad 2
+        5.5. Eventos del teclado y el mouse
+        5.6. Actividad 3
+        5.7. Ejercicio de codificación
+    6. UNIDAD 2: Prueba

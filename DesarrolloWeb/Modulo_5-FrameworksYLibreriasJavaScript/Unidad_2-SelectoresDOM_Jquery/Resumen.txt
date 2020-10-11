@@ -1,0 +1,131 @@
+UNIDAD 2: Selectores del DOM, sintaxis y eventos jQuery 
+
+Leccion 1 - Que es jQuery y como funciona
+	Que es JQuery?
+	jQuery es un framework, o librería JavaScript, para el desarrollo de sitios web que comprende una gran cantidad de características que permiten al desarrollador 
+	implementar elementos de JavaScript fácil y rápidamente. Además de ser la librería de JavaScript más utilizada en la actualidad es también un proyecto de 
+	software libre; lo que significa que su uso es completamente gratuito. jQuery fue lanzado en el 2006 por John Resig y desde entonces ha ido evolucionando 
+	hasta su versión más reciente: jQuery 3.0, lanzada el 9 de Junio de 2016.
+
+ 	Esta librería se encarga principalmente de ejecutar las acciones que se pueden obtener con JavaScript pero con una reducción de código significativa. Una de 
+	las principales tareas de este framework es encargarse de la compatibilidad con todos los navegadores, ya que esta labor sin uso de jQuery requiere una 
+	gran cantidad de código. Además,  jQuery permite la manipulación de los elementos del DOM con gran facilidad gracias a su motor de selección Sizzle; 
+	una manera sencilla de capturar eventos, una gran variedad de animaciones prediseñadas, y de un tamaño muy pequeño que demanda poco espacio en la memoria 
+	al momento de incluirlo en un proyecto web.
+
+	Cabe anotar que jQuery no es la única librería JavaScript disponible. Sin embargo, es la preferida por los desarrolladores web debido a su estabilidad, buena 
+	documentación y al soporte de toda una empresa velando por su mantenimiento y actualización hacia nuevas tecnologías. Otro de los puntos a favor de esta 
+	librería se basa en su popularidad, ya que en una comunidad tan grande de usuarios hay muchas personas realizando plantillas, componentes y plug-ins de jQuery 
+	disponibles para su uso.
+
+	Sintaxis de JQuery
+	Como todas las demás librerías, jQuery requiere una sintaxis específica para hacer uso de sus características. Por ello, es muy importante relacionarnos con 
+	la estructura básica de las acciones que podemos definir usando este framework.
+
+	En primera instancia debemos tener claro que jQuery es una librería de JavaScript. Es decir, es una manera simplificada de desarrollar con este lenguaje; 
+	lo que significa que todo lo que vayamos a codificar con este framework debe estar dentro de una etiqueta tipo <script>, o en un archivo con extensión “.js” 
+	enlazado a la página HTML en cuestión.
+	
+	En la siguiente imágen se muestra la sintaxis básica de jQuery: 
+	$(selector).accion()
+	
+	El primer elemento a tener en cuenta es el signo pesos «$». Este es uno de los caracteres más importantes ya que indica el acceso a la librería de jQuery. 
+	O sea, define lo que viene a continuación entre paréntesis como un objeto jQuery que puede hacer un llamado a todas las funcionalidades del framework.
+
+	El segundo elemento es el selector, el cual se ubica entre los paréntesis después del signo pesos. Este se encarga de indicar sobre qué elemento del DOM 
+	se aplicará la característica de jQuery.
+
+	El tercer elemento es el punto «.», que indica la invocación de un método propio de jQuery. Este método se especifica en el cuarto elemento que corresponde 
+	a la acción; es decir, a qué efecto se aplicará al elemento seleccionado previamente.
+
+	Dentro de los paréntesis de la acción puede ir una función de JavaScript definiendo más acciones en cadena. Así, dentro de una sentencia de jQuery puede ir 
+	otra en su interior. Según lo anterior, es muy común ver una estructura como la siguiente:
+
+	$(selector).accion(function(){
+		$(selector).accion();
+	})
+
+	- Ejemplos
+		$(".oceano").slideUp("slow"); Para deslizar hacia arriba un elemento
+		$(".oceano").hide("slow"); Para ocultar un elemento
+		$(".oceano").fadeIn("slow"); Para mostrar un elemento
+
+Leccion 2 - Selectores JQuery
+	- Selectores id, clase, etiqueta
+		Selector de id $("#id_elemento").accion()
+            	$("#cuadro3").hide();
+  // Selector de Id
+		$(".cuadroAzul").hide();
+ // Selector de Clase
+		$("p").hide(); // Selector de Etiqueta
+	
+	- Busqueda sobre una seleccion
+		$(selector).find(subselector)
+	
+		Ejemplos:
+		$("div h3").css("color","white");
+            
+		$("div").find(":contains('Rojo')").css("color","blue");
+
+            
+		o
+		$("div:has(h3)").css("color","white");
+            
+		$("div:has(h3)").find(":contains('Rojo')").css("color","blue");
+	
+Leccion 3 - Manipulación y modificación de elementos, atributos y estados con jQuery
+	- Modificación de estilos
+		.css() es utilizado para consultar los estilos o asignar un estilo nuevo
+		Ejemplo: $(selector).css("propiedad")
+	- Modificación de atributos
+		.attr() para consultar o asignar nuevos valores
+	- Modificación de contenido parte 1
+		metodos
+			- text(), consultar el contenido o asignar un texto especificado
+			Nota, el metodo text reemplaza el contenido existente en el elemento seleccionado.
+			Si fuesemos a anadir contenido con etiqueta html, estas no se renderizarian, sino que se mostrarian tal cual son,
+			es decir solo texto
+			- html(), cuando lo usamos sin parametros retorna el contenido del elemento seleccionado en codigo HTML
+			Si se le incluyen un valor de parametro se reemplaza el contenido y ademas si renderiza contenido HTML
+			- append(), nos permite anadir contenido despues de un elemento seleccionado, y no reemplaza el contenido original,
+			ademas siempre debe tener definido en su parametro el nuevo contenido a anadir
+			- prepend(), cumple la misma funcionalidad de append pero antes dele elemento seleccionado
+			- appendTo()y prependTo(), producen los mismos efectos que los anteriores a diferencia del orden de los elementos
+			involucrados
+			- after(), agregar contenido despues del elemento seleccionado, el contenido se agrega afuera del elemento seleccionado
+			y no dentro de el como sucede con append y prepend, puede recebir: texto, codigo HTLM o un elemento de la pagina
+			- before(), agregar contenido antes del elemento seleccionado, puede recibir como parametros funciones igualmente que after
+			- insertAfter() e insertBefore(), cumple las mismas condiciones que los metodos anteriores sin embargo con sintaxis deferente.
+
+		Nota - This selecciona un elemento de una clase general, es util a la hora de modificar atributos de una clase a un elemento especifico
+		Nota 2 - :last-of-type es para agregar al final el elemento en una clase
+
+Leccion 4 - Manejo de Eventos con JQuery
+	- Eventos de Objetos Nativos
+		Control de Eventos. 
+		.Ready() - Por ejemplo: Se encarga de ejecutar la funcion una vez se carga la estructura del DOM. $( document ).ready(function() {})
+		Solo se dispara cuando se carga la estructura basica del DOM, no involucra iframes y algunos otros elementos.
+		Punto de partida.
+		
+		.resize(), esta asocia al objeto windows
+		.scroll(), gralmente al obejto window
+			
+	- Eventos sobre los elementos del DOM.
+		focus(), se dispara en el momento en el que se selecciona un caja (por ejemplo input)
+		blur(), se activa cuando se deja de seleccionar una caja (por ejemplo input)
+		change(), select, radio buttons, check boxes
+		select(), dentro de un elemento el texto es seleccionado por el usuario.
+		submit(), este evento se dispara cada vez que se envia un formulario, es muy utilizado en la validacion de los campos.
+	
+	- Eventos del teclado y el mouse
+		Eventos mas usados.
+		click, se dispara cuando se hace click sobre el elemento de la seleccion.
+		contextmenu(), se dispara cada vez que se hace click derecho en el elemento. El metodo preventDefault evita que al hacer este click se despliegue el menu
+		por defecto
+		dblclick, se dispara con doble click
+		hover, metodo de Jquery cuando sobre el elemento seleccionado, metodo toggleClass() -> asigna una clase a la imagen.
+		mousedown, boton izquierdo del mouse esta presionado.
+		mouseup, se dispara cada vez que se deja de presionar el click izquierdo del mouse
+		mousemove, se dispara cada vez que se mueve el mouse.
+		keypress, cada ve que se presiona una tecla
+		keydown y keyup, se accionan cada ve que se presiona un 

@@ -1,0 +1,13 @@
+Unidad 1: Introducción a los Frameworks y Librerías, usos y diferencias
+¡Aquí comienza la Unidad 1: Introducción a los Frameworks y Librerías, usos y diferencias!
+
+    Los objetivos del Programa que corresponden a esta Unidad son:
+        Aplicar interactividad a un sitio web a partir de JavaScript.
+        Utilizar frameworks y librerías de JavaScript apropiadamente.
+        Utilizar las estructuras de programación necesarias para gestionar sitios web dinámicos.
+
+    Los objetivos del Curso 5 que corresponden a esta Unidad son:
+        Describir que es un framework JavaScript.
+        Comprender que es una librería JavaScript.
+        Implementar aplicaciones con frameworks y librerías JavaScript.
+
