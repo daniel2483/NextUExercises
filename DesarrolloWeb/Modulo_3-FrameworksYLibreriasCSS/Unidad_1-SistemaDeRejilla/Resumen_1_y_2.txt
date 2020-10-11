@@ -1,0 +1,135 @@
+1- Unidad 1 - Sistema de rejilla
+	width
+	box-sizing: 
+		content-box - Por defecto
+		padding-box - No incluye margin, ni border
+		border-box - No incluye margin
+	
+	Sistema de rejillas
+		Normalmente se usa 12
+		dentro de un div se pueden ubicar 12 rejillas
+	
+
+[href] 	El atributo href existe en la etiqueta.
+[href="#"] 	El atributo href existe y su valor es igual al texto #.
+[href\*="emezeta"] 	El atributo href existe y su valor contiene el texto emezeta.
+[href^="https://"] 	El atributo href existe y su valor comienza por https://.
+[href$=".pdf"] 	El atributo href existe y su valor termina por .pdf (es un enlace a un PDF).
+[class~="emezeta"] 	El atributo class contiene una lista de valores, que contiene emezeta.
+[lang|="es"] 	El atributo lang contiene una lista de valores, donde alguno empieza por es-.
+
+	Se debe crear lo siguiente:
+	[class*="col-"]{float:left;padding:15px}
+	Se debe definir la propiedad Width para cada clase de columna
+	Se debe crear una clase por cada columna, agregando la palabra col seguida de un guion
+	y un numero correspondiente.
+
+	Contenedores y Clearfix:
+	
+	Metodo Clearfix o Clearfix hack:
+		Solucionar problema
+
+	El cambio en el tamaño de un elemento por medio de un media-query en el sistema de rejilla 
+	se denomina column reset. 
+	para que se adapte a pantallas más pequeñas y sea mostrado de manera más óptima.
+
+	Frameworks:
+	Se tomar en cuenta lo siguiente:
+		Rapidez de instalacion
+		Facilidad de uso
+		Opciones ofrecidas
+		Integracion con otros sistemas
+		Calidad en el soporte
+	
+		Requisitos del Framework
+	Es importante entender la sintaxis propia del Framework
+
+
+2. Unidad 2 - Bootstrap 
+	un conjunto de librerías CSS creado por Twitter para facilitarnos y estandarizar los desarrollos de aplicaciones web. 
+	Este framework trae bastantes componentes en su interior que nos permitirán mejorar la presentación del cuerpo, 
+	formularios, botones, barras de navegación, entre otros. Su gran particularidad es que ofrece un diseño adaptativo 
+	para múltiples plataformas. Otra de las integraciones que tiene el Framework Bootstrap aparte del manejo de CSS es 
+	la integración de Javascript.
+
+	Ventajas
+
+	- Maneja el modelo multiplataforma con diseño responsive.
+	- Puede ser codificado en 1 o 2 días de arduo trabajo, en solo minutos o en pocas horas.
+	Supongamos que estamos ante un cliente con un diseño web y a última hora quiere modificar la estructura inicial, 
+	básicamente nos tocaría cambiar toda la estructura del sitio lo que nos tomaría varias horas de trabajo, mientras que 
+	con este framework lo podemos hacer ante sus ojos casi de inmediato y sin muchas complicaciones.
+	- Cuando desarrollamos un sitio web, debemos pensar no solo en los dispositivos que accederán al sitio sino también en 
+	los diferentes navegadores que existen, y crear entonces reglas para cada navegador, lo cual consumirá mucho tiempo de desarrollo; 
+	usando Bootstrap, nuestro sitio siempre se verá igual en todos los navegadores que sean usados y esta será una preocupación menos a tener en cuenta.
+	El framework Bootstrap maneja la filosofía mobile first, la cual ayuda a desarrollar sitios inicialmente para las plataformas móviles 
+	y para luego hacerlos extensibles a tablets y pantallas de gran formato.
+
+	¿Dónde y cómo lo obtengo?
+
+	Solo debes ingresar a la página oficial de Bootstrap http://getbootstrap.com/ allí puedes descargarlo e incluso ver algunos ejemplos de 
+	sitios que integran este framework en sus sitios web.
+
+	col-lg columnas colapsan a menos de 1200px
+	col-md columnas colapsan a menos de 992px
+	col-sm columnas colapsan a menos de 768px
+	col-xs columnas no colapsan para Boostrap 3
+	
+	
+	Esto se conoce como Column Reset
+	
+
+	Column Wraping y Offsetting Columns
+		Offset en Bootstrap 3: col-lg-offset-4
+		Offset en Bootstrap 4: offset-lg-4
+
+
+	Para Boostrap 4
+
+
+    .col- (extra small devices - screen width less than 576px)
+    .col-md- (medium devices - screen width equal to or greater than 768px)
+    .col-lg- (large devices - screen width equal to or greater than 992px)
+    .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+	
+	Column Wraping es cuando excedemos 12 columnas en el desarrollo, esta se acodomodara en la siguiente fila
+	Offsetting Columns es para dejar espacios vacios en las columnas
+	
+	Column Ordering con Pull y Push - Para Boostrap 3
+		Pull movimiento a la izquierda
+		Push movimiento a la derecha
+
+	Column Ordering se puede realizar con Boostrap 4 mediante la clase 
+		order-first
+		order-md-2
+	
+	Manejo de Textos e imagenes
+		Para Textos
+		text-center, text-justify,text-nowrap,tex-left,text-right
+		text-capitalize,text-uppercase,text-lowercase
+		Etiquetas: <small>,<abbr> para abrebiaturas, <code> para codigo <edb> para accesos del teclado,<mark> para marcado
+		Para Listas
+		list-unstyle
+		list-inline
+		dl-horizontal
+		lead - Para un mayor espaciado entre letras
+		
+
+	Imagenes:
+		clases: img-circle, img-thumnail, img-rounded
+		img-responsive es la clase utilizada para hacer una imagen reponsive
+
+	Formularios
+		atributo role="form" para personas con discapacidad
+
+		Clase form-group el formulario se expande al 100% en horizontal
+
+		Clase form-control es la clase utilizada para cada una de las entradas
+
+		Clases "btn btn-default" Presenta mejor estilo de boton
+
+		Checkbox y Radiobuttons
+			Clase checkbox coloca los checkbox de forma vertical o checkbox-inline de forma horizontal
+			Clase radio colo los radio de forma vertical o radio-inline de forma horizontal
+		Listas despegables  (select --> options) se coloco el form-control, para poder seleccionar varios elementos podemos usar el atributo multiple
+		

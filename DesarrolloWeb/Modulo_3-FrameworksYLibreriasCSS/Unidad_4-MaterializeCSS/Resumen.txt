@@ -1,0 +1,228 @@
+Unidad 4 Materialize CSS
+
+Intro
+Creada por Google MAterial Design
+
+
+1. Leccion 1 Teoria y Concepto
+	- Material Design
+		Normativa de diseno desarrollada por google
+		Objetivo sintetizar los principios clasicos del buen diseno e innovacion con la posibilidad de tecnologia y ciencia
+		Experiencia a los usuarios una experiencia unificada en multiples plataformas y dispositivos de diferentes tamanos
+
+	Material metafora inspirada en el papel y tinta, tambien pretende unificar las teorias de espacios racional basado en movimientos
+	Ubicacion y bordes en la realidad
+	la luz la superficie y el movimiento son la clave para transmitir movimiento, interaccion y existencia de los objetos en el espacio
+	
+	La iluminacion realista muestra costuras e indica parte del movimiento
+
+	El peso, la visualizacion y la intencionalidad se fundamenta en los elementos de diseno basada en la impresion
+	La tipografia las cuadriculas el espacio la escala el color y el uso de imagenes son elementos que guian el tratamiento visual
+	dando jerarquia significado y enfoque
+
+	Colores intencionalmente seleccionados, imagenes borde a borde, tipografia a gran escala y espacios en blanco deliverads
+
+	El movimiento proporciona un significado transformando al usuario como primer motor de los objetos
+	Toda accion tiene lugar en un unico entorno, los objetos se presentan al usuario sin romper continuidad de los objetos
+
+	El movimiento es significativo y apropiado sirve para centrar la atencion y mantener la continuidad (transiciones eficientes)
+	FRameworks: Polymer, Materialize CSS, Material UI, Paper Bootswatch for Bootstrap, MUI CSS Framework.
+
+	- Ventajas de MAterialize CSS
+		Simplifica la vida de los desarrolladores y de los usuarios
+		Acelera el proceso de desarrollo Web 
+			Facilita la codificacion con estilos predeterminados
+			Refina animaciones y transiciones
+			Extremo ligero 30kb
+		Enfocado en la experiencia de usuario
+			Utiliza los principios y elementos de Material Design
+			Incorpora componentes y animaciones que proporcionan retro al usuario
+			Un solo sistema adaptativo a todas las plataformas, experiencia unificada a todos los usuarios
+		Facil para trabajar
+			Documentacion detallada y ejemplos de codigo
+			Comunicacion rapida y fluida con los desarrolladores para ayuda
+	
+	- Como lo uso
+		descarga: materializecss.com
+		Descomprimidos los archivos del download
+		
+		Se debe importar en el archivo lo siguiente:
+		https://fonts.googleapis.com/icon?family=Material+Icons para los iconos
+		css/materialize.min.css para las librerias materialize
+
+		Ademas de los siguientes Javascript
+		https://code.jquery.com/jquery-2.1.1.min.js para darle funciones jquery
+		js/materialize.min.js para añadir funciones materialize
+
+	Repuesta Ejercicio 1.
+
+	Material
+	En este principio la luz, la superficie y el movimiento son la clave para transmitir: movimiento, interacción y existencia de 
+	los objetos en el espacio.
+
+	El peso, la visualización y la intencionalidad
+	Este principio se basa en los elementos del diseño para la impresión: la tipografía, las cuadrículas, el espacio, la escala, 
+	el color y el uso de imágenes, son los elementos que guían el tratamiento visual, dando jerarquía, significado y enfoque.
+
+	Movimiento
+	Este principio es significativo y apropiado, sirve para centrar la atención y mantener la continuidad.
+
+	Repuesta Ejercicio 2.
+
+2. Sistema de Rejilla.
+	- Colores por Material Design
+	Paleta de colores desde la pagina
+	card-panel para backgrounds se usa el nombre del color luego se le puede colocar el lighten o darken deseado
+	Para colores de texto se usa color-text luego se le puede colocar lighten, darken o accent
+	Por defecto background en blanco y texto en negro
+	
+	- Sistema de Rejilla, es de 12 columnas
+		Filas y columnas, filas de 12 columnas
+		Ejemplo
+		<div class="row">
+			<div class="col s12">
+			</div>
+		</div>
+	
+	- Contenedores y nomenclatura de 12 columnas
+	col - significado columnas
+	s - Dispositivo s-smartphones, m-tabletas, l-computadores de escritorio
+	12 - numero de columnas
+	
+	Si no se indica el numero de columnas el valor por defecto es 1.
+
+	- Desplazamiento y ordenamiento
+	General: offset-pn - Para crear un offset
+	Ejemplo: offset-s2
+	General: push-pn - desplazamiento a la derecha
+	Ejemplo: push-s2
+	General: pull-pn - desplazamiento a la izquierda
+	Ejemplo: pull-s2
+
+3. Visibilidad, Posicionamiento y media
+	-Alineación
+	.valign-wrapper
+
+	Posicionamiento Vertical:
+	   <div class="valign-wrapper">
+      		<p class="valign">Texto alineado verticalmente</p>
+   	   </div>
+
+	.left-align, .right-align and .center-align - alineacion horizontal
+	.justify-align
+
+	- Formateo
+	Ocultacion para elementos DOM. Ejemplos:
+	hide
+	hide-on-small-only
+	hide-on-medium-only
+	hide-on-large-only
+	hide-on-med-and-up
+	hide-on-med-and-down
+
+	Funcion truncate se usa para recortar el texto
+	card y hoverable dan sombra al elemento, se puede aplicar a cualquier elemento con sombra
+
+	- Sombras, Citas y texto adaptativo
+	Sombras - z-depth-n al elemento
+	1 la mas cercana 5 la mas lejana
+	Citas textuales (block quotes)
+	div de clase row y columna, <blockquote>
+
+	Clase flow-text para hacer el texto adaptativo
+
+	- Tablas y Multimedia
+	Tablas:
+	bordered - clase a table da divisiones entre filas
+	striped - clase a table da intercalaciones de colores en el body del table, cada columna impar tenga un color de fondo
+	highlight - clase a table para remarcar cuando se esta sobre el table
+	responsive-table - Clase que genera un scroll cuando el texto no cabe en la pantalla
+
+	Multimedia
+	responsive-img	- Clase utilizada para hacer imagenes responsive
+	video-container - Se especifica para incrustar dentro de un div un video de youtube con el iframe
+	responsive-video - Clase utilizada para hacer videos responsive dentro de una clase video
+	
+	
+4. Componentes de Materialize
+	- Cards, Chips y Collections
+	Elemento card - es un rectangulo que puede contener texto, imagenes o links
+	Se define la clase card junto con el color o estilo que tendra el card
+	justo despues de definir el estilo podemos indicar si es small, medium o large
+	Luego se define un div con la clase card-content y el estilo del card que contiene el texto
+	card-action - es la clase utilizada para links
+	card-reveal - clase utilizada para para esconder contenido detras de un card
+	Las clases "material-icons right" son las clases que indican el icono si es close por ejemplo para cerrar, right es la ubicacion
+	activator - es la clase que se le asigna al elemento que da la accion para revelar el contenido de card-reveal
+	
+	Elemento Chip, son ideales para mostrar muy pequeñas piezas de informacion como contactos
+	etiquetas
+	clase chip a un contenedor, en modo de texto imagenes o iconos
+	
+	Elemento de tipo Collection
+	Es una alternativa a las listas propias de HTML clases utilizadas
+	collection para definir que un div pertenece a una lista
+	with-header para indicar que esta lista posee un titulo
+	collection-header para indicar que ese elemento es el header
+	collection-item para indicar que ese elemento es un item de collection
+
+	- Iconos y Nav Bar
+	Barra de Navegacion
+	Nos permite tener enlaces a todos los links de la web tradicionalmente se encuentra en la parte superior
+	Clase           Descripcion
+	nav-wrapper - Clase que se asigna a la etiqueta nav para indicar que es un menu
+	brand-logo - Clase que indica que un enlace es el logo
+	left y right - son clases para asignar que un elemento esta ubicado en la parte derecha o izquierda
+	active clase - utilizada para indicar que un elemento li esta activo y se usa para indicar en que parte del sitio web esta el usuario
+	navbar-fixed - Clase utilizada para indicar un menu fijo
+	
+	Iconos
+	debe estar contenido en la etiqueta <i>
+	material-icons - Clase utilizada para indicar que el icono es de material
+	iconos disponibles https://materializecss.com/icons.html
+	left o right - Son clases que se deben especificar para indicar donde va a ir el icono
+	
+	- Botones y paginacion
+	Se hace por medio de etiquetas de enlace <a>
+	btn - Sirve para definir si un elemento <a> es un boton
+	btn-size - Se indica el tamaño del boton. Ejemplo: btn-large o btn-small
+	btn-floating - Botones flotantes, se pueden añadir una lista a un boton fijo en la pagina
+	y hacer que dicha lista aparezca cuando se ubica el mouse sobre el
+	waves-efect - Se usa para añadir efecto a un boton
+	waves-light - Toma como punto de referencia donde estamos haciendo click en el boton
+	
+	Botones anidados
+	fixed-action-btn - Se usa para hacer un menu con botones fijos utilizando una lista
+	horizontal - es la clase utilizada para indicar que los botones se deben desplegar horizontalmente por defecto son verticales
+	click-to-toggle - es una clase utilizada para mostrar el listado cuando hacemos click
+	
+	Botones Flat
+	Son utilizados para no crear mucha saturacion de sombras
+	btn-flat
+	
+	Paginacion
+	Es muy util para desplazarnos en direcciones, el numero de pagina que esta activa debe tener la clase "active"
+	La paginacion se define dentro de un lista desordenada con la clase "pagination"
+	disabled para indicar que un link de la paginacion esta deshabilitado
+	active para indicar cual elemento es el que esta activo
+
+	- Fomularios
+	Formularios adaptativos, y animaciones de gran utilidad
+	de debe de crear un contenedor con la clase "input-field"
+	Cada input debe tener su correspondiente label
+	Clase "validate" se usa para realizar validacion de los campos
+	los atributos "data-success" y "data-error" son utilizados para dar mensajes a los usuarios de error o exito
+	Para los text-area se debe definir el textarea con la clase "materialize-textarea"
+	Tanto los checkbox como los radiobuttons se deben de crear dentro de la clase "input-field"
+	la clase "with-gap" se puede aplicar a los radiobuttons
+	la clase "filled-in" se puede aplicar a los checkbox
+	Material tiene un input denominado switch, este debe estar contenido dentro de un label, en 
+	su interior, debe tener el valor negativo, un input de tipo checkbox, un span vacio con la clase "lever" y por ultimo el valor positivo
+	
+	Para la carga de archivos
+	al "input-file" se le debe agregar la clase "file-field" dentro de este div se debe de crear un boton al que le ponemos un nombre y le agregamos un input
+	de tipo file
+	Dentro de la clase "file-field input-field" se debe de crear otro div con la clase file-path-wrapper con el fin de 
+	poder ver el nombre del archivo que vamos a subir dentro de este div colocamos un input de tipo texto y agregamos
+	las clases "file-path validate"
+

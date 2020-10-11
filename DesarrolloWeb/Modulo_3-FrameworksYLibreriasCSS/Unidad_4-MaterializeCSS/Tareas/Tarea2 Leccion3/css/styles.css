@@ -1,0 +1,60 @@
+.menu{
+  margin-top: 0.5rem;
+}
+
+.row{
+  margin-bottom: 0px !important;
+}
+
+.encabezado{
+  min-height: 4rem;
+}
+
+
+.minimum{
+  min-height: 50rem;
+  margin-left: 0.5rem;
+}
+
+.minimum-chat{
+  min-height: 25rem;
+}
+
+.border-line{
+  border: 0px solid #eeeeee;
+}
+
+.chat{
+  padding: 0px !important;
+}
+
+#card1{
+  min-height: 7rem;
+}
+
+#card2, #card3{
+  min-height: 17rem;
+  padding: 2rem;
+}
+
+img[src*=".svg"]{
+  width: 55px;
+  height: 55px;
+}
+
+.noticias{
+  min-height: 50rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  margin:0.5rem;
+}
+
+.principal{
+
+}
+
+img[src*=".jpg"]{
+  width: 100%;
+  border-radius: 5px;
+  border:0.6rem solid #f9a825;
+}

@@ -1,0 +1,40 @@
+.row{
+  max-width:90%;
+}
+
+
+img[src*=".png"]
+{
+  background-color: #cc3300;
+  border-radius: 5px;
+  max-width: 20px;
+}
+
+body{
+  width:90%;
+  margin-left: 5%
+}
+
+
+.column{
+  padding-left: 1px !important;
+  padding-right: 0px !important;
+}
+
+.divisor{
+  border-bottom: 2px solid #cdcdcd;
+}
+
+.titulo{
+  text-align: center;
+}
+
+.link{
+  text-align: center
+}
+
+img[src*=".jpg"]{
+  max-height: 250px;
+  padding: 10px;
+  text-align: center;
+}

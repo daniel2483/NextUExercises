@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="foundation-icons/foundation-icons.css">
+  </head>
+  <body>
+    <div class="row collapse">
+      <div class="columns small-4 medium-3 large-2">
+        <h2 class="e-Store">e-Store</h2>
+      </div>
+      <div class="columns medium-9 large-6 large-offset-4 main-menu">
+        <div class="row align-left show-for-medium">
+          <div class="column medium-10 medium-offset-2 large-10 large-offset-3">
+            <div class="menu">
+              <ul class="menu ">
+                <li><a href="#">Ingresa</a></li>
+                <li><a href="#">Regístrate</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Mapa del Sitio</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row show-for-landscape" style="color:white">
+          <div class="column small-12">
+          Test
+          </div>
+        </div>
+        <div class="row show-for-landscape">
+          <div class="column small-1 small-offset-3 medium-2 medium-offset-2 large-1 large-offset-7">
+              <a href="index.html">
+                <i class="step fi-social-facebook"></i>
+              </a>
+          </div>
+          <div class="column small-2 medium-2 large-1">
+            <a href="index.html">
+              <i class="step fi-social-instagram"></i>
+            </a>
+          </div>
+          <div class="column small-2 medium-2 large-1">
+            <a href="index.html">
+              <i class="step fi-social-twitter"></i>
+            </a>
+          </div>
+          <div class="column small-2 medium-2 large-1">
+            <a href="index.html">
+              <i class="step fi-social-youtube"></i>
+            </a>
+          </div>
+          <div class="column small-2 medium-2 large-1">
+            <a href="index.html">
+              <i class="step fi-social-yahoo"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Menu de botones -->
+      <div class="row button-group hide-for-small-only medium-show-for-portrait">
+        <div class="column medium-1 large-1">
+          <a href="#" class="button expanded ">Hogar</a>
+        </div>
+        <div class="column medium-1 large-1">
+          <a href="#" class="button expanded">Salud</a>
+        </div>
+        <div class="column medium-1 large-1">
+          <a href="#" class="button expanded">Deporte</a>
+        </div>
+        <div class="column medium-2 large-2">
+          <a href="#" class="button expanded">Tecnología</a>
+        </div>
+        <div class="column medium-2 large-2">
+          <a href="#" class="button expanded">Accesorios</a>
+        </div>
+        <div class="column medium-1 large-1">
+          <a href="#" class="button expanded">Ropa</a>
+        </div>
+        <div class="column medium-2 large-2">
+          <a href="#" class="button expanded">Mantenimiento</a>
+        </div>
+        <div class="column medium-2 large-2 large-centered">
+          <a href="#" class="button hollow alert expanded">Carrito <i class="step fi-shopping-cart"></i></a>
+        </div>
+      </div>
+    <!-- Menu Breadcrumbs-->
+      <div class="row" aria-hidden="true">
+        <nav aria-label="You are here:" role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Hogar</a></li>
+            <li><a href="#">Varios</a></li>
+            <li>Decoración</li>
+        </nav>
+      </div>
+
+
+      <!-- Inicio de Columnas de Busqueda y Principal-->
+      <div class="row">
+        <div class="column hide-for-small-only medium-4 large-3 ">
+          <div class="callout">
+
+            <!--Lectura del Screen reader-->
+            <div class="show-for-sr">
+              <p>A continuación hay un formulario para hacer búsquedas avanzadas</p>
+            </div>
+
+            <h2 class="hide-for-medium">Búsqueda Avanzada</h2>
+            <h3 class="show-for-medium">Búsqueda Avanzada</h3>
+            <form class="" action="index.html" method="post">
+              <label for="">Por nombre:
+                <input type="text" class="" name="" value="">
+              </label>
+              <label for="">Por referencia:
+                <input type="text" name="" value="" area-describedby="porReferencia">
+              </label>
+              <label>
+            		<p class="help-text" id="porReferencia">
+            		Número único del producto
+            		</p>
+            	</label>
+              <label>Por Categoría:
+                <select>
+                  <option value="1">Hogar</option>
+                  <option value="2">Salud</option>
+                  <option value="3">Deporte</option>
+                  <option value="4">Tecnología</option>
+                  <option value="5">Accesorios</option>
+                  <option value="6">Ropa</option>
+                  <option value="7">Mantenimiento</option>
+                </select>
+              </label>
+              <fieldset class="">
+            		<legend>Tipo de producto:</legend>
+            		<input id="checkbox1" type="checkbox"><label for="checkbox1">Nuevo</label>
+            		<input id="checkbox2" type="checkbox"><label for="checkbox2">Usado</label>
+            	</fieldset>
+              <fieldset class="">
+                <legend>Radio Button</legend>
+                <input type="radio" name="precio" value="Pleno" id="Pleno" required><label for="Pleno">Pleno</label>
+                <input type="radio" name="precio" value="Oferta" id="Oferta"><label for="Oferta">Oferta</label>
+              </fieldset>
+              <label for="">Buscar productos agotados?</label>
+              <div class="switch">
+            		<input class="switch-input" type="checkbox" name="Agotados" id="Agotados">
+            		<label class="switch-paddle" for="Agotados">
+            			<span class="switch-active" aria-hidden="true">Sí</span>
+            			<span class="switch-inactive" aria-hidden="true">No</span>
+            		</label>
+            	</div>
+              <div class="row column text-center">
+                <hr>
+                <a href="#" class="button">Buscar <i class="step fi-magnifying-glass"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="column medium-8 large-8 large-offset-1">
+          <div class="callout">
+            <h2 class="">Decoración</h2>
+            <hr>
+            <div class="row">
+              <div class="column medium-6 large-4">
+                <div class="callout secondary">
+                  <div class="row imagen align-center">
+                    <img src="img/imagen1.jpg" class="img-responsive float-center">
+                  </div>
+                  <div class="row titulo">
+                    <h4>Decoración 1</h4>
+                  </div>
+                  <div class="row link">
+                    <a href="#">Ver mas <strong>+</strong></a>
+                  </div>
+                </div>
+              </div>
+              <div class="column  medium-6 large-4">
+                <div class="callout secondary">
+                  <div class="row imagen">
+                    <img src="img/imagen2.jpg" class="img-responsive float-center">
+                  </div>
+                  <div class="row titulo">
+                    <h4>Decoración 2</h4>
+                  </div>
+                  <div class="row link">
+                    <a href="#">Ver mas <strong>+</strong></a>
+                  </div>
+                </div>
+              </div>
+              <div class="column medium-12 large-4">
+                <div class="callout secondary">
+                  <div class="row imagen">
+                    <img src="img/imagen3.jpg" class="img-responsive float-center">
+                  </div>
+                  <div class="row titulo">
+                    <h4>Decoración 3</h4>
+                  </div>
+                  <div class="row link">
+                    <a href="#">Ver mas <strong>+</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column medium-6 large-4">
+                <div class="callout secondary">
+                  <div class="row imagen">
+                    <img src="img/imagen4.jpg" class="img-responsive float-center">
+                  </div>
+                  <div class="row titulo">
+                    <h4>Decoración 4</h4>
+                  </div>
+                  <div class="row link">
+                    <a href="#">Ver mas <strong>+</strong></a>
+                  </div>
+                </div>
+              </div>
+              <div class="column medium-6 large-4">
+                <div class="callout secondary">
+                  <div class="row imagen">
+                    <img src="img/imagen5.jpg" class="img-responsive float-center">
+                  </div>
+                  <div class="row titulo">
+                    <h4>Decoración 5</h4>
+                  </div>
+                  <div class="row link">
+                    <a href="#">Ver mas <strong>+</strong></a>
+                  </div>
+                </div>
+              </div>
+              <div class="column medium-12 large-4">
+                <div class="callout secondary">
+                  <div class="row imagen">
+                    <img src="img/imagen6.jpg" class="img-responsive float-center">
+                  </div>
+                  <div class="row titulo">
+                    <h4>Decoración 6</h4>
+                  </div>
+                  <div class="row link">
+                    <a href="#">Ver mas <strong>+</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu de botones para smartphones Portrait-->
+        <div class="row button-group show-for-small-only stacked-for-small ">
+          <div class="column">
+            <a href="#" class="button expanded ">Hogar</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button expanded">Salud</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button expanded">Deporte</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button expanded">Tecnología</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button expanded">Accesorios</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button expanded">Ropa</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button expanded">Mantenimiento</a>
+          </div>
+          <div class="column">
+            <a href="#" class="button hollow alert expanded">Carrito <i class="step fi-shopping-cart"></i></a>
+          </div>
+        </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

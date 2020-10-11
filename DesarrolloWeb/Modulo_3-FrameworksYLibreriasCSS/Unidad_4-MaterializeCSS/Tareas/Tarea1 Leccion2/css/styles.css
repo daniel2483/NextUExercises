@@ -1,0 +1,20 @@
+.row{
+  margin-bottom: 0px !important;
+}
+
+.encabezado{
+  min-height: 4rem;
+}
+
+
+.minimum{
+  min-height: 50rem;
+}
+
+.minimum-chat{
+  min-height: 25rem;
+}
+
+.border-line{
+  border: 1px solid #eeeeee;
+}

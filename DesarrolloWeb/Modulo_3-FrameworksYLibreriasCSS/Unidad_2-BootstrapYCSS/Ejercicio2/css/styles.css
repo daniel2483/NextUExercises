@@ -1,0 +1,67 @@
+body{
+  background: grey;
+}
+
+.navbar-default {
+    background-color: #082D5E;
+  }
+
+.container{
+  margin-top: 64px;
+}
+
+.container .jumbotron{
+  background: #516889;
+  min-height: 500px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.titulo-cartelera{
+  min-height: 45px;
+  background-color: #1e4375;
+}
+
+.movies-row{
+  background-color: #3e4652;
+  min-height: 350px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.movies-column{
+  margin-top: 5px;
+  background-color: #788596;
+  min-height: 330px;
+  border: 2px dashed white;
+}
+
+.right-column{
+  display: block;
+}
+
+.left-column{
+  border-left: 3px dashed black;
+}
+
+.movies-row{
+  background: #b9bec4;
+}
+
+.myrow{
+  background-color: #4f5d70;
+}
+
+@media (max-width:770px){
+  .right-column{
+    display: none;
+  }
+
+  .movies-row{
+    min-height: 250px;
+  }
+
+  .jumbotron{
+    min-height: 350px;
+  }
+}

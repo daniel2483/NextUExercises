@@ -1,0 +1,131 @@
+.menu{
+  margin-top: 0.5rem;
+}
+
+.row{
+  margin-bottom: 0px !important;
+}
+
+.encabezado{
+  min-height: 4rem;
+}
+
+
+.minimum{
+  min-height: 50rem;
+  margin-left: 0.5rem;
+  padding-top: 2px;
+}
+
+.minimum-chat{
+  height: 25rem;
+  overflow: scroll;
+}
+
+.border-line{
+  border: 0px solid #eeeeee;
+}
+
+.chat{
+  padding: 0px !important;
+}
+
+#card1{
+  min-height: 7rem;
+}
+
+#card2, #card3{
+  min-height: 17rem;
+}
+
+img[src*=".svg"]{
+  width: 55px;
+  height: 55px;
+}
+
+.noticias{
+  min-height: 50rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  margin:0.5rem;
+}
+
+.principal{
+
+}
+
+img[src*=".jpg"]{
+  width: 100%;
+  border-radius: 5px;
+  border:0.6rem solid #f9a825;
+}
+
+.menu .input-field{
+  margin-top: 0px;
+}
+
+i{
+  color: white;
+}
+
+
+.input-field label {
+  color: white;
+}
+
+#buscar{
+  border-bottom-color: white;
+  font-size: 20px;
+  color: white
+}
+
+#labelBuscar {
+  color: grey;
+  font-size: 20px
+}
+
+#menu-right{
+  margin-top: 1rem;
+}
+
+.collection1{
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.card-icon{
+  color: grey;
+}
+
+.collection-header{
+  margin: 0 0 0 0;
+}
+
+#chat1,#chat2{
+}
+
+.chat_right_down{
+  padding-left:1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.25rem;
+  padding-right:1rem;
+}
+
+hr{
+  color: white;
+}
+
+.texto{
+  text-align: justify;
+  text-justify:inter-word;
+}
+
+#publicacion-texto{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  resize: none;
+  border: 1px solid #ff8f00;
+  background-color: #ff8f00;
+  height: 5rem;
+  color: #fff;
+}

@@ -1,0 +1,201 @@
+1.	Framework CSS Foundation
+
+- Que es Foundation
+	Sistema de rejilla basada en flexbox y alta
+	parametrizacion a la hora de la descarga
+	Se pueden elegir componentes que se quieran usar
+	para tener una version portable mas liviana
+
+	Tendencia Mobile-First
+	
+	Es un FW front-end --> mejores en el diseño y estruturacion de proyectos web adaptativos
+	Creado por ZURB -- Rapido y mejor
+	Usa JS, HTML y CSS --> Esto lo hace compatible con cualquier tecnologia Back-end y permite su aplicacion en cualquier tipo de proyecto
+	
+	Ventajas de version vigente (version 6)
+	50% menos codigo
+	accesibilidad web
+	menos estilos que sobreescribir
+	Sistema de rejilla sass personalizable
+	Prototipado ZURB
+	Movimiento en la interfaz usuario
+	Patrones de diseño más flexibles
+	
+	Principal Ventaja: Unico FW soportado profesionalmente
+	por una organizacion, proyecto con más de 5 años de experiencia
+	Multiples versiones que lo mejoran, siempre a la vanguardia con las tecnologias
+
+	
+	Ejemplo de paginas usando Foundation:
+	Car and Driver. http://www.caranddriver.com/
+	Polar: http://www.polar.com/us-en
+	EA Star Wars: http://starwars.ea.com/es_ES/
+	HP Store: http://store.hp.com/us/en/
+	Universidad de Cambridge: http://www.cambridge.org/
+	Dominos Careers: https://jobs.dominos.com/dominos-careers/
+	Toms: http://www.toms.com/
+	JQuery: https://jquery.com/
+	
+	Foundation
+		Archivos y carpetas
+		foundation.zurb.com
+	Como Uso Foundation
+	En el header
+	<link rel="css/foundation.min.css">
+	<link rel="css/app.css">
+
+	En el Body al final todos los js
+	<script src="js/..js"></script>
+
+	app.css es el archivo con el que se trabajan los estilos
+	
+- Sistema de rejillas de Foundation
+	1 - Conceptos Basicos
+	Sistema de rejilla o GRid
+	Para definir una columna
+		<div class="column"></div> para version 6.2
+		<div class="columns"></div> version 6.2
+		<div class="cell"></div> version 6.4
+	Para definir tamaños de columnas
+		<div class="column small-4 medium-6 large-8"></div>
+	Las cantidades de columnas en el sistema grid se define en la descarga
+	Fila horizontal class="row" para version 6.2
+	Fila horizontal class="grid-x" para version 6.4
+	Float Grid
+	Fila ocupa el 100% (por defecto son 1200px) si se quiere el 100% se usa la clase expanded-row
+	small - Cualquier pantalla version 6.2 y 6.4
+	medium - 640px  version 6.2 y 6.4
+	large -1024px o mas  version 6.2 y 6.4
+
+	Funciona con CDN Content Delivery Network
+	
+	Grid XY
+	version 6.4
+	<div class="grid-y grid-frame">
+		<div class="cell shrink header">
+			<div class="cell shrink subheader">
+			</div>
+		</div>
+		<div class="cell auto body">
+		</div>
+		<div class="cell shrink footer">
+		</div>
+	</div>
+
+	Para agregar scrolls independientes dentro de las columnas
+	Ej: 
+		medium-cell-block-container (cuando se anidan filas para que no haya scroll)
+		medium-cell-block-y (scroll en el eje y)
+	
+	2 - Sistema de Rejillas avanzado version 6.2
+	Flex grid --> Basada en Flex box (como bootstrap)
+	
+	clase callout clase para div
+	Colores .primary, .secondary, .success, .warning, .alert
+	expanded - Clase para row para expandir todo el ancho del div
+	small-stack medium-unstack: stack se apila uno debajo de la otra es una clase para row
+	columns shrink: Obtiene el ancho de los valores que lo contengan
+	large-expand: Se expande al maximo de la alineacion
+
+	large-offset-x para mover la columna a la derecha (deja columnas en blanco)
+	large-push-4 mueve la columna cuatro espacios a la derecha
+	large-pull-4 mueve la columna cuatro espacios a la izquierda
+	medium-centered centra la columna para dispositivos medium
+	large-uncentered  descentra la columna para dispositivos large
+	
+
+	align-Tipo de alineacion (right, left, center. justify y spaced) para filas
+	align-top / algin-bottom / align-middle para filas
+	align-self-middle... para columnas
+
+	Para ordernarlas debemos asignar la clase order a todos los elementos para obtener los resultados esperados
+	float-center - Clase para alinear al centro una imagen y se coloca dentro de la etiqueta img
+	
+	3 - Elementos del formulario
+	
+	
+	Label y help text
+	Muchos elementos siempre van con la etiqueta label ejemplo
+	<label>Nombre del Label
+		<input type="..." placeholder="..." required ...>
+	</label>
+	Ejemplos de tipo de texto url, password, time, tel, url, week, number
+	Etiqueta textarea para campo de texto largo debe ir tambien dentro de un label
+	Para hacer un checkbox
+	<fieldset class="fieldset">
+		<legend>Checkbox</legend>
+		<input id="checkbox1" type="checkbox"><label for="checkbox1">Verde</label>
+		<input id="checkbox2" type="checkbox"><label for="checkbox2">Azul</label>
+	</fieldset>
+	<input type="" class="button">
+
+	Para una ayuda de un input se hace lo siguiente:
+	se crea la siguiente estructura
+	<label>
+		<p class="help-text" id="ayudaTexto">
+		Esto es una ayuda
+		</p>
+	</label>
+	Esta estructura se llama en el input con el siguiente atributo
+	area-describedby="ayudaTexto"
+	
+	Controles
+	
+	Botones y switches
+	Botones - nos permite 2 cosas llevarnos a otra pagina o realizar acciones en la misma pagina
+	tamaños tiny, small y large
+	clase stacked-for-medium en conjunto con button-group dentro de un contenedor div hace que se apilen uno encima del otro
+	hollow- button sin relleno solo borde y letras
+	secondary, success,alert y warning para los estilos de botones
+	Switches - dos estados
+	Dentro del contenedor div debemos crear la clase switch y luego la etiqueta input con la clase switch-input
+	Ej:
+	<div class="switch">
+		<input class="switch-input" type="checkbox" name="EjSwitch" id="EjSwitch">
+		<label class="switch-paddle" for="EjSwitch">
+			<span class="switch-active" aria-hidden="true">Si</span>
+			<span class="switch-inactive" aria-hidden="true">No</span>
+		</label>
+	</div>
+
+	<hr> --> Es para agregar una linea divisoria
+
+	<div class="row column text-center"> para crear un fila de una columna con los valores centrados, ya sea boton o texto
+
+	4 - Visibilidad y posicionamiento
+
+	Visibilidad
+	Mostrar u ocultar elementos con Foundation
+	Ej: show-for-medium | show-for-large , no es necesario definir para small ya que siempre esta por defecto
+	show-for-medium-only
+	show-for-small-only
+	show-for-large-only
+	hide-for-small-only
+	hide-for-medium-only
+	hide-for-large-only
+	hide - si no queremos que aparezca para ningun tamaño de pantalla
+
+	Orientacion
+	En dispositivos moviles: Portrait (Vertical) y Landscape (Panoramica)
+	show-for-portrait
+	show-for-landscape
+	
+	Accesibilidad
+	Screen readers para discapacidad
+	show-for-sr Este mensaje no se mostrará en pantalla pero será leído por el screen reader
+	aria-hidden="true" Este mensaje se mostrará en pantalla pero no será leído por el screen reader
+	
+	Clases flotantes
+	Sistema de Rejilla y Flex Grid
+	Posicionamiento
+	clase clearfix -> Permite hacer limpieza de los flotantes para poder ubicarlos dentro de un contenedor padre
+	En el padre se define la clase clearfix
+	En los elementos hijos se definen las clases float-left o float-right o float-center
+	float-center tiene una restriccion solo funciona para elementos con valores de ancho absolute (50px) y no en % o auto
+
+	Para Flex drid orden
+	small-order-2
+	
+
+	Para permitir que el código CSS del archivo app.css sobreescriba los estilos propios del framework, su enlace debe ser el último.
+	La respuesta correcta es: Primero se debe enlazar el archivo foundation.css y luego el archivo app.css.

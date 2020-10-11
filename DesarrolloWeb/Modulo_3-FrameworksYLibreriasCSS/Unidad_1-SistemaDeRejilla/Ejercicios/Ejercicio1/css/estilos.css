@@ -1,0 +1,47 @@
+body {
+  width: 100%;
+  background-color: #F5EEAE;
+  margin-top: 0px;
+}
+
+header{
+  background: #D9C297;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+  color: #A46006;
+}
+
+section{
+  width:74%;
+  margin-left:13%
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+#imagen1 img,#imagen2 img,#imagen3 img{
+  width: 35%;
+  border: 4px solid black;
+  padding: 5px 5px 5px 5px;
+  background: #D9C297;
+}
+
+#imagen1, #imagen2, #imagen3 {
+  vertical-align: middle;
+  margin: 5px;
+  padding: 15px;
+  background-color: #A46006;
+}
+
+#fotos .row {
+  text-align: center;
+}
+
+
+#fotos {
+  background: #F5EEAE;
+  padding: 2px 2px 2px 2px;
+}

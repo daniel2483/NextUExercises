@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <!--Importar la fuente de los íconos de Google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importar la hojas de estilos de materialize css-->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="css/estilos_personalizados.css">
+    <title>Botones</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1>Manejo de Botones en Materialized CSS</h1>
+        </div>
+      </div>
+    </div>
+
+    <h3>1. Boton Grande</h3>
+    <div class="row">
+      <div class="col s4 center-align">
+        <a class="btn btn-large teal waves-effect" href="">Boton 1</a>
+      </div>
+    </div>
+
+    <h3>2. Boton Pequeño</h3>
+    <div class="row">
+      <div class="col s4 center-align">
+        <a class="btn btn-small teal waves-effect" href="">Boton 2</a>
+      </div>
+    </div>
+
+    <h3>3. Boton sin estilos ni animacion</h3>
+    <div class="row">
+      <div class="col s4 center-align">
+        <a class="btn" href="">Boton 2</a>
+      </div>
+    </div>
+
+    <h3>4. Boton Floating</h3>
+    <div class="row">
+      <div class="col s4 center-align">
+        <a class="btn-floating" href="">Boton 2</a>
+      </div>
+    </div>
+
+    <h3>5. Boton Floating con icono, estilos y efecto</h3>
+    <div class="row">
+      <div class="col s4 center-align">
+        <a class="btn-floating btn-large light-orange waves-effect" href="" title="Edit"> <i class="material-icons">edit</i> </a>
+      </div>
+    </div>
+
+    <h3>6.Listas de Boton Flotantes vertical o horizontal</h3>
+        <div class="fixed-action-btn horizontal" style="bottom:50px; right:50px">
+          <a href="" class="btn-floating black"> <i class="material-icons">settings</i> </a>
+          <ul>
+            <li><a href="" class="btn-floating orange"> <i class="material-icons">phonelink_setup</i> </a></li>
+            <li><a href="" class="btn-floating brown"> <i class="material-icons">error_outline</i> </a></li>
+            <li><a href="" class="btn-floating grey"> <i class="material-icons">lock</i> </a></li>
+          </ul>
+        </div>
+
+    <h3>7.Botones Flat</h3>
+    <div class="row">
+      <div class="col s6 center-align">
+        <a href="" class="btn-flat waves-effect grey"> <i class="material-icons">forward</i> Adelante</a>
+      </div>
+    </div>
+
+    <h3>8.Paginacion</h3>
+    <div class="row">
+      <div class="col s6 center-align">
+        <ul class="pagination">
+          <li class="disabled"><a href=""> <i class="material-icons">chevron_left</i></a></li>
+          <li class="active">1</li>
+          <li class="waves-effect">2</li>
+          <li class="waves-effect">3</li>
+          <li class="waves-effect">4</li>
+          <li class=""><a href=""> <i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>

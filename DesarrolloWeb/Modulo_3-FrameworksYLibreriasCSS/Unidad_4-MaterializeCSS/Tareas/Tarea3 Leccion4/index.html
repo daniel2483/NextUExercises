@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Materialized CSS</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0"/>
+    </head>
+
+    <body>
+
+      <!-- Contenedor General -->
+      <div class="row">
+        <div class="col s12">
+
+        <div class="row yellow darken-3 flow-text menu">
+          <div class="input-field col s12 m8 l5 valign-wrapper">
+              <img src="img/logo.svg" class="prefix">
+              <input class="text-white" id="buscar" type="text" name="" value="">
+              <label id="labelBuscar" for="buscar">Buscar</label>
+              <i class="material-icons">search</i>
+          </div>
+          <div id="menu-right" class="col hide-on-small-only m4 l4 offset-l3">
+            <div class="btn-floating grey"><i class="material-icons">email</i></div>
+            <div class="btn-floating grey"><i class="material-icons">linked_camera</i></div>
+            <div class="btn-floating grey"><i class="material-icons">question_answer</i></div>
+          </div>
+        </div>
+
+        <div class="row bloque">
+          <!-- Bloque principal lado izquierdo-->
+          <div class="col s2 push-s10 m2 l2 white border-line">
+            <div class="minimum grey lighten-3">
+              <div class="collection collection1">
+                <!-- Item 1 Javascript-->
+                <a href="#" class="collection-item">
+                  <div class="row">
+                    <div class="col s4">
+                      <img class="" src="img/javascript_logo.png" alt="" style="width:50px">
+                    </div>
+                    <div class="col s8">
+                      <span>Javacript</span><br><div class="orange-text text-darken-3">120 miembros</div>
+                    </div>
+                  </div>
+                </a>
+                <!-- Item 2 Perl-->
+                <a href="#" class="collection-item">
+                  <div class="row">
+                    <div class="col s4">
+                      <img class="" src="img/perl_logo.png" alt="" style="width:50px">
+                    </div>
+                    <div class="col s8">
+                      <span>Perl</span><br><div class="orange-text text-darken-3">45 miembros</div>
+                    </div>
+                  </div>
+                </a>
+                <!-- Item 3 HTML-->
+                <a href="#" class="collection-item">
+                  <div class="row">
+                    <div class="col s4">
+                      <img class="" src="img/html_logo.png" alt="" style="width:50px">
+                    </div>
+                    <div class="col s8">
+                      <span>HTML</span><br><div class="orange-text text-darken-3">255 miembros</div>
+                    </div>
+                  </div>
+                </a>
+                <!-- Item 4 PHP-->
+                <a href="#" class="collection-item">
+                  <div class="row">
+                    <div class="col s4">
+                      <img class="" src="img/php_logo.png" alt="" style="width:50px">
+                    </div>
+                    <div class="col s8">
+                      <span>PHP</span><br><div class="orange-text text-darken-3">89 miembros</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s10 pull-s2 m7 l7 white principal z-depth-1">
+            <div class="row">
+                <div class="row border-line">
+                  <!-- 1era columna Principal-->
+                  <div class="col s12 m12 l8 border-line publicaciones">
+                    <div class="white minimum">
+                      <!-- Primera Card del Bloque Publicion-->
+                      <div class="card yellow lighten-4" id="card1">
+                        <div class="card-content">
+                          <!-- Fila titulo -->
+                          <div class="row">
+                            <div class="col s12 m12 l12">
+                              Escribe una nueva publicación
+                            </div>
+                          </div>
+                          <!-- Fila textarea -->
+                          <div class="row">
+                            <div class="col s12 m12 l12">
+                              <div class="input-field black-text"><textarea id="publicacion-texto" class="materialize-textarea"></textarea></div>
+                            </div>
+                          </div>
+                          <!-- Fila botones izquierdos y derecho -->
+                          <div class="row">
+                            <!-- Botones del lado izquierdo -->
+                            <div class="col s8 m6 l4">
+                              <div class="btn-floating grey"><i class="material-icons">code</i></div>
+                              <div class="btn-floating grey"><i class="material-icons">edit</i></div>
+                              <div class="btn-floating grey"><i class="material-icons">mic</i></div>
+                            </div>
+                            <!-- Boton del lado derecho Para dispositivos Small Medium y Large-->
+                            <div class="col hide-on-small-only m4 offset-m2 l4 offset-l4">
+                              <div class="btn-flat grey right"><i class="material-icons">send</i></div>
+                            </div>
+                            <div class="col s4 hide-on-med-and-up">
+                              <div class="btn-floating grey right"><i class="material-icons">send</i></div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <!-- Segunda Card del Bloque Publicion-->
+                      <div class="card yellow lighten-4" id="card2">
+                        <div class="card-content">
+                          <span class="card-title waves-effect waves-block waves-light">Daniel2483:<i class="material-icons right activator card-icon">more_vert</i></span>
+                          <p class="texto">En este vídeo les quiero compartir como iniciar con el editor de imágenes en GIMP.</p>
+                        </div>
+                        <div class="card-image">
+                          <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/84o6FGuE2Mk" frameborder="0" allow="" allowfullscreen></iframe>
+                            <!--<video class="responsive-video" src="video/Video_1_GIMP.mp4"  autoplay controls poster="img/gimp_img.jpg">
+                              <p class="texto">Si ves esto es porque tu navegador no soporta HTML5.</p>
+                            </video>-->
+                          </div>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title">Daniel2483:<i class="material-icons right card-icon">close</i></span>
+                          <p class="texto" >En este vídeo podrás ver el paso a paso de como puedes utilizar GIMP para edición de imágenes, así como ver su instalación.</p>
+                        </div>
+                      </div>
+                      <!-- Contenido de la tercera Card -->
+                      <div class="card yellow lighten-4" id="card3">
+                        <div class="card-content">
+                          <span class="card-title waves-effect waves-block waves-light">Jose0524:<i class="material-icons activator right card-icon">more_vert</i></span>
+                          <p class="texto">
+                            Tengo una duda sobre Materialized CSS.
+                          </p>
+                          <blockquote class="texto">
+                            En esta ocasión estoy aprendiendo a desarrollar páginas web, crear íconos y utilizar múltiples Frameworks, para lograr este objetivo.
+                            Durante toda mi vida he trabajado en el área de Tecnología, por lo que el desarrollo web y de aplicaciones siempre ha sido una prioridad.
+                          </blockquote>
+                        </div>
+
+                        <div class="card-reveal flow-text">
+                          <span class="card-title">Duda sobre Materialized CSS <i class="material-icons right card-icon">close</i></span>
+                          <p class="texto">Este tema lo puedes solucionar utlizando las clases propias de Materialized con la creacion de Menus Flotantes.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2da columna Principal-->
+                  <div class="col hide-on-med-and-down l3 offset-l1 border-line ">
+                    <div class="yellow lighten-4 z-depth-1 noticias">
+                      <h2 class="flow-text center-align">Ultimas Noticias</h2>
+                      <p class="flow-text truncate">- Se ha publicado las últimas noticias acerca de las nuevas laptops</p>
+                      <img class="responsive-img" src="img/imagen1.jpg" alt="Imagen 1">
+                      <p class="flow-text truncate">- Publicacion de tpc HP para hogar</p>
+                      <img class="responsive-img" src="img/imagen2.jpg" alt="Imagen 2">
+                      <p class="flow-text truncate">- Se está vendiendo una laptop</p>
+                      <img class="responsive-img" src="img/imagen3.jpg" alt="Imagen 3">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col hide-on-small-only m3 white derecha chat" >
+            <div class="row">
+              <!-- Bloque de Actividades -->
+              <div class="col s12" >
+                <div class=" white-text minimum-chat border-line" >
+                  <ul class="collection with-header" id="chat1">
+                    <li class="collection-header grey"><h4>Actividades Recientes</h4>
+                    <li class="collection-item grey white-text">
+                      <div class="row">
+                        <div class="col m4 l2 valign-wrapper"><div class="btn-floating blue"><i class="material-icons">refresh</i></div></div>
+                        <div class="col m8 l10"><span>Maria_DB <br>Respondió tu pregunta</span></div>
+                      </div>
+                    </li>
+                    <li href="#" class="collection-item grey white-text">
+                      <div class="row">
+                        <div class="col m4 l2 valign-wrapper"><div class="btn-floating green lighten-3"><i class="material-icons">group_add</i></div></div>
+                        <div class="col m8 l10"><span>CodigosOnline <br>Quiero Agregarte como amigo</span></div>
+                      </div>
+                    </li>
+                    <li href="#" class="collection-item grey white-text">
+                      <div class="row">
+                        <div class="col m4 l2 valign-wrapper"><div class="btn-floating orange darken-2"><i class="material-icons">help</i></div></div>
+                        <div class="col m8 l10"><span>Felipe_21 <br>Te hizo una pregunta</span></div>
+                      </div>
+                    </li>
+                    <li href="#" class="collection-item grey white-text">
+                      <div class="row">
+                        <div class="col m4 l2 valign-wrapper"><div class="btn-floating purple darken-3"><i class="material-icons">people</i></div></div>
+                        <div class="col m8 l10"><span>Jose1234 <br>Quiere reunirse contigo</span></div>
+                      </div>
+                    </li>
+                    <li href="#" class="collection-item grey white-text">
+                      <div class="row">
+                        <div class="col m4 l2 valign-wrapper"><div class="btn-floating purple darken-3"><i class="material-icons">people</i></div></div>
+                        <div class="col m8 l10"><span>Rocio3333<br>Quiere reunirse contigo</span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Bloque de Chat -->
+              <div class="col s12">
+                <div class="grey lighten-4 black-text minimum-chat border-line">
+                  <div id="chat2" class="chat_right_down">
+                    <h4 class=" text-black">Chat</h4>
+                    <hr><div class="chip"><img src="img/man_icon.png" alt="">Juan_Jose</div>
+                    <hr><div class="chip"><img src="img/man_icon.png" alt="">Pedro_1192</div>
+                    <hr><div class="chip"><img src="img/woman_icon.png" alt="">Maria_DB</div>
+                    <hr><div class="chip"><img src="img/man_icon.png" alt="">Felip45</div>
+                    <hr><div class="chip"><img src="img/woman_icon.png" alt="">Rocio_T545</div>
+                    <hr><div class="chip"><img src="img/man_icon.png" alt="">JJ_1598</div>
+                    <hr><div class="chip"><img src="img/woman_icon.png" alt="">M_rodriguez_1983</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fixed-action-btn hide-on-small-only" style="bottom:7%; left:7%">
+            <a class="btn-floating orange"><i class="material-icons">build</i></a>
+            <ul style="text-align:left !important">
+              <li><a class="btn-floating blue lighten-2"><i class="material-icons">notifications_active</i></a></li>
+              <li><a class="btn-floating green "><i class="material-icons">share</i></a></li>
+              <li><a class="btn-floating yellow"><i class="material-icons">lock_open</i></a></li>
+              <li><a class="btn-floating red"><i class="material-icons">volume_off</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+      <!-- Script para hacer funcionar el boton Flotante-->
+      <script>
+       document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.fixed-action-btn');
+          var instances = M.FloatingActionButton.init(elems, {
+            direction: 'top',
+            hoverEnabled: false
+          });
+        });
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <!--Importar la fuente de los íconos de Google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importar la hojas de estilos de materialize css-->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="css/estilos_personalizados.css">
+    <title>Formularios</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1 class="red-text text-darken-4">Manejo de Formularios en Materialized CSS</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <form class="" action="index.html" method="post">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">perm_identity</i>
+            <input id="nombre" type="text" name="" value="" class="validate">
+            <label for="nombre">Nombre</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="contrasena" type="password" name="" value="" class="validate">
+            <label for="contrasena">Contraseña</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" name="" value="" class="validate">
+            <label for="email" data-success="Correcto" data-error="Debes completar este campo">Correo electronico</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">dehaze</i>
+            <textarea id="texto" name="texto" class="materialize-textarea"></textarea>
+            <label for="texto">Introduzca Texto</label>
+          </div>
+          <div class="input-field col s6">
+            <select class="browser-default" name="">
+              <option value="" disabled selected>Elige</option>
+              <option value="">Opcion 2</option>
+              <option value="">Opcion 3</option>
+              <option value="">Opcion 4</option>
+            </select>
+          </div>
+          <div class="input-field col s6">
+            <p>
+              <input id="masculino" type="radio" name="sexo" value="masculino" class="validate">
+              <label for="masculino">Masculino - with no gap</label>
+            </p>
+            <p>
+              <input id="femenino" type="radio" name="sexo" value="femenino" class="validate with-gap">
+              <label for="femenino">Femenino - with gap</label>
+            </p>
+          </div>
+          <div class="input-field col s6">
+            <p>
+              <input type="checkbox" name="" value="valor1" id="check1">
+              <label for="check1">Auto</label>
+            </p>
+            <p>
+              <input type="checkbox" name="" value="valor2" id="check2" checked="checked">
+              <label for="check2">Bus</label>
+            </p>
+            <p>
+              <input type="checkbox" name="" value="valor3" id="check3" class="filled-in">
+              <label for="check3">Avion</label>
+            </p>
+          </div>
+          <div class="input-field col s6">
+            <div class="switch">
+              <label>
+                No
+                <input type="checkbox">
+                <span class="lever"></span>
+                Si
+              </label>
+            </div>
+          </div>
+
+        </div>
+          <div class="row">
+            <div class="file-field input-field col s6">
+              <div class="btn">
+                Subir
+                <input type="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input type="text" class="file-path validate">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>

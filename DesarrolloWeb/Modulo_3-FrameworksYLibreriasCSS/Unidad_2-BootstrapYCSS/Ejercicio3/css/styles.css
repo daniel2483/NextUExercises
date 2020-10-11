@@ -1,0 +1,186 @@
+body{
+  background-image: url("../img/cinema_body.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px !important;
+}
+
+header{
+  height: 62px !important;
+}
+
+.navbar-default {
+    background-color: #082D5E;
+    width: 100%;
+    position: fixed;
+    opacity: 0.95;
+    height: 62px !important;
+    border: 0px !important;
+  }
+
+navbar {
+  position: fixed;
+
+}
+
+.clearfix::after{
+  content:" ";
+  clear:both;
+  display: block;
+}
+
+.navbar-inverse {
+  background-color: rgba(8, 45, 94, 0.95);
+  min-height: 10%;
+  border: none;
+}
+
+.navbar-default img{
+    width:120px;
+    height:70px;
+    padding:10px;
+    padding-left: 0px;
+    margin-left: 0px;
+    perspective: 0px;
+  }
+
+.container{
+  width:100%;
+}
+
+.jumbotron{
+  background-image: url("../img/cinema_jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+  width: 100%;
+  min-height: 500px;
+  margin-bottom: 0px;
+  border-radius: 0px !important;
+}
+
+.titulo-cartelera{
+  min-height: 45px;
+  background-color: #1e4375;
+  opacity: 0.95
+}
+
+.movies-row{
+  background-color: #3e4652;
+  min-height: 350px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.movies-column{
+  margin-top: 5px 5px 5px 5px;
+  background-color: #788596;
+  min-height: 330px;
+  border: 2px dashed white;
+}
+
+.right-column{
+  display: block;
+}
+
+.left-column{
+  border-left: 3px dashed black;
+}
+
+.movies-row{
+  background: #b9bec4;
+}
+
+.myrow{
+  background-color: #4f5d70;
+}
+
+.welcome-title{
+  color: white;
+  margin-right: 10px;
+  /*background-color: rgb(225, 230, 237,0.3);*/
+}
+
+.jumbotron-img{
+  margin-top: 20px;
+  width:230px;
+}
+
+.jumbotron-text{
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
+}
+
+.redes-sociales{
+  margin-top: 20px;
+}
+
+img[src*=".png"]{
+  width:25px;
+}
+
+.titulo-text{
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.movie-title{
+  color:white;
+}
+
+.img-movies img{
+  height: 260px;
+  padding: 6px;
+  margin-top: 22px;
+}
+
+.services-text{
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.welcome-title{
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width:770px){
+  .right-column{
+    display: none;
+  }
+
+  .movies-row{
+    min-height: 250px;
+    opacity: 0.8;
+  }
+
+  .jumbotron{
+    min-height: 350px;
+  }
+
+  h2{
+    font-size: 22px
+  }
+
+  .titulo-cartelera{
+    font-size: 15px;
+  }
+
+  .jumbotron{
+    min-height: 400px;
+  }
+
+  .jumbotron-img{
+    margin-top: 20px;
+    width:230px;
+  }
+}

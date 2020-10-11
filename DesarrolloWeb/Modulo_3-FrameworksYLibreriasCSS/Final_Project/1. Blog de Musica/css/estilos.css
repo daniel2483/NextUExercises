@@ -1,0 +1,249 @@
+body{
+  width:80%;
+  margin-left: 10%;
+  background-color: #8a2037;
+}
+
+#logo-principal{
+  height:90%;
+}
+
+.redes-sociales img[src*=".png"]{
+  background: black;
+  width:25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.logo-principal{
+  width:130px;
+}
+
+.redes-sociales{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.redes{
+  padding-top: 110px;
+}
+
+.jumbotron {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px !important;
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.nav{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar{
+  margin-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background: #ff944d;
+}
+
+.navbar-default{
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #8a2037;
+  height:inherit;
+  align-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-default{
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.nav > li > a:hover{
+  color: #8a2037;
+  font-size: 20px;
+}
+
+ul{
+  width: 100%;
+}
+li{
+  width:16.6%;
+  text-align: center;
+}
+a{
+  width:100%;
+}
+
+.menu-top{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+abbr{
+  border-bottom-width: 0px !important;
+}
+
+.principal{
+  background: white;
+  opacity: 0.95;
+}
+
+.contenido,.busqueda{
+  background: #c2d6d6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height:500px;
+  padding: 10px;
+  opacity: 1 !important;
+}
+
+.articulo-img{
+  height: 100%;
+}
+
+#concierto1{
+  margin-top: 10%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  margin-bottom: 10%;
+  transform: rotate(35deg);
+}
+
+#concierto2{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  transform: rotate(0deg);
+}
+
+
+.comment{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.input-element {
+  width: 100%;
+  padding: 10px;
+  color: #000000;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 15px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  margin-top: 5px;
+}
+
+textarea.form-control {
+  height: 45px;
+}
+
+.comment img{
+  width:50px;
+}
+
+i{
+  font-size:36px;
+  margin-top:8px;
+  text-align: right;
+}
+
+.glyphicon{
+  position: absolute !important;
+  top:18% !important;
+  left:25px !important;
+}
+
+#buscar{
+  padding-left: 30px !important;
+}
+
+.btn-block{
+  background: white;
+  margin-top:0px;
+  margin-bottom: 0px;
+  padding: 15px;
+  border-radius: 5px;
+  border:1px solid #4c6351;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.list-unstyled li{
+  margin-bottom: 0px;
+  width:100%
+}
+
+.list-unstyled {
+  margin-bottom: 20px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+@media (max-width:800px){
+  .menu-boton{
+    border: 2px solid #8a2037;
+    margin: 0px;
+  }
+
+  li{
+    width:105%;
+  }
+
+  .redes-sociales{
+    width:100%;
+  }
+  .redes{
+    text-align: center;
+    width: 100%;
+  }
+
+  textarea.form-control {
+    height: 90px;
+  }
+}
+
+@media (max-width:1100px){
+
+  .img-responsive{
+    display: inline-block;
+  }
+
+  body{
+    width:100%;
+    margin-left: 0%;
+  }
+
+  .logo-principal{
+    width:110px;
+  }
+
+  .redes{
+    padding-top: 0px;
+  }
+
+  #concierto1{
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    transform: rotate(0deg);
+  }
+
+  .glyphicon{
+    left:20px !important;
+  }
+}
