@@ -1,0 +1,189 @@
+Unidad 2: Fundamentos de programación en JavaScript
+¡Aquí comienza la Unidad 2: Fundamentos de programación en JavaScript!
+
+    Los objetivos del Programa que corresponden a esta Unidad son:
+        Aplicar interactividad a un sitio web a partir de JavaScript.
+        Utilizar frameworks y librerías de JavaScript apropiadamente.
+        Utilizar las estructuras de programación necesarias para gestionar sitios web dinámicos.
+
+    Los objetivos del Curso 4 que corresponden a esta Unidad son:
+        Entender qué es javascript y cómo funciona.
+        Aprender los fundamentos básicos de programación.
+
+1. Leccion 1: Intro a la progra con JS
+	Algoritmo - Nos ayudan a simplicar procesos.
+	Preciso
+	Definido
+	Ser finito
+	Entrada, proceso y salida
+	
+	Variables, declaracion, asignacion
+	Variable contenedor, de tipo numerico o texto.
+	Debilmente Tipado - Se puede definar un valor a una varialble primero numerico y luego de texto
+	Tipado dinamico
+	Declaracion de variable: Ej: var nombre;
+	Por defecto el valor de todas las variables es undefined en caso de que no se asigne ningun valor.
+
+	Tipos de datos
+	Numeros (enteros o decimales), Booleanos, Cadena de caracteres, vectores y objetos
+	Indice es la posicion de un valor en un vector esta comienza desde 0.
+	Vector Ejemplo: var vector=[0,2312,3233,21,233,44]
+		vector[4]=21
+
+2. Leccion 2: Variables y Metodos:
+	math y numeros
+	infinity (numero infinito) y NaN (not a number)
+	suma concatenacion de caracteres
+	
+	Objeto Math. Ej: Math.E, Math.PI, etc, operaciones, abs(), acos(x),etc
+
+	parseFloat
+
+	Fechas,formatos y metodos
+	Como una cadena de caracteres o como numeros
+	date
+	new Date();
+	new Date(1000);
+	new Date("Formato en texto");
+	new Date(YY,MM,DD,hh,mm,ss,ms);
+	
+	setFullYear para obtener el valor del anho
+	mes numero entre 0 y 11
+	dia numero entre 1 y 31
+	hora entre 0 y 23
+	min y seg entre 0 y 59
+	milisegundos entre 0 y 99
+	
+	getTime
+	getDate
+	getDay
+
+	Arreglos y vectores
+	Ej: var fila1=["Carlos",45,65]
+		var fila2=["Roi",50,35]
+		var fila3=["Luis",34,78]
+		var array = [fila1,fila2,fila3]
+		array[1][3] esigual a 35
+
+	Objetos
+	Estructura de datos que agrupa propiedades variables y metodos
+
+	Conversion de datos
+	Cadenas de caracteres, numeros, booleanos, funciones, objetos
+	atributos y metodos, fecha, vector
+	null, es considerado como un objeto, variable no inicializada
+	undefined, propiedad del objeto global cuando no se le asigna ningun valor
+	typeof identificar el tipo de variable
+	.toString(); para convertir un numero como string
+	.toExponential(digitos,decimales) 
+	.toFixed(numero_digitos), numero de digitos decimales
+	.toPrecision(numero_digitos)
+	String()
+	string(unaFecha)
+	unaFecha.toString();
+	date.GetFullYear()
+	var fecha_actual= Date.now()
+
+3. Leccion 3: Programacion Estructurada
+	Operadores Aritmeticos:
+	Suma, REsta, Division y Multiplicacion
+	% Modulo
+	Incremente ++
+	Decremente --
+	Unario -X (unary)
+	
+	Operadors logicos
+	AND &&
+	OR ||
+	NOT !
+
+	OR
+	True True True
+	False True True
+	True False True
+	False False False
+
+	Operaciones de Comparacion
+	== IGual a
+	=== Igual valor e igual tipo
+	!== Diferente
+	!=== Diferente Valory diferente tipo
+	> Mayor que
+	< Menor que
+	>= Mayor igual que
+	<= Menor o igual que
+
+	Estructuras Secuenciales: Asignacion, entrada y salida
+	Condicionales: Simples, Dobles y multiples
+	Ciclicas: Para, mientras que, Repitahasta
+
+	Secuenciales
+	Ingreso de Variables
+	Proceso
+	Mostrar a usuario
+	
+	Condicionales
+	Simple 1 validacion, if - else
+	Dobles Condicionales anidados
+	switch(expersion){
+	case n1:
+		Procedimiento1();
+		break;
+	case n2:
+		Procedimiento2();
+		break;
+	...
+	default:
+		ProcedimientoX();
+		break;
+	}
+
+
+	Ciclos
+	Repetitivas
+	Iteracion - cada repeticion
+	i para contar las iteraciones
+	Ciclos - indeterminados, do-while, while
+		determinados, for y for-in
+		sentencias, break, continue
+
+4. Leccion 4: Programacion Funcional
+	
+	Funciones, invocacion, parametros y respuesta
+	Function Nombre_funcion () {
+	// Bloque te codigo
+	}
+	Invocacion:  NombreFuncion()
+	Puede recibir parametros o argumentos
+	Retornar un valor, return
+
+	Tipos de funcion
+	- Callbacks
+	- Closures
+	- Anonimas
+	- Autoejecutables
+
+	Funcion Anonima
+	Funciones asincronas, setInterval(function(){})
+	Ejemplo:
+	setInterval(function (){console.log("Mensaje Repetitivo");},2000)
+	setTimeout(function (){console.log("Mensaje luego de una espera");},2000)
+	Callback, es una funcion que envia como parametro otra funcion con el fin de controlar el tiempo de ejecucion
+	Autoejecutable: sintaxis
+		(function(){
+			// Codigo de la funcion
+		})() --> Ejecucion
+	Contexto --> this
+
+	Callbacks, closures
+	Closures - funciones internas - Patrones de Codigo (Patron modulo)
+	Callbacks - las funciones son asincronas, es decir no tenemos el control total sobre el tiempo de ejecucion.
+	Funciones en JS son de primer nivel, llamada de vuelta cuando algo termino
+	Parametros de entrada es una funcion de otra funcion
+
+	Scope de las variables
+	Ambito o alcance - Global y local- dentro de una funcion
+	si no se asigna var a una variable de una funcion esta trabaja como una variable global
+	Hoisting (Elevacion) - no importa el lugar donde haya definido la funcion
+	
+	

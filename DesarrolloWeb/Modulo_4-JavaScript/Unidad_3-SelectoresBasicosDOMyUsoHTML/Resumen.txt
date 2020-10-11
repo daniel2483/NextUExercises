@@ -1,0 +1,186 @@
+Unidad 3: Selectores básicos del DOM y su uso en HTML
+¡Aquí comienza la Unidad 3: Selectores básicos del DOM y su uso en HTML!
+
+    Los objetivos del Programa que corresponden a esta Unidad son:
+        Aplicar interactividad a un sitio web a partir de JavaScript.
+        Utilizar frameworks y librerías de JavaScript apropiadamente.
+        Utilizar las estructuras de programación necesarias para gestionar sitios web dinámicos.
+
+    Los objetivos del Curso 4 que corresponden a esta Unidad son:
+        Entender qué es javascript y cómo funciona
+        Conocer y emplear los selectores básicos de javascript
+
+Leccion 1: Selectores
+	getElementsById
+	Interacciones con el DOM
+	document.getElementById('id')
+	Para obtener el valor de un input:
+	document.getElementById('id').value
+	
+	getElementsByClassName
+	document.getElementsByClassName('nombre_clase')
+	var tarjetas_amarillas=document.getElementsByClassName('card-panel yellow')
+	tarjetas_amarillas[0].getElementByClassName("texto_tarjeta")[0].innerHTML="NUEVO TEXTO"
+
+	getElementsByName
+	document.getElementsByName('valor_name'), varios elementos pueden tener el mismo name
+	Ejemplo de como ver los valores en del DOM por name
+	resultados = document.getElementsByName("nombre")
+	resultados[0].value
+	resultados[1].value
+	...
+
+	getElementsByTagName
+	document.getElementsByTagName('nombre_tag')
+
+	Para modificar una clase
+	var variable_name = document.getElementsBy...('nombre')
+	variable_name[i].className="Nuevo_nombre_clase"
+
+	for(i=0;i<iconos.length;i++)
+	{
+		iconos[i].className="large material-icons"
+	}
+
+	querySelector y querySelectorAll
+	document.querySelector("seleccion")
+	querySelector toma el primer valor que contenga lo indicado en seleccion
+	Ej:
+	document.querySelector(".card-image")
+	
+	document.querySelectorAll("seleccion")
+	Toma todos los valores que contenga lo indicado en seleccion
+	Ejemplo:
+	imagenes = document.querySelectorAll(".card-image")
+	for(i=0;i<imagenes.length;i++){imagenes[i].style.width = "100px"}
+
+
+t
+
+document.getElementById('lista_musica').getElementsByTagName('option');
+
+
+Leccion 2 - Modificacion de estilos con JavaScript
+	- Modificacion estilos del modelo caja
+		document.getElementsbyClassName("class_name")[0].style.border = "3px solid red"
+		document.getElementsbyClassName("class_name")[0].style.padding = "20px"
+	- Modificar el flujo y posicionamiento de cajas
+		var tarjetas = document.getElementsByClassName("card")
+		tarjetas[0].style.order = "4"
+		tarjetas[3].style.order = "1"
+		document.getElementById('contenedor_tarjetas').style.flexFlow = 'row-reverse nowrap'
+		document.getElementById('contenedor_tarjetas').style.flexFlow = 'column nowrap'
+	- Modificar las propiedades de texto
+		var titulos = document.getElementsByClassName("card-title")
+		titulos[0].style.textTransform = "uppercase"
+		titulos[1].style.textTransform = "lowercase"
+		titulos[2].style.textTransform = "capitalize"
+		var parrafos = document.getElementsByTagName("p")
+		parrafos[0].style.fontFamily = "cursive"
+		parrafos[1].style.fontFamily = "fantasy"
+		parrafos[2].style.fontFamily = "monospace"
+	- Modificar propiedades de color y fondos
+		document.getElementsByClassName("encabezado")[0].style.background = "url('img/logoNextU.png') no-repeat left top"
+		document.getElementsByClassName("encabezado")[0].style.backgroundSize = "250px"
+		document.getElementsByClassName('promoNextU')[0].style.background = "#33cccc";
+		document.getElementsByClassName('promoNextU')[0].style.color = "000";
+		document.getElementsByClassName('promoNextU')[0].style.color = "#000";
+		document.getElementsByClassName('promoNextU')[0].style.borderRadius = "20px"
+		document.getElementsByClassName('promoNextU')[0].style.boxShadow = "2px 3px 5px rgba(0,0,0,0.3)"
+		document.getElementsByTagName('footer')[0].style.background = "url('img/papel_doblado.jpg') repeat right"
+		document.getElementsByTagName('footer')[0].style.backgroundSize = "100px"
+		var listaMenu = document.getElementsByTagName("nav")[0].getElementsByTagName("li")
+		for (i=0; i<listaMenu.length; i++)
+		{
+  			listaMenu[i].style.borderRadius = "10px";
+		}
+		var hojasEstilos = document.createElement("style");
+		hojasEstilos.innerHTML = "nav ul li{border-radius: 10px}"
+		document.head.appendChild(hojasEstilos)
+
+		document.querySelectorAll("[class^='item-'] *") para seleccionar los hijos de una clase item
+		elementoPadre.children[i2]			para seleccionar los hijos de un elemento padre
+
+Leccion 3 - Modificacion de estados con JavaScript
+	- Radio buttons y Checkboxes
+		document.getElementById("activar_rb").checked="true";
+		document.getElementById("activar_rb").disabled="true";
+	- Selects
+		Compuestos de elementos options
+		document.getElementById("sel_animales").disbaled =true --> Para deshabilitar un select normal, no funciona en materialed CSS
+		$(document).ready(function(){$('select'.material_select);}) --> Renderiza la pagina en Materialized CSS, es necesario para mostrar los cambios
+		$(document).ready(function(){
+			$('select').material_select();
+		});
+		document.getElementById('sel_postres').querySelector("option[value='helado']").selected=true
+	- InnerHTML y appends
+		innerHTML --> Sirve para acceder al contenido de un objeto DOM y modificarlo con uno nuevo
+		Ej:document.getElementsByTagName("h5")[1].innerHTML ="Selecciona tu animal favorito y tus postres preferidos"
+		appendChild --> Se utiliza cuando se quiere agregar un nuevo contenido sin eliminar nada anterior como por ejemplo un parrafo
+		document.getElementById('lista_animales').className = "input-field col s4";
+		document.getElementById('lista_postres').className = "input-field col s4";
+		
+		// Ejemplo de creacion de un nuevo select - option
+		
+		var cont_lista_nueva = document.createElement('div')
+		cont_lista_nueva.id = "lista_musica"
+		cont_lista_nueva.className="input-field col s4"
+		document.getElementById("contenedor_listas").appendChild(cont_lista_nueva);
+		var lista_musica=document.createElement("select");
+		lista_musica.id="sel_musica";
+		lista_musica.className="icons";
+		var dist_opt=document.createElement("option")
+		dist_opt.value="";
+		dist_opt.disabled ="true";
+		dist_opt.selected = "true";
+		dist_opt.innerHTML="Selecciona tu instrumento favorito";
+		var opt_trompeta = document.createElement("option");
+		opt_trompeta.value="trompeta";
+		opt_trompeta.dataset.icon="img/trompeta.png";
+		opt_trompeta.className="left circle";
+		opt_trompeta.innerHTML="trompeta";
+		var opt_clarinete = document.createElement("option");
+		opt_clarinete.value="clarinete";
+		opt_clarinete.dataset.icon="img/clarinete.png";
+		opt_clarinete.className="left circle";
+		opt_clarinete.innerHTML="clarinete";
+		var opt_piano = document.createElement("option");
+		opt_piano.value="piano";
+		opt_piano.dataset.icon="img/piano.png";
+		opt_piano.className="left circle";
+		opt_piano.innerHTML="piano";
+		var opt_violin = document.createElement("option");
+		opt_violin.value="violin";
+		opt_violin.dataset.icon="img/violin.png";
+		opt_violin.className="left circle";
+		opt_violin.innerHTML="violin";
+		lista_musica.appendChild(dist_opt);
+		lista_musica.appendChild(opt_trompeta);
+		lista_musica.appendChild(opt_clarinete);
+		lista_musica.appendChild(opt_piano);
+		lista_musica.appendChild(opt_violin);
+		cont_lista_nueva.appendChild(lista_musica);
+		var musicaLabel = document.createElement("label");
+		musicaLabel.innerHTML="Instrumentos Musicales";
+		cont_lista_nueva.appendChild(musicaLabel);
+		$(document).ready(function(){
+			$('select').material_select();
+		});
+
+Leccion 4 - Eventos
+	- Eventos del teclado
+		functions Listeners
+		keypress
+		keydown
+		keyup
+	- Eventos del mouse
+		onclick
+		ondblclick
+		onmouseover
+		onmouseout
+	- Otros eventos comunes
+		onchange - Cuando cambia alguno de sus atributos
+		onload - Cuando termina de cargar un objeto DOM
+		onfocus - Elemento enfocado normalmente input select y a
+		onblur - Elemento pierde el foco
+		Validacion de formularios

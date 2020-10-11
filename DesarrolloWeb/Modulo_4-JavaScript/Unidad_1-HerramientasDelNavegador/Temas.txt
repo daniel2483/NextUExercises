@@ -1,0 +1,24 @@
+UNIDAD 1: Herramientas del navegador
+
+    1. UNIDAD 1: Introducción
+    2. Lección 1: Qué es JavaScript
+        2.1. Definición JavaScript
+        2.2. Historia de JavaScript
+        2.3. Sintaxis y Semántica
+        2.4. ECMAScript, Historia, y su actualidad
+        2.5. Actividad 1
+        2.6. Actividad 2
+    3. Lección 2: Etiqueta y uso de JavaScript
+        3.1. Como se usa la etiqueta
+        3.2. Archivos .js
+        3.3. Características Principales
+        3.4. Actividad 1
+    4. Lección 3: Consolas y herramientas de depuración de código de los navegadores
+        4.1. Navegadores para desarrollo
+        4.2. Consolas y depuración del código
+        4.3. Control de errores y debug
+        4.4. Actividad 1
+        4.5. Actividad 2
+        4.6. Actividad 3
+        4.7. Ejercicio de codificación
+    5. UNIDAD 1: Prueba

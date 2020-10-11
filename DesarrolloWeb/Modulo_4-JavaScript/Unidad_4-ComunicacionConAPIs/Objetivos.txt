@@ -1,0 +1,12 @@
+Unidad 4: HTML APIs, JSON
+¡Aquí comienza la Unidad 4: HTML APIs, JSON!
+
+    Los objetivos del Programa que corresponden a esta Unidad son:
+        Aplicar interactividad a un sitio web a partir de JavaScript.
+        Utilizar frameworks y librerías de JavaScript apropiadamente.
+        Utilizar las estructuras de programación necesarias para gestionar sitios web dinámicos.
+
+    Los objetivos del Curso 4 que corresponden a esta Unidad son:
+        Entender qué es javascript y cómo funciona.
+        Aprender a usar el formato JSON y las API's de HTML5 para agregar mayor interactividad a un sitio web.
+

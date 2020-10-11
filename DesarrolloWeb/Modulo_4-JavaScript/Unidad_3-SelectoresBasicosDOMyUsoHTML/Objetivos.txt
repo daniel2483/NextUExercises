@@ -1,0 +1,14 @@
+
+
+Unidad 3: Selectores básicos del DOM y su uso en HTML
+¡Aquí comienza la Unidad 3: Selectores básicos del DOM y su uso en HTML!
+
+    Los objetivos del Programa que corresponden a esta Unidad son:
+        Aplicar interactividad a un sitio web a partir de JavaScript.
+        Utilizar frameworks y librerías de JavaScript apropiadamente.
+        Utilizar las estructuras de programación necesarias para gestionar sitios web dinámicos.
+
+    Los objetivos del Curso 4 que corresponden a esta Unidad son:
+        Entender qué es javascript y cómo funciona
+        Conocer y emplear los selectores básicos de javascript
+

@@ -1,0 +1,7 @@
+Objetivos:
+
+    Entender qué es JavaScript y cómo funciona.
+    Aprender los fundamentos básicos de programación.
+    Conocer y emplear los selectores básicos JavaScript.
+    Depurar código JavaScript con el navegador.
+    Aprender a usar el formato JSON y las APIs de HTML5 para agregar mayor interactividad.

@@ -1,0 +1,97 @@
+Unidad 1: Herramientas del navegador, tiempo de ejecución, .js y etiqueta script
+¡Aquí comienza la Unidad 1: Herramientas del navegador, tiempo de ejecución, .js y etiqueta script!
+
+    Los objetivos del Programa que corresponden a esta Unidad son:
+        Aplicar interactividad a un sitio web a partir de JavaScript.
+        Utilizar frameworks y librerías de JavaScript apropiadamente.
+        Utilizar las estructuras de programación necesarias para gestionar sitios web dinámicos.
+
+    Los objetivos del Curso 4 que corresponden a esta Unidad son:
+        Entender qué es JavaScript y cómo funciona.
+        Depurar código JavaScript con el navegador.
+
+
+1- Leccion 1: Javascript
+	JavaScript es un lenguaje de programación creado por Netscape que nos permite crear paginas web interactivas, es decir, páginas dinámicas en las que los 
+	usuarios pueden participar y aportar. Este es un lenguaje interpretado que no necesita de un servidor para analizar todo el código escrito pues está 
+	presente en todos los navegadores y son estos los encargados de interpretar los scripts (códigos). Básicamente, JavaScript nos permite crear eventos 
+	en una página web y responder a estos.
+	JavaScript se define como un lenguaje de programación orientado a objetos, imperativo, debilmente tipado e interpretado.
+	
+	- Historia
+	JavaScript fue creado por Brenda Eich de Netscape quien inicialmente lo llamo´ ‘Mocha’, ma´s tarde recibio´ el nombre de LiveScript para finalmente consolidarse como JavaScript.
+	En 1997 los autores propusieron a JavaScript para que fuera considerado como un esta´ndar ante la European Computer Manufacturers Association (ECMA) y poco despue´s un estandar ISO.
+
+	- Sintaxis y semantica
+	El navegador // navigator
+	El DOM document
+	La ventana del navegador // window
+	
+	Con esto podemos controlar los eventos Estados
+
+	Objetos: document, navigator, widnow
+
+	etiqueta <script> o archivo .js
+	Funcion en JS:
+
+	function Alertar(){
+	}
+
+	Las funciones son para reutilizar varias veces. o reutilizable
+
+	- ECMAScript, Historia y su actualidad
+	ECMAScript esta´ basado en JavaScript (esta´ndar propuesto por la compania Netscape). Podemos ver un poco mas de informacion en su sitio oficial:
+	http://www.ecma-international.org/publications/standards/Ecma-262.htm
+	
+	A lo largo de la historia se han publicado seis versiones oficiales, pero aun existe un alto grado de incompatibilidad entre los navegadores y 
+	la version ECMAScript 6 (o ECMAScript 2015 porque fue liberada en junio de ese an~o). Debido a esto, la version 5 es la mas utilizada en la actualidad 
+	por ser precisamente la ma´s compatible.
+
+	La version 6 publico cambios considerables en cuanto al lenguaje: se tomaron muchas de las mejores caracteristicas de otros lenguajes y se implementaron, 
+	introduciendo conceptos como constantes, clases y mo´dulos. ECMAScript en la actualidad
+
+	Actualmente se encuentra en etapa de desarrollo la versio´n 7 y sigue orientada a reformar el lenguaje y aplicar mejoras en la parte matematica y de datos numericos.
+
+2. Leccion 2: Etiqueta y uso de script
+	entre la etiqueta <stcript type="text/javascript">
+	a etiqueta <script> debe agregarse dentro del body de nuestra pa´gina, pero otra de las buenas pra´cticas recomendadas es agregarlo antes de la etiqueta de cierre </body>.
+	Esto es debido a que con el lenguaje JavaScript se manipulan los elementos del DOM, y si agregamos el co´digo antes de que el motor de render cree nuestros elementos, 
+	JavaScript no encontrara´ los objetos que queremos manipular y por lo tanto se generara´ un error.Esta forma de incluir co´digo JavaScript dentro del HTML solo es recomendada 
+	cuando vamos a realizar pequen~as acciones o el co´digo no es muy extenso, ya que si incluimos todo el co´digo junto con el HTML esto dari´a como resultado un documento dificil 
+	de comprender, dificil de mantener y muy poco escalable a futuro, esto quiere decir que sera´ muy dificil que en un futuro el proyecto pueda crecer sin tener complicaciones. 
+
+	Javascript externo
+	<script src="NombreArchivo.js"> </script>
+
+	Caracteristicas Principales
+	JavaScript es un lenguaje sensible a las minusculas y mayusculas
+	Comentarios de línea ( // )
+	Comentarios de bloque ( /* ….. */ )
+	La mayoría de lenguajes de programación utilizan el simbolo de punto y coma para finalizar cada instrucción o línea de código, en JavaScript esto no es obligatorio ; 
+	al ser un lenguaje tan dinámico esta es una de sus características importantes, la única situación en donde es necesario el punto y coma es cuando queremos ponervarias 
+	expresiones en la misma línea
+
+3. Leccion 3: Consolas y herramientas de depuracion de codigo de los navegadores
+	Depuracion, Test y Rendimiento
+	Firefoz Developer Edition. 
+	Chrome Canary, nuevas caracteristicas de Javascript y poco estable y en versiones de pruebas.
+	
+	Consola y depuracion
+	console.log();
+	Se define una funtion en un .js
+	Cuando se abre la consola
+	NombreDeLaFuncion nos devolvera la definicion de la funcion
+	NombreDeLaFuncion() nos devolvera el resultado de la funcion
+	NombreDeUnaVariable nos devolvera el valor de esa variable
+
+	Debugger - Se puede observar el codigo Javascript generado.
+	
+	Control de errores y debug
+	function (parametro1,parametro2,...)
+	Break point, punto de debug o debugger, hacemos click en la linea de JS en la ventana de debugger y recargamos el navegador ahi se correra hasta ese punto
+	
+	
+	
+	
+	
+	

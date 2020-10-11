@@ -1,0 +1,54 @@
+{
+  "usuarios": [
+    {
+      "identificacion": "3213123",
+      "nombre": "Juan Camilo",
+      "apellido": "Gonzalez",
+      "edad": 13,
+      "email": "juan.c@nextu.com",
+      "teléfono": "3163057",
+      "dirección": "Avenida 14 #12",
+      "estado": "activo"
+    },
+    {
+      "identificacion": "43343234",
+      "nombre": "Jason",
+      "apellido": "Roberts",
+      "edad": 24,
+      "email": "jason@nextu.com",
+      "teléfono": "324324",
+      "dirección": "Calle5 #37-36",
+      "estado": "activo"
+    },
+    {
+      "identificacion": "555543",
+      "nombre": "Edward",
+      "apellido": "Muller",
+      "edad": 19,
+      "email": "emuller@nextu.com",
+      "teléfono": "454667",
+      "dirección": "Calle 48 Piso 6",
+      "estado": "activo"
+    },
+    {
+      "identificacion": "988989",
+      "nombre": "Mateo",
+      "apellido": "Daniels",
+      "edad": 22,
+      "email": "mdaniels@nextu.com",
+      "teléfono": "06454586",
+      "dirección": "Avenida Los Pinos Calle #13",
+      "estado": "activo"
+    },
+    {
+      "identificacion": "90485758",
+      "nombre": "Guillermo",
+      "apellido": "Williams",
+      "edad": 30,
+      "email": "guillermo@nextu.com",
+      "teléfono": "9080900",
+      "dirección": "Avenida 50 Calle #18",
+      "estado": "activo"
+    }
+  ]
+}
