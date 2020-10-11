@@ -1,124 +1,0 @@
-Building SQL queries for 
-Querying Availability and Capacity data for 30DAYS
-Query Date: 2020-09-07 00:00:00 - 2020-10-07 00:00:00
-Ingest Query Date: 20200907000000 - 20201007000000
-Executing SQL queries on AWS...
-Running  /usr/local/bin/aws athena start-query-execution --query-string "SELECT ci_alias_nm,
-         ci_id,
-         data_domain_nm,
-         client_id,
-         client_alias_nm,
-         date_trunc('day',interval_utc_ts),
-         ci_alias_type,
-         metricset_nm,         
-         natv_mtrc_cd,
-         avg(natv_mtrc_valu),
-         metric_sample_ct,
-         metricset_module,
-         src_clnt_cd,
-         src_sys_nm         
-FROM ana_avcap_metricbeat_data1.ci_metric
-WHERE ingest_dt >= '20200907000000' AND ingest_dt < '20201007000000'
-AND interval_utc_ts >= date_parse('2020-09-07 00:00:00', '%Y-%m-%d %H:%i:%s') AND interval_utc_ts < date_parse('2020-10-07 00:00:00', '%Y-%m-%d %H:%i:%s')
-GROUP BY ci_alias_nm,
-         ci_id,
-         data_domain_nm,
-         client_id,
-         client_alias_nm,
-         date_trunc('day',interval_utc_ts),
-         ci_alias_type,
-         metricset_nm,         
-         natv_mtrc_cd,         
-         metric_sample_ct,
-         metricset_module,
-         src_clnt_cd,
-         src_sys_nm" --result-configuration "OutputLocation=s3://aws-athena-query-results-828418741574-eu-west-1/OCD2/" --region eu-west-1 --profile ana-oc-data-access-gblprod
-
-Query Execution ID: 72f9daae-dbc6-4617-8d54-e6b073508501
-
-Running  /usr/local/bin/aws athena start-query-execution --query-string "SELECT ci_alias_nm,
-         ci_id,
-         data_domain_nm,
-         client_id,
-         client_alias_nm,
-         date_trunc('day',interval_utc_ts),
-         ci_alias_type,
-         metricset_nm,
-         resource_type,
-         resource_nm,         
-         natv_mtrc_cd,
-         avg(natv_mtrc_valu),
-         metric_sample_ct,
-         metricset_module,
-         src_clnt_cd,
-         src_sys_nm         
-FROM ana_avcap_metricbeat_data1.ci_resource_metric
-WHERE ingest_dt >= '20200907000000' AND ingest_dt < '20201007000000'
-AND interval_utc_ts >= date_parse('2020-09-07 00:00:00', '%Y-%m-%d %H:%i:%s') AND interval_utc_ts < date_parse('2020-10-07 00:00:00', '%Y-%m-%d %H:%i:%s')
-GROUP BY ci_alias_nm,
-         ci_id,
-         data_domain_nm,
-         client_id,
-         client_alias_nm,
-         date_trunc('day',interval_utc_ts),
-         ci_alias_type,
-         metricset_nm,
-         resource_type,
-         resource_nm,         
-         natv_mtrc_cd,         
-         metric_sample_ct,
-         metricset_module,
-         src_clnt_cd,
-         src_sys_nm " --result-configuration "OutputLocation=s3://aws-athena-query-results-828418741574-eu-west-1/OCD2/" --region eu-west-1 --profile ana-oc-data-access-gblprod
-
-Query Execution ID: 56b76150-41be-47df-9121-1eae8e42fc15
-
-Running  /usr/local/bin/aws athena start-query-execution --query-string "SELECT ci_alias_nm,
-         ci_id,
-         data_domain_nm,
-         client_id,
-         client_alias_nm,
-         interval_utc_ts,
-         ci_alias_type,
-         metricset_nm,
-         request_time,
-         natv_mtrc_cd,
-         natv_mtrc_valu,
-         metric_sample_ct,
-         metricset_module,
-         src_clnt_cd,
-         src_sys_nm         
-FROM ana_avcap_metricbeat_data1.ci_status_metric
-WHERE ingest_dt >= '20200907000000' AND ingest_dt < '20201007000000'
-AND interval_utc_ts >= date_parse('2020-09-07 00:00:00', '%Y-%m-%d %H:%i:%s') AND interval_utc_ts < date_parse('2020-10-07 00:00:00', '%Y-%m-%d %H:%i:%s')
-AND ci_alias_nm in (select ci_alias_nm from (SELECT 
-											ci_alias_nm,         
-										  MAX(natv_mtrc_valu) AS maxvalu, 
-										  MIN(natv_mtrc_valu) AS minvalu   
-									FROM ana_avcap_metricbeat_data1.ci_status_metric
-									WHERE ingest_dt >= '20200907000000' AND ingest_dt < '20201007000000'
-									AND interval_utc_ts >= date_parse('2020-09-07 00:00:00', '%Y-%m-%d %H:%i:%s') AND interval_utc_ts < date_parse('2020-10-07 00:00:00', '%Y-%m-%d %H:%i:%s')
-									group by ci_alias_nm
-									)               
-WHERE ( maxvalu - minvalu) > ((cast(to_unixtime(CAST('2020-09-07 00:00:00' AS timestamp))AS BIGINT)-cast(to_unixtime(CAST('2020-10-07 00:00:00' AS timestamp))AS BIGINT))*1000)
-)" --result-configuration "OutputLocation=s3://aws-athena-query-results-828418741574-eu-west-1/OCD2/" --region eu-west-1 --profile ana-oc-data-access-gblprod
-
-Query Execution ID: aff07209-2874-4395-8625-6db89c69693c
-
-Waiting 60 seconds for AWS queries to move to s3 storage.
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960
-
-Downloading result data from S3 Storage...
-
-Running /usr/local/bin/aws athena get-query-execution --query-execution-id 72f9daae-dbc6-4617-8d54-e6b073508501 --region eu-west-1 --profile ana-oc-data-access-gblprod
-Athena query 72f9daae-dbc6-4617-8d54-e6b073508501 status RUNNING
-
-Waiting 60 seconds for AWS queries to complete and move data to s3 bucket.
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960
-Attempt 2. Querying Athena for status
-
-Running /usr/local/bin/aws athena get-query-execution --query-execution-id 72f9daae-dbc6-4617-8d54-e6b073508501 --region eu-west-1 --profile ana-oc-data-access-gblprod
-Athena query 72f9daae-dbc6-4617-8d54-e6b073508501 status RUNNING
-
-Waiting 60 seconds for AWS queries to complete and move data to s3 bucket.
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849
