@@ -1,0 +1,22 @@
+<?xml version="1.0" enconding="ISO-8859-1"?>
+<factura id="200" fecha="2019-07-08">
+	<cliente>
+		<nombre>Daniel Rodriguez</nombre>
+		<telefono>83384120</telefono>
+	</cliente>
+	<articulos>
+		<articulo id="1">
+			<descripcion>mocasines brasilenos</descripcion>
+			<precio-unitario>$30</precio-unitario>
+			<precio-final>$35</precio-final>
+			<cantidad>1</cantidad>
+		</articulo>
+		<articulo id="15">
+			<descripcion>sandalias</descripcion>
+			<precio-unitario>$5</precio-unitario>
+			<precio-final>$7.5</precio-final>
+			<cantidad>1</cantidad>
+		</articulo>
+	<articulos>
+	<precio-total>$42.5</precio-total>
+</factura>

@@ -1,0 +1,17 @@
+<?xml version="1.0" enconding="ISO-8859-1"?>
+<empleados>
+	<persona>
+		<nombre>Daniel</nombre>
+		<apellido1>Rodriguez</apellido1>
+		<apellido2>Sanchez</apellido2>
+		<edad>36</edad>
+		<email>jdrs2483@gmail.com</email>
+	</persona>
+	<persona>
+		<nombre>Sergio</nombre>
+		<apellido1>Murillo</apellido1>
+		<apellido2>Salas</apellido2>
+		<edad>38</edad>
+		<email>prosergi@gmail.com</email>
+	</persona>
+</empleados>
