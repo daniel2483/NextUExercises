@@ -1,0 +1,392 @@
+golf_db=# \d
+               List of relations
+ Schema |       Name        | Type  |  Owner
+--------+-------------------+-------+----------
+ public | campos            | table | postgres
+ public | ciudades          | table | postgres
+ public | hoyos             | table | postgres
+ public | jugadores         | table | postgres
+ public | paises            | table | postgres
+ public | posiciones_torneo | table | postgres
+ public | tarjetas_torneo   | table | postgres
+ public | torneos           | table | postgres
+(8 rows)
+
+
+golf_db=# \d paises
+                      Table "public.paises"
+ Column |         Type          | Collation | Nullable | Default
+--------+-----------------------+-----------+----------+---------
+ id     | integer               |           | not null |
+ nombre | character varying(45) |           | not null |
+Indexes:
+    "paises_pkey" PRIMARY KEY, btree (id)
+Referenced by:
+    TABLE "ciudades" CONSTRAINT "ciudad_pais" FOREIGN KEY (fk_pais) REFERENCES paises(id)
+
+
+golf_db=# insert into paises (id,nombre) values (1,'Francia')
+golf_db-# insert into paises (id,nombre) values (1,'España')
+golf_db-# insert into paises (id,nombre) values (1,'Francia')
+golf_db-# insert into paises (id,nombre) values (2,'España')
+golf_db-# insert into paises (id,nombre) values (3,'Portugal')
+golf_db-#
+golf_db-# select * from paises;
+ERROR:  syntax error at or near "insert"
+LINE 2: insert into paises (id,nombre) values (1,'Espaa')
+        ^
+golf_db=# insert into paises (id,nombre) values (1,'Francia');
+INSERT 0 1
+golf_db=# insert into paises (id,nombre) values (2,'España');
+INSERT 0 1
+golf_db=# insert into paises (id,nombre) values (3,'Portugal');
+INSERT 0 1
+golf_db=# \d ciudades
+                      Table "public.ciudades"
+  Column  |         Type          | Collation | Nullable | Default
+----------+-----------------------+-----------+----------+---------
+ id       | integer               |           | not null |
+ nombre   | character varying(45) |           |          |
+ latitud  | character varying(60) |           |          |
+ longitud | character varying(60) |           |          |
+ fk_pais  | integer               |           |          |
+Indexes:
+    "ciudades_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "ciudad_pais" FOREIGN KEY (fk_pais) REFERENCES paises(id)
+Referenced by:
+    TABLE "campos" CONSTRAINT "campos" FOREIGN KEY (fk_ciudad) REFERENCES ciudades(id)
+    TABLE "jugadores" CONSTRAINT "ciudad_origen_ciudad" FOREIGN KEY (fk_ciudad_origen) REFERENCES ciudades(id)
+
+
+golf_db=# insert into ciudades (id,nombre,fk_pais) values (1,'París',1)
+golf_db-# ;
+INSERT 0 1
+golf_db=# insert into ciudades (id,nombre,fk_pais) values (2,'Marsella',1);
+INSERT 0 1
+golf_db=# insert into ciudades (id,nombre,fk_pais) values (3,'Madrid',2);
+INSERT 0 1
+golf_db=# insert into ciudades (id,nombre,fk_pais) values (4,'Barcelona',2);
+INSERT 0 1
+golf_db=# insert into ciudades (id,nombre,fk_pais) values (5,'Lisboa',3);
+INSERT 0 1
+golf_db=# insert into ciudades (id,nombre,fk_pais) values (6,'Oporto',3);
+INSERT 0 1
+golf_db=# select * from ciudades;
+ id |  nombre   | latitud | longitud | fk_pais
+----+-----------+---------+----------+---------
+  1 | París     |         |          |       1
+  2 | Marsella  |         |          |       1
+  3 | Madrid    |         |          |       2
+  4 | Barcelona |         |          |       2
+  5 | Lisboa    |         |          |       3
+  6 | Oporto    |         |          |       3
+(6 rows)
+
+
+golf_db=# \d campos
+                       Table "public.campos"
+  Column   |         Type          | Collation | Nullable | Default
+-----------+-----------------------+-----------+----------+---------
+ id        | integer               |           | not null |
+ nombre    | character varying(45) |           |          |
+ direccion | character varying(45) |           |          |
+ fk_ciudad | integer               |           |          |
+Indexes:
+    "campos_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "campos" FOREIGN KEY (fk_ciudad) REFERENCES ciudades(id)
+
+
+golf_db=# insert into campos (id,nombre,direccion,fk_ciudad) values (1,'Le Champ','Av4 87-21',1);
+INSERT 0 1
+golf_db=# insert into campos (id,nombre,direccion,fk_ciudad) values (2,'Petites','Av1 11-40',2);
+INSERT 0 1
+golf_db=# insert into campos (id,nombre,direccion,fk_ciudad) values (3,'Los Robles','Av7 22-11',3);
+INSERT 0 1
+golf_db=# insert into campos (id,nombre,direccion,fk_ciudad) values (4,'Antienes','Av2 25-25',4);
+INSERT 0 1
+golf_db=# insert into campos (id,nombre,direccion,fk_ciudad) values (5,'Ouro Preto','Av9 10-05',5);
+INSERT 0 1
+golf_db=# insert into campos (id,nombre,direccion,fk_ciudad) values (6,'Pedras Brancas','Av23 12-51',6);
+INSERT 0 1
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=# \d
+               List of relations
+ Schema |       Name        | Type  |  Owner
+--------+-------------------+-------+----------
+ public | campos            | table | postgres
+ public | ciudades          | table | postgres
+ public | hoyos             | table | postgres
+ public | jugadores         | table | postgres
+ public | paises            | table | postgres
+ public | posiciones_torneo | table | postgres
+ public | tarjetas_torneo   | table | postgres
+ public | torneos           | table | postgres
+(8 rows)
+
+
+golf_db=# \d  hoyos
+                        Table "public.hoyos"
+   Column   |         Type          | Collation | Nullable | Default
+------------+-----------------------+-----------+----------+---------
+ numero     | integer               |           | not null |
+ fk_campo   | integer               |           |          |
+ par        | integer               |           |          |
+ dificultad | character varying(45) |           |          |
+Indexes:
+    "hoyos_pkey" PRIMARY KEY, btree (numero)
+Referenced by:
+    TABLE "tarjetas_torneo" CONSTRAINT "torneo_nhoyo" FOREIGN KEY (fk_numero_hoyo) REFERENCES hoyos(numero)
+
+
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (1,1,2,baja);
+ERROR:  column "baja" does not exist
+LINE 1: ... hoyos (numero,fk_campo,par,dificultad) values (1,1,2,baja);
+                                                                 ^
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (1,1,2,'baja');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (2,1,3,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (3,1,3,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (4,1,5,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (5,1,5,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (6,1,4,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (7,1,3,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (8,1,3,'baja');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (9,1,3,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (10,1,3,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (11,1,5,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (12,1,4,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (13,1,3,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (14,1,5,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (15,1,3,'baja');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (16,1,4,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (17,1,4,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (18,1,4,'alta');
+INSERT 0 1
+golf_db=# select * from campos
+golf_db-# ;
+ id |     nombre     | direccion  | fk_ciudad
+----+----------------+------------+-----------
+  1 | Le Champ       | Av4 87-21  |         1
+  2 | Petites        | Av1 11-40  |         2
+  3 | Los Robles     | Av7 22-11  |         3
+  4 | Antienes       | Av2 25-25  |         4
+  5 | Ouro Preto     | Av9 10-05  |         5
+  6 | Pedras Brancas | Av23 12-51 |         6
+(6 rows)
+
+
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (1,3,4,'alta');
+ERROR:  duplicate key value violates unique constraint "hoyos_pkey"
+DETAIL:  Key (numero)=(1) already exists.
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (19,3,4,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (20,3,3,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (21,3,3,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (22,3,5,'baja');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (23,3,2,'baja');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (24,3,4,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (25,3,4,'media');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (26,3,5,'alta');
+INSERT 0 1
+golf_db=# insert into hoyos (numero,fk_campo,par,dificultad) values (27,3,2,'baja');
+INSERT 0 1
+golf_db=# \d jugadores
+                         Table "public.jugadores"
+      Column      |         Type          | Collation | Nullable | Default
+------------------+-----------------------+-----------+----------+---------
+ id               | integer               |           | not null |
+ nombre           | character varying(45) |           |          |
+ apellido         | character varying(45) |           |          |
+ fecha_nacimiento | date                  |           |          |
+ categoria        | character varying(45) |           |          |
+ fk_ciudad_origen | integer               |           |          |
+Indexes:
+    "jugadores_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "ciudad_origen_ciudad" FOREIGN KEY (fk_ciudad_origen) REFERENCES ciudades(id)
+Referenced by:
+    TABLE "posiciones_torneo" CONSTRAINT "posiciones_jugador" FOREIGN KEY (fk_jugador) REFERENCES jugadores(id)
+    TABLE "tarjetas_torneo" CONSTRAINT "toreno_jugador" FOREIGN KEY (fk_jugador) REFERENCES jugadores(id)
+
+
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (1,'Pedro','Abascal','Profesional',4)
+golf_db-# ;
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (2,'Andres','Bello','Profesional',5);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (3,'Antoin','Bello','Profesional',7);
+ERROR:  insert or update on table "jugadores" violates foreign key constraint "ciudad_origen_ciudad"
+DETAIL:  Key (fk_ciudad_origen)=(7) is not present in table "ciudades".
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (3,'Antoin','Bello','Profesional',6);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (4,'Jose Carlo','Bismal','Profesional',6);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (5,'Santiago','Alfaro','Profesional',5);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (5,'Danilo','Sanji','Semi-Profesional',4);
+ERROR:  duplicate key value violates unique constraint "jugadores_pkey"
+DETAIL:  Key (id)=(5) already exists.
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (6,'Danilo','Sanji','Semi-Profesional',4);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (7,'Daniel','Hernandez','Semi-Profesional',2);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (8,'David','Fernandez','Semi-Profesional',2);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (9,'Juan Felipe','Carmello','Amateur',3);
+INSERT 0 1
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (9,'Gabriel','Cardenas','Amateur',4);
+ERROR:  duplicate key value violates unique constraint "jugadores_pkey"
+DETAIL:  Key (id)=(9) already exists.
+golf_db=# insert into jugadores (id,nombre,apellido,categoria,fk_ciudad_origen) values (10,'Gabriel','Cardenas','Amateur',4);
+INSERT 0 1
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=# \d torneos
+                       Table "public.torneos"
+  Column   |         Type          | Collation | Nullable | Default
+-----------+-----------------------+-----------+----------+---------
+ id        | integer               |           | not null |
+ nombre    | character varying(45) |           |          |
+ fecha     | date                  |           |          |
+ premio    | double precision      |           |          |
+ categoria | character varying(45) |           |          |
+Indexes:
+    "torneos_pkey" PRIMARY KEY, btree (id)
+Referenced by:
+    TABLE "posiciones_torneo" CONSTRAINT "posiciones_torneo" FOREIGN KEY (fk_torneo) REFERENCES torneos(id)
+    TABLE "tarjetas_torneo" CONSTRAINT "torneo_tarjetas" FOREIGN KEY (fk_torneo) REFERENCES torneos(id)
+
+
+golf_db=# insert into torneos (id,nombre,fecha,premio,categoria) values (1,'Master de París','2016-04-12','400000','Semi-Profesional')
+golf_db-# ;
+INSERT 0 1
+golf_db=# insert into torneos (id,nombre,fecha,premio,categoria) values (2,'Abierto de Madrid','2016-08-30','800000','Profesional');
+INSERT 0 1
+golf_db=# select * from torneos
+golf_db-# ;
+ id |      nombre       |   fecha    | premio |    categoria
+----+-------------------+------------+--------+------------------
+  1 | Master de París   | 2016-04-12 | 400000 | Semi-Profesional
+  2 | Abierto de Madrid | 2016-08-30 | 800000 | Profesional
+(2 rows)
+
+
+golf_db=# \d
+               List of relations
+ Schema |       Name        | Type  |  Owner
+--------+-------------------+-------+----------
+ public | campos            | table | postgres
+ public | ciudades          | table | postgres
+ public | hoyos             | table | postgres
+ public | jugadores         | table | postgres
+ public | paises            | table | postgres
+ public | posiciones_torneo | table | postgres
+ public | tarjetas_torneo   | table | postgres
+ public | torneos           | table | postgres
+(8 rows)
+
+
+golf_db=# \d tarjetas_torneo
+              Table "public.tarjetas_torneo"
+     Column     |  Type   | Collation | Nullable | Default
+----------------+---------+-----------+----------+---------
+ fk_torneo      | integer |           |          |
+ fk_jugador     | integer |           |          |
+ fk_numero_hoyo | integer |           |          |
+ fk_campo       | integer |           |          |
+ numero_golpes  | integer |           |          |
+ puntuacion     | integer |           |          |
+Foreign-key constraints:
+    "toreno_jugador" FOREIGN KEY (fk_jugador) REFERENCES jugadores(id)
+    "torneo_nhoyo" FOREIGN KEY (fk_numero_hoyo) REFERENCES hoyos(numero)
+    "torneo_tarjetas" FOREIGN KEY (fk_torneo) REFERENCES torneos(id)
+
+
+golf_db=# select * from hoyos
+golf_db-# ;
+ numero | fk_campo | par | dificultad
+--------+----------+-----+------------
+      1 |        1 |   2 | baja
+      2 |        1 |   3 | media
+      3 |        1 |   3 | media
+      4 |        1 |   5 | media
+      5 |        1 |   5 | alta
+      6 |        1 |   4 | media
+      7 |        1 |   3 | media
+      8 |        1 |   3 | baja
+      9 |        1 |   3 | alta
+     10 |        1 |   3 | alta
+     11 |        1 |   5 | alta
+     12 |        1 |   4 | media
+     13 |        1 |   3 | media
+     14 |        1 |   5 | alta
+     15 |        1 |   3 | baja
+     16 |        1 |   4 | media
+     17 |        1 |   4 | media
+     18 |        1 |   4 | alta
+     19 |        3 |   4 | alta
+     20 |        3 |   3 | media
+     21 |        3 |   3 | media
+     22 |        3 |   5 | baja
+     23 |        3 |   2 | baja
+     24 |        3 |   4 | media
+     25 |        3 |   4 | media
+     26 |        3 |   5 | alta
+     27 |        3 |   2 | baja
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=# \d tarjetas_torneo
+              Table "public.tarjetas_torneo"
+     Column     |  Type   | Collation | Nullable | Default
+----------------+---------+-----------+----------+---------
+ fk_torneo      | integer |           |          |
+ fk_jugador     | integer |           |          |
+ fk_numero_hoyo | integer |           |          |
+ fk_campo       | integer |           |          |
+ numero_golpes  | integer |           |          |
+ puntuacion     | integer |           |          |
+Foreign-key constraints:
+    "toreno_jugador" FOREIGN KEY (fk_jugador) REFERENCES jugadores(id)
+    "torneo_nhoyo" FOREIGN KEY (fk_numero_hoyo) REFERENCES hoyos(numero)
+    "torneo_tarjetas" FOREIGN KEY (fk_torneo) REFERENCES torneos(id)
+
+
+golf_db=# insert into tarjetas_torneo (fk_torneo,fk_jugador,fk_numero_hoyo,fk_campo,numero_golpes,puntuacion) values (1,3,15,1,25,500)
+golf_db-# ;
+INSERT 0 1
+golf_db=# insert into tarjetas_torneo (fk_torneo,fk_jugador,fk_numero_hoyo,fk_campo,numero_golpes,puntuacion) values (1,7,14,1,35,300);
+INSERT 0 1
+golf_db=# insert into tarjetas_torneo (fk_torneo,fk_jugador,fk_numero_hoyo,fk_campo,numero_golpes,puntuacion) values (1,8,13,1,45,100);
+INSERT 0 1
+golf_db=#
