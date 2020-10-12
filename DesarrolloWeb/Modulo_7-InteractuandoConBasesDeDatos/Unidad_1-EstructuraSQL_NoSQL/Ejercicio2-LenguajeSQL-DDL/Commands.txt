@@ -1,0 +1,196 @@
+biblioteca_db=# create database golf.db
+biblioteca_db-# ;
+ERROR:  syntax error at or near "."
+LINE 1: create database golf.db
+                            ^
+biblioteca_db=# create database golf_db;
+CREATE DATABASE
+biblioteca_db=# \c golf_db;
+You are now connected to database "golf_db" as user "postgres".
+golf_db=#
+golf_db=#
+golf_db=#
+golf_db=# create table paises (id integer primary key,nombre varchar(45));
+CREATE TABLE
+golf_db=# create table ciudades (id integer primary key,nombre varchar(45), latitud varchar(60),longitud varchar(60),fk_pais integer);
+CREATE TABLE
+golf_db=# create table campos (id integer primary key,nombre varchar(45), direccion varchar(45),fk_ciudad integer);
+CREATE TABLE
+golf_db=# create table jugadores (id integer primary key, nombre varchar(45), apellido varchar(45),fecha_nacimiento date, categoria varchar(45), fk_ciudad_origen integer);
+CREATE TABLE
+golf_db=# create tarjetas_torneo (fk_torneo integer, fk_jugador integer, fk_numero_hoyo integer, fk_campo integer, numero_golpes integer, puntuacion integer);
+ERROR:  syntax error at or near "tarjetas_torneo"
+LINE 1: create tarjetas_torneo (fk_torneo integer, fk_jugador intege...
+               ^
+golf_db=# create table tarjetas_torneo (fk_torneo integer, fk_jugador integer, fk_numero_hoyo integer, fk_campo integer, numero_golpes integer, puntuacion integer);
+CREATE TABLE
+golf_db=# create table hoyos (numero int primary key, fk_campo integer, par integer, dificultad varchar(45));
+CREATE TABLE
+golf_db=# create table posiciones_torneo (fk_jugador integer, fk_torneo integer, puntuacion_general integer, golpes_totales integer);
+CREATE TABLE
+golf_db=# create table torneos (id integer primary key, nombre varchar(45),fecha date, premio double, categoria varchar(45));
+ERROR:  type "double" does not exist
+LINE 1: ...rimary key, nombre varchar(45),fecha date, premio double, ca...
+                                                             ^
+golf_db=# create table torneos (id integer primary key, nombre varchar(45),fecha date, premio float, categoria varchar(45));
+CREATE TABLE
+golf_db=# \d
+               List of relations
+ Schema |       Name        | Type  |  Owner
+--------+-------------------+-------+----------
+ public | campos            | table | postgres
+ public | ciudades          | table | postgres
+ public | hoyos             | table | postgres
+ public | jugadores         | table | postgres
+ public | paises            | table | postgres
+ public | posiciones_torneo | table | postgres
+ public | tarjetas_torneo   | table | postgres
+ public | torneos           | table | postgres
+(8 rows)
+
+
+golf_db=# alter table paises column nombre not null
+golf_db-# ;
+ERROR:  syntax error at or near "column"
+LINE 1: alter table paises column nombre not null
+                           ^
+golf_db=# alter table paises modify nombre not null ;
+ERROR:  syntax error at or near "modify"
+LINE 1: alter table paises modify nombre not null ;
+                           ^
+golf_db=# alter table paises alter column nombre set not null
+golf_db-# ;
+ALTER TABLE
+golf_db=# alter table ciudades add constraint ciudad_pais foreign key (fk_pais) references paises (id);
+ALTER TABLE
+golf_db=# alter table campos add constraint campo_ciudad foreign key (fk_ciudad) references cuidades (id);
+ERROR:  relation "cuidades" does not exist
+golf_db=# alter table campos add constraint campo_ciudad foreign key (fk_ciudad) references cuidades (id);
+ERROR:  relation "cuidades" does not exist
+golf_db=# \d ciudades
+                      Table "public.ciudades"
+  Column  |         Type          | Collation | Nullable | Default
+----------+-----------------------+-----------+----------+---------
+ id       | integer               |           | not null |
+ nombre   | character varying(45) |           |          |
+ latitud  | character varying(60) |           |          |
+ longitud | character varying(60) |           |          |
+ fk_pais  | integer               |           |          |
+Indexes:
+    "ciudades_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "ciudad_pais" FOREIGN KEY (fk_pais) REFERENCES paises(id)
+
+
+golf_db=# \d campos
+                       Table "public.campos"
+  Column   |         Type          | Collation | Nullable | Default
+-----------+-----------------------+-----------+----------+---------
+ id        | integer               |           | not null |
+ nombre    | character varying(45) |           |          |
+ direccion | character varying(45) |           |          |
+ fk_ciudad | integer               |           |          |
+Indexes:
+    "campos_pkey" PRIMARY KEY, btree (id)
+
+
+golf_db=# alter table campos add constraint campo_ciudad foreign key (fk_ciudad) references cuidades (id);
+ERROR:  relation "cuidades" does not exist
+golf_db=# \d ciudades
+                      Table "public.ciudades"
+  Column  |         Type          | Collation | Nullable | Default
+----------+-----------------------+-----------+----------+---------
+ id       | integer               |           | not null |
+ nombre   | character varying(45) |           |          |
+ latitud  | character varying(60) |           |          |
+ longitud | character varying(60) |           |          |
+ fk_pais  | integer               |           |          |
+Indexes:
+    "ciudades_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "ciudad_pais" FOREIGN KEY (fk_pais) REFERENCES paises(id)
+
+
+golf_db=# \d ciudades
+                      Table "public.ciudades"
+  Column  |         Type          | Collation | Nullable | Default
+----------+-----------------------+-----------+----------+---------
+ id       | integer               |           | not null |
+ nombre   | character varying(45) |           |          |
+ latitud  | character varying(60) |           |          |
+ longitud | character varying(60) |           |          |
+ fk_pais  | integer               |           |          |
+Indexes:
+    "ciudades_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "ciudad_pais" FOREIGN KEY (fk_pais) REFERENCES paises(id)
+
+
+golf_db=# alter table campos add constraint campo_ciudad foreign key (fk_ciudad) references cuidades (id);
+ERROR:  relation "cuidades" does not exist
+golf_db=# alter table hoyos add constraint hoyos_campo foreign key (fk_campo) references campos (id)
+golf_db-# alter table ciudades add primary key (id)
+golf_db-# ;
+ERROR:  syntax error at or near "alter"
+LINE 2: alter table ciudades add primary key (id)
+        ^
+golf_db=# alter table ciudades add primary key (id);
+ERROR:  multiple primary keys for table "ciudades" are not allowed
+golf_db=# \d ciudades
+                      Table "public.ciudades"
+  Column  |         Type          | Collation | Nullable | Default
+----------+-----------------------+-----------+----------+---------
+ id       | integer               |           | not null |
+ nombre   | character varying(45) |           |          |
+ latitud  | character varying(60) |           |          |
+ longitud | character varying(60) |           |          |
+ fk_pais  | integer               |           |          |
+Indexes:
+    "ciudades_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "ciudad_pais" FOREIGN KEY (fk_pais) REFERENCES paises(id)
+
+
+golf_db=# alter table campos add constraint campo_ciudad foreign key (fk_ciudad) references cuidades (id);
+ERROR:  relation "cuidades" does not exist
+golf_db=# alter table jugadores add constraint ciudad_origen_ciudad foreign key (fk_cuidad) references ciudades (id);
+ERROR:  column "fk_cuidad" referenced in foreign key constraint does not exist
+golf_db=# alter table jugadores add constraint ciudad_origen_ciudad foreign key (fk_cuidad_origen) references ciudades (id);
+ERROR:  column "fk_cuidad_origen" referenced in foreign key constraint does not exist
+golf_db=# alter table jugadores add constraint ciudad_origen_ciudad foreign key (fk_cuidad_origen) references ciudades (id);
+ERROR:  column "fk_cuidad_origen" referenced in foreign key constraint does not exist
+golf_db=#
+golf_db=# \d jugadores
+                         Table "public.jugadores"
+      Column      |         Type          | Collation | Nullable | Default
+------------------+-----------------------+-----------+----------+---------
+ id               | integer               |           | not null |
+ nombre           | character varying(45) |           |          |
+ apellido         | character varying(45) |           |          |
+ fecha_nacimiento | date                  |           |          |
+ categoria        | character varying(45) |           |          |
+ fk_ciudad_origen | integer               |           |          |
+Indexes:
+    "jugadores_pkey" PRIMARY KEY, btree (id)
+
+
+golf_db=# alter table jugadores add constraint ciudad_origen_ciudad foreign key (fk_ciudad_origen) references ciudades (id);
+ALTER TABLE
+golf_db=# alter table tarjetas_torneo add constraint torneo_tarjetas foreign key (fk_torneo) references torneos (id)
+golf_db-# ;
+ALTER TABLE
+golf_db=# alter table tarjetas_torneo add constraint toreno_jugador foreign key (fk_jugador) references jugadores (id)
+golf_db-# ;
+ALTER TABLE
+golf_db=# alter table tarjetas_torneo add constraint torneo_nhoyo foreign key (fk_numero_hoyo) references hoyos (numero)
+golf_db-# ;
+ALTER TABLE
+golf_db=# alter table posiciones_torneo add constraint posiciones_jugador foreign key (fk_jugador) references jugadores (id);
+ALTER TABLE
+golf_db=# alter table posiciones_torneo add constraint posiciones_torneo foreign key (fk_torneo) references torneos (id);
+ALTER TABLE
+golf_db=#
+golf_db=# alter table campos add constraint campos foreign key (fk_ciudad) references ciudades (id)
+golf_db-# ;
+ALTER TABLE
+golf_db=#
