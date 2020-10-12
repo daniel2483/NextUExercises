@@ -15,6 +15,7 @@ CREATE DATABASE golf_db
         id integer NOT NULL,
         nombre character varying(45) NOT NULL,
         latitud character varying(60) NOT NULL,
+		longitud character varying(60) NOT NULL,
         fk_pais integer NOT NULL,
         PRIMARY KEY (id)
     );
@@ -101,7 +102,7 @@ CREATE DATABASE golf_db
 
 
 
-        INSERT INTO paises VALUES (1, 'Francia'), (2, 'España'), (3, 'Portugal');
+INSERT INTO paises VALUES (1, 'Francia'), (2, 'España'), (3, 'Portugal');
 
         INSERT INTO ciudades VALUES (1, 'Paris', '48.856684', '2.351826', 1),
                                     (2, 'Marsella', '43.296979', '5.369415', 1),
@@ -116,13 +117,6 @@ CREATE DATABASE golf_db
                                     (4, 'Antienes', 'Av2 25-25', 4),
                                     (5, 'Ouro Preto', 'Av9 10-05', 5),
                                     (6, 'Pedras Brancas', 'Av23 12-51', 6);
-
-        INSERT INTO hoyos VALUES    (1, 1, 3, 'baja'),(2, 1, 4, 'baja'),(3, 1, 3, 'baja'),(4, 1, 2, 'media'), (5, 1, 3, 'baja'),
-                                    (6, 1, 3, 'baja'),(7, 1, 4, 'alta'), (8, 1, 3, 'media'), (9, 1, 4, 'baja'),(10, 1, 3, 'baja');
-        INSERT INTO hoyos VALUES    (11, 1, 3, 'media'), (12, 1, 4, 'baja'),(13, 1, 2, 'baja'), (14, 1, 3, 'alta'), (15, 1, 2, 'baja'),
-                                    (16, 1, 4, 'alta'),(17, 1, 4, 'media'),(18, 1, 2, 'alta'),(1, 3, 3, 'alta'), (2, 3, 4, 'alta');
-        INSERT INTO hoyos VALUES    (3, 3, 3, 'media'),(4, 3, 2, 'media'),(5, 3, 3, 'alta'), (6, 3, 3, 'media'),(7, 3, 4, 'alta'),
-                                    (8, 3, 3, 'media'), (9, 3, 4, 'media');
 
         INSERT INTO jugadores VALUES (1,'Quin','York','03/17/1977','Semi-profesional',6),
                                     (2,'Alika','Browning','07/12/1978','Semi-profesional',6),
