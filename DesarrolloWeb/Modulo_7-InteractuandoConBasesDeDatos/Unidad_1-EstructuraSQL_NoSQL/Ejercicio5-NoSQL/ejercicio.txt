@@ -1,0 +1,64 @@
+[1]
+r.db('NextUCourse').table('students').insert({name:"Felipe",lastname:"Giraldo",number:"4335-543-43"})
+Remove
+Load
+[2]
+r.db(‘NextUCourse’).table(‘students’)
+[3]
+r.db('NextUCourse').table('students')
+[4]
+r.db('NextUCourse').table('students').filter({name:"Felipe"})
+[5]
+r.db('NextUCourse').table('students').orderBy({name})
+[6]
+r.db('NextUCourse').table('students').orderBy(name)
+[7]
+r.db('Tienda').table('productos').insert({codigo:"1234",nombre:'Producto1',precio:"14",cantidad:"2"}]
+This query produced an errorRemove
+Load
+[8]
+r.db('Tienda').table('productos').insert({codigo:"1234",nombre:'Producto1',precio:"14",cantidad:"2"})
+[9]
+r.db('Tienda').table('productos').insert({codigo:"1332",nombre:'Producto2',precio:"25",cantidad:"1"})
+[10]
+r.db('Tienda').table('productos').insert({codigo:"1432",nombre:'Producto3',precio:"32",cantidad:"5"})
+[11]
+r.db('Tienda').table('productos').insert({codigo:"1434",nombre:'Producto4',precio:"3",cantidad:"4"})
+[12]
+r.db('Tienda').table('productos').insert({codigo:"1534",nombre:'Producto5',precio:"30",cantidad:"10"})
+[13]
+r.db('Tienda').table('vendedores')
+[14]
+r.db('Tienda').table('vendedores').insert({nombre:"Santiago González",id:1023221,telefono:"7165239854"})
+[15]
+r.db('Tienda').table('vendedores').insert({nombre:"Gabriela Gómez",id:3654873,telefono:"6458932543"})
+[16]
+r.db('Tienda').table('clientes').insert({id:12,nombre:"Gustavo Perez",telefono:"50454455",email:"perez@gmail.com"})
+[17]
+r.db('Tienda').table('clientes').insert({id:12,nombre:"Paulina Benavidez",telefono:"5063434334",email:"paubena@gmail.com"})
+[18]
+r.db('Tienda').table('clientes').insert({id:11,nombre:"Paulina Benavidez",telefono:"5063434334",email:"paubena@gmail.com"})
+[19]
+r.db('Tienda').table('clientes').insert({id:9,nombre:"Daniel Gutierrez",telefono:"5068332812",email:"guti@gmail.com"})
+[20]
+r.db('Tienda').table('clientes').insert({id:8,nombre:"Andrés Sánchez",telefono:"50683355512",email:"andres@gmail.com"})
+[21]
+r.db('Tienda').table('productos')
+[22]
+r.db('Tienda').table('vendedores')
+[23]
+r.db('Tienda').table('clientes')
+[24]
+"})
+[25]
+r.db('Tienda').table('productos').filter({precio:3})
+[26]
+r.db('Tienda').table('productos').filter({precio:25})
+[27]
+r.db('Tienda').table('productos')
+[28]
+r.db('Tienda').table('productos').filter({precio:"3"})
+[29]
+r.db('Tienda').table('productos').filter({precio:"3"}).delete()
+[30]
+r.db('Tienda').table('productos')
