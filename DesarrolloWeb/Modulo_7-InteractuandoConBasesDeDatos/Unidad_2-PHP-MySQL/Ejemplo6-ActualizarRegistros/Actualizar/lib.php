@@ -64,17 +64,35 @@
       $sql .= ' VALUES (';
       $i = 1;
       foreach ($data as $key => $value) {
-        $sql .= "'".$value."'";
+        $sql .= $value;
         if ($i<count($data)) {
           $sql .= ', ';
         }else $sql .= ');';
         $i++;
       }
 
-      echo $sql;
-
       return $this->ejecutarQuery($sql);
 
+    }
+
+    function getConexion(){
+      return $this->conexion;
+    }
+
+    function actualizarRegistro($tabla, $data, $condicion){
+      $sql = 'UPDATE '.$tabla.' SET ';
+      $i=1;
+      foreach ($data as $key => $value) {
+        $sql .= $key.'='.$value;
+        if ($i<sizeof($data)) {
+          $sql .= ', ';
+        }else $sql .= ' WHERE '.$condicion.';';
+        $i++;
+      }
+
+      //echo $sql;
+
+      return $this->ejecutarQuery($sql);
     }
 
 

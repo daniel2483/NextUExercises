@@ -71,10 +71,12 @@
         $i++;
       }
 
-      echo $sql;
-
       return $this->ejecutarQuery($sql);
 
+    }
+
+    function getConexion(){
+      return $this->conexion;
     }
 
 
