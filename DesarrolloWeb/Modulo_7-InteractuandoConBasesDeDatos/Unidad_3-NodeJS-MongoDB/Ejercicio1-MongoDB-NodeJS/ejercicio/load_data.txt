@@ -1,0 +1,12 @@
+db.estudiantes.insert({nombre:'Daniel',edad:23,genero:'masculino',estatura:'1.69m'});
+db.estudiantes.insert({nombre:'Gabriel',edad:33,genero:'masculino',estatura:'1.7m'});
+db.estudiantes.insert({nombre:'Sofía',edad:25,genero:'femenino',estatura:'1.87m'});
+db.estudiantes.insert({nombre:'Enrique',edad:26,genero:'masculino',estatura:'1.90m'});
+db.estudiantes.insert({nombre:'Gustavo',edad:27,genero:'masculino',estatura:'1.75m'});
+db.estudiantes.insert({nombre:'Massiel',edad:27,genero:'masculino',estatura:'1.72m'});
+db.estudiantes.insert({nombre:'Fernanda',edad:26,genero:'femenino',estatura:'1.67m'});
+db.estudiantes.insert({nombre:'Gabriela',edad:27,genero:'femenino',estatura:'1.69m'});
+db.estudiantes.insert({nombre:'David',edad:28,genero:'masculino',estatura:'1.77m'});
+db.estudiantes.insert({nombre:'Daniela',edad:22,genero:'femenino',estatura:'1.78m'});
+
+db.estudiantes.find();
