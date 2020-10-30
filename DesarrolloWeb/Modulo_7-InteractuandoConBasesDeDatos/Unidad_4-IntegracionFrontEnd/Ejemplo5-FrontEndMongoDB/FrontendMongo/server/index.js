@@ -21,3 +21,5 @@ app.use('/users', Routing)
 Server.listen(PORT, function(){
   console.log('Server is listening on port: ' + PORT);
 })
+
+mongoose.connect('mongodb://localhost/c7')
