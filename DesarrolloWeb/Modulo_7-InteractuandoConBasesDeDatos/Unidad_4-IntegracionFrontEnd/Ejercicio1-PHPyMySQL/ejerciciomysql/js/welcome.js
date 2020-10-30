@@ -32,4 +32,5 @@ function getInitData(){
     alert( "Se presentó un error" );
   })
 
+
 }

@@ -2,6 +2,8 @@
 
   require('./conector.php');
 
+  error_reporting(0);
+
   $con = new ConectorBD('localhost','nextu','12345');
 
   $response['conexion'] = $con->initConexion('transporte_db');

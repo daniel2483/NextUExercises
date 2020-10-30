@@ -149,6 +149,11 @@
       return $this->ejecutarQuery($sql);
     }
 
+    function getConductores(){
+      $sql = "SELECT id,nombre FROM usuarios;";
+      return $this->ejecutarQuery($sql);
+    }
+
   }
 
 

@@ -33,9 +33,35 @@ $(function(){
 
   getSelects();
 
+  // Function use when click on new viaje button
+  $('#enviar').on('click', function(){
+    var ciudad_orig_id = $('#ciudad_origen').val();
+    var vehiculo_placa = $('#vehiculo').val();
+    var ciudad_dest_id = $('#ciudad_destino').val();
+    var conductor_id = $('#conductor').val();
+    var fecha_salida = $('#fecha_salida').val();
+    var hora_salida = $('#hora_salida').val();
+    alert("Ingresando nuevos datos a la tabla:<br>Ciudad Origen: "+ciudad_orig_id+"<br>Ciudad Destino: "+ciudad_dest_id+"<br>Vehiculo: "+vehiculo_placa+"<br>Condutor: "+conductor_id+"<br>Fecha Salida: "+fecha_salida+"<br>Hora Salida: "+hora_salida );
+    $.ajax({
+      url: 'server/add_viaje.php',
+      dataType: 'json',
+      data: {ciudad_orig_id: ciudad_orig_id,ciudad_dest_id: ciudad_dest_id,vehiculo_placa: vehiculo_placa,conductor_id:conductor_id,fecha_salida:fecha_salida,hora_salida:hora_salida},
+      cache: false,
+      type: 'POST',
+      success: function(php_response){
+
+      },
+      error: function(){
+        alert("No se ha ingresado el nuevo viaje.");
+      }
+
+    })
+  })
+
 })
 
 
+// Function used to get the dropdown list
 function getSelects(){
   $.ajax({
     url: 'server/select_info.php',
@@ -49,12 +75,16 @@ function getSelects(){
         //alert(php_response.ciudades[0].nombre);
         $.each(php_response.ciudades,function(index,value){
           //console.log("Index: "+index+" | Value: "+value.nombre);
-          $('#ciudad_origen').append("<option value='"+index+"'>"+value.nombre+"</option>");
-          $('#ciudad_destino').append("<option value='"+index+"'>"+value.nombre+"</option>");
+          $('#ciudad_origen').append("<option value='"+value.id+"'>"+value.nombre+"</option>");
+          $('#ciudad_destino').append("<option value='"+value.id+"'>"+value.nombre+"</option>");
         })
         $.each(php_response.vehiculos,function(index,value){
           //console.log("Index: "+index+" | Value: "+value.nombre);
-          $('#vehiculo').append("<option value='"+index+"'>"+value.placa+"("+ value.fabricante + " " + value.referencia + ")</option>");
+          $('#vehiculo').append("<option value='"+value.placa+"'>"+value.placa+"("+ value.fabricante + " " + value.referencia + ")</option>");
+        })
+        $.each(php_response.conductores,function(index,value){
+          //console.log("Index: "+index+" | Value: "+value.nombre);
+          $('#conductor').append("<option value='"+value.id+"'>"+value.nombre+"</option>");
         })
 
       }
@@ -69,6 +99,8 @@ function getSelects(){
     }
   })
 }
+
+
 
 
 

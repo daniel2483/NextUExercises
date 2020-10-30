@@ -25,6 +25,14 @@
       $i++;
     }
 
+    $resultado = $con->getConductores();
+    $i=0;
+    while ($fila = $resultado->fetch_assoc()) {
+      $response['conductores'][$i]['id']=$fila['id'];
+      $response['conductores'][$i]['nombre']=$fila['nombre'];
+      $i++;
+    }
+
     $response['msg']= 'OK';
 
     $con->cerrarConexion();

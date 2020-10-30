@@ -1,5 +1,6 @@
 <?php
   require('conector.php');
+  error_reporting(0);
 
   session_start();
 
@@ -7,11 +8,13 @@
 
   if (isset($_SESSION['username'])) {
 
-    $con = new ConectorBD('localhost', 't_access', '12345');
+    $con = new ConectorBD('localhost', 'nextu', '12345');
     if ($con->initConexion('transporte_db')=='OK') {
       $resultado = $con->consultar(['usuarios'], ['nombre', 'id'], "WHERE email ='".$_SESSION['username']."'");
       $fila = $resultado->fetch_assoc();
       $response['nombre']=$fila['nombre'];
+      $response['id']=$fila['id'];
+
 
       $resultado = $con->getViajesUser($fila['id']);
       $i=0;
