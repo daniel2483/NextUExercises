@@ -11,5 +11,5 @@ module.exports.insertarRegistro = function(db, callback){
   ], (error, result) => {
     console.log("Resultado de insert: " + result.toString());
   })
-  
+
 }
