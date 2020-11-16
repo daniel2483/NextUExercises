@@ -310,4 +310,4 @@
 
 2. Fin de curso
 	
-3. Evaluación Final - [Project Completed](https://github.com/daniel2483/Javascript_Modulo4) Project Completed:thttps://github.com/daniel2483/Javascript_Modulo4rophy:
+3. Evaluación Final - [Project Completed](https://github.com/daniel2483/Javascript_Modulo4) :trophy:
