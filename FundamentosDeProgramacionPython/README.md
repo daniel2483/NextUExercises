@@ -1,3 +1,3 @@
 This certification is already completed
 
-![Certification Document](./)python_certification.pdf
+![Certification Document](./python_certification.pdf)
