@@ -274,4 +274,4 @@ EVALUACIÓN FINAL
 
 2. Fin de curso
 
-3. Evaluación Final - ![Project Completed]()
+3. Evaluación Final - ![Project Completed](https://github.com/daniel2483/InteractuandoConDB_Modulo7) :trophy:
