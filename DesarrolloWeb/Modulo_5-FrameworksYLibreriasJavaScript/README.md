@@ -256,5 +256,5 @@
 
 	2. Fin de curso
 
-	3. Evaluación Final
+	3. Evaluación Final ![Project Completed](https://github.com/daniel2483/FrameworksyLibreriasJS_Modulo5) :trophy:
 
