@@ -266,5 +266,5 @@ Este es un reporsitorio que contiene ejemplos y ejercicios de NextU del Módulo 
 
 2. Encuesta de fin de curso
 
- 3. Evaluación Final
+3. Evaluación Final - ![Project Completed](https://github.com/daniel2483/BackEnd_Modulo6) :trophy:
 
