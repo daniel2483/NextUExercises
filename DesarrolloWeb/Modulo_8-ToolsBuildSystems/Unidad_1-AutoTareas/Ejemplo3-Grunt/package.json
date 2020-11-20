@@ -1,0 +1,15 @@
+{
+  "name": "ejemplo-grunt",
+  "version": "1.0.0",
+  "description": "Este es un ejemplo de proyecto Grunt",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Daniel Rodriguez Sanchez",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-uglify": "^5.0.0"
+  }
+}
