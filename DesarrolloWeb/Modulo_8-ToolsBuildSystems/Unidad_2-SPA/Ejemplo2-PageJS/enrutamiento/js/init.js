@@ -192,7 +192,7 @@
 
     $('.button-collapse').sideNav();
 
-    page.base('/enrutamiento')
+    page.base('/enrutamiento_')
     page('/fotos-pag2', sigFotos)
     page('/index', cerrarFoto)
     page('/foto-ampliada/:foto', abrirFoto)
