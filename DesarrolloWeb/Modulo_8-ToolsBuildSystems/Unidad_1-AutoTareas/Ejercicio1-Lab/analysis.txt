@@ -1,0 +1,33 @@
+1.	Estructura del proyecto:
+
+Descarga el código base e inspecciónalo.
+Indica la estructura del proyecto y cuál es la función de cada carpeta. Luego describe la estructura del archivo index.html, indicando donde se incluyen las hojas de estilo, 
+los scripts de Javascript y las imágenes que se muestran en la página.
+
+El proyecto consiste de un archivo index.html donde está el código html del proyecto. Adicionalmente tenemos 3 carpetas css, js y img.
+- Carpeta js: Contiene los archivos Javascript del proyecto, adicionalmente contiene una carpeta vendor con las dependencias en Javascript.
+- Carpeta img: Se encuentran todas las imágenes que provee el equipo gráfico
+- Carpeta css: Contiene las dependencias de css de la librería Foundation y el css de la aplicación en app.css
+
+2.	Manejo de scripts:
+
+Diseña las tareas que se deben ejecutar para los manejos de scripts de las librerías usadas.
+- Los scripts deben ser descargados por un manejador de paquetes que permite, a su vez, descargar las dependencias de manera local. 
+- Se debe mantener un archivo para saber qué librerías y en qué versión deben estar instaladas. (Package.json)
+- Se debe hacer una tarea que revise qué archivos son dependencias de la aplicación y los contenga en una carpeta haciendo copias de los archivos para la versión que se 
+va a construir.
+- Estos archivos .js pueden juntarse en un solo archivo vendor-bundle.js, por ejemplo, utilizando una tarea que los concatene.
+- Los scripts de la aplicación también pueden juntarse con vendor-bundle.js en app.js para servir un sólo archivo Javascript con otra tarea de concatenación.
+- El nombre del archivo a importar debe ser inyectado en el index.html por una tarea de reemplazamiento.
+
+3.	Manejo de recursos:
+Diseña las tareas que implementan una infraestructura para el manejo de los recursos gráficos, creados por el equipo de fotografía.
+Para eso, realiza una tarea de reemplazamiento, tomando las llaves desde el archivo json y las reemplaza por las correctas en todos los html.
+
+4.	Estrategia de localización del sitio web:
+Diseña la infraestructura de tareas requerida para generar las versiones localizadas del sitio web. Debes tener archivos html esqueleto que sean los que se tomarán de base, 
+utilizando un diccionario de etiquetas reemplazar en cada bundle para cada sitio web estático generado. Index.html finalmente detectara el lenguaje a cargar y luego inyecta el html necesario según el lenguaje.
+- Carpeta con plantillas html
+- Carpeta con diccionarios en JSON
+- Construcción del bundle html para cada lenguaje con tareas de reemplazamiento y luego copia.
+- Meta Plantilla de index.html que reemplaza el index.html y mediante javascript detecta qué lenguaje debe ser cargado para luego, cargarlo.
