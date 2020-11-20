@@ -1,0 +1,19 @@
+{
+  "name": "ejercicio2",
+  "version": "1.0.0",
+  "description": "Esto es un nuevo Lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Daniel Rodriguez Sanchez",
+  "license": "ISC",
+  "devDependencies": {
+    "foundation-cli": "^2.2.6",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "jquery": "^3.5.1",
+    "what-input": "^5.2.10"
+  }
+}
