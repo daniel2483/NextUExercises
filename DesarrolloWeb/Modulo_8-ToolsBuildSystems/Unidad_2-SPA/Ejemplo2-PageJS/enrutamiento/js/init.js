@@ -49,7 +49,7 @@
       </div>
 
       <div class="next-btn">
-        <a class="btn-floating btn-small light-blue lighten-1 waves-effect" href="index2.html">
+        <a class="btn-floating btn-small light-blue lighten-1 waves-effect" id="fotos-pag2" href="fotos-pag2">
           <i class="large material-icons">keyboard_arrow_right</i>
         </a>
       </div>
@@ -57,7 +57,7 @@
       <!-- Pegar aquí la flecha a la izquierda de index2.html -->
 
       <div class="prev-btn invisible">
-        <a class="btn-floating btn-small light-blue lighten-1 waves-effect" href="index.html">
+        <a class="btn-floating btn-small light-blue lighten-1 waves-effect" href="index">
           <i class="large material-icons">keyboard_arrow_left</i>
         </a>
       </div>
@@ -72,7 +72,7 @@
                   <span class="card-title">Times Square</span>
                 </div>
                 <div class="card-action">
-                  <a href="single-photo.html">Ver mas</a>
+                  <a href="./foto-ampliada/1">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@
                   <span class="card-title">Ayuntamiento</span>
                 </div>
                 <div class="card-action">
-                  <a href="#">Ver mas</a>
+                  <a href="./foto-ampliada/2">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
                   <span class="card-title">Playa</span>
                 </div>
                 <div class="card-action">
-                  <a href="#">Ver mas</a>
+                  <a href="./foto-ampliada/3">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@
                   <span class="card-title">Camping</span>
                 </div>
                 <div class="card-action">
-                  <a href="#">Ver mas</a>
+                  <a href="./foto-ampliada/4">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@
                   <span class="card-title">Aventura</span>
                 </div>
                 <div class="card-action">
-                  <a href="#">Ver mas</a>
+                  <a href="./foto-ampliada/5">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@
                   <span class="card-title">Hotel</span>
                 </div>
                 <div class="card-action">
-                  <a href="#">Ver mas</a>
+                  <a href="./foto-ampliada/6">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -141,23 +141,14 @@
         </div>
         <br><br>
       </div>
+
+
       `)
-      $('.card-action a').click(function(e){
-        e.preventDefault()
-        var nombreFoto = $(e.target).parent().prev().find('img').attr('src')
-        abrirFoto(nombreFoto)
-      })
-      $('.next-btn').click(function(e){
-        e.preventDefault()
-        sigFotos()
-      })
-      $('.prev-btn').click(function(e){
-        e.preventDefault()
-        prevFotos()
-      })
+
   }
 
-  function abrirFoto(nombreFoto){
+  function abrirFoto(ctx, next){
+    var nombreFoto = "img/"+ctx.params.foto+".jpg"
     $('#vista-principal').empty();
     $('#vista-principal').append(`
       <br>
@@ -167,7 +158,7 @@
             <h3 class="orange-text">${asociarFoto(nombreFoto)}</h3>
           </div>
           <div class="col s5 right-align above-pic">
-             <a class="btn-floating btn-medium waves-effect waves-light green" id="home"><i class="material-icons">photo_library</i></a>
+             <a class="btn-floating btn-medium waves-effect waves-light green" id="home" href="index"><i class="material-icons">photo_library</i></a>
              <a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons">favorite</i></a>
              <a class="btn-floating btn-medium waves-effect waves-light purple"><i class="material-icons">delete</i></a>
           </div>
@@ -190,31 +181,24 @@
         <br><br>
       </div>
       `)
-      $('#home').on('click', function(e){
-        e.preventDefault()
-        cerrarFoto()
-      })
 
   }
 
+  function notfound(){
+    alert('NotFound');
+  }
 
   $(function(){
 
     $('.button-collapse').sideNav();
 
-    $('.next-btn').click(function(e){
-      e.preventDefault()
-      sigFotos()
-    })
-    $('.prev-btn').click(function(e){
-      e.preventDefault()
-      prevFotos()
-    })
-    $('.card-action a').click(function(e){
-      e.preventDefault()
-      var nombreFoto = $(e.target).parent().prev().find('img').attr('src')
-      abrirFoto(nombreFoto)
-    })
+    page.base('/enrutamiento')
+    page('/fotos-pag2', sigFotos)
+    page('/index', cerrarFoto)
+    page('/foto-ampliada/:foto', abrirFoto)
+    page('*', notfound)
+    page()
+
 
 
 
