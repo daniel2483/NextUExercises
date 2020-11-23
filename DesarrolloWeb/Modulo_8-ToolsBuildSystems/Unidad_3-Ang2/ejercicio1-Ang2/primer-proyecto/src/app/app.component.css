@@ -1,0 +1,10 @@
+.contenedor-principal{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%
+}
+
+barra-superior{
+  width: 100%;
+  height: 5%;
+}
