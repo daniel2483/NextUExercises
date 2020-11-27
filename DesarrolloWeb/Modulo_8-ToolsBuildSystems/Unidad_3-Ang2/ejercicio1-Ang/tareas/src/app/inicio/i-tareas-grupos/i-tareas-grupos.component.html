@@ -5,7 +5,7 @@
     <hr>
     <table>
       <tr>
-        <td *ngFor="let grupos of listaGrupos"><div class="icons {{ grupos.icono }}" [ngClass] = "{resaltado: true}"><i></i></div></td>
+        <td *ngFor="let grupos of listaGrupos"><div class="icons {{ grupos.icono }}" [ngClass] = "{resaltado: grupos.resaltado}" (mouseenter)="mouseEnter(grupos)" (mouseleave)="mouseExit(grupos)"><i></i></div></td>
       </tr>
       <tr>
         <td *ngFor="let grupos of listaGrupos"><div class="text">{{ grupos.nombre }}</div></td>

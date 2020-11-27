@@ -17,12 +17,14 @@ export class ITareasGruposComponent implements OnInit {
   }
 
   // Directiva
-  mouseEnter(){
+  mouseEnter(item){
     //this.listaGrupos["resaltado"] = true;
+    item.resaltado = true;
   }
 
-  mouseExit(){
+  mouseExit(item){
     //this.listaGrupos.resaltado = false;
+    item.resaltado = false
   }
 
 }
