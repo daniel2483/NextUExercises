@@ -16,4 +16,13 @@ export class ITareasGruposComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Directiva
+  mouseEnter(){
+    //this.listaGrupos["resaltado"] = true;
+  }
+
+  mouseExit(){
+    //this.listaGrupos.resaltado = false;
+  }
+
 }

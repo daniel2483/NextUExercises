@@ -68,10 +68,10 @@ table{
   margin: 0%;
 }
 
-tr > td {
-  padding: 4%;
-  align-items: center;
+td {
+  padding: 10px 10px 10px 10px;
 }
+
 
 .footer {
   background-color: #e0e0e0;
@@ -80,4 +80,8 @@ tr > td {
   font-size: 30px;
   margin-right: 15px;
   border-radius: 50%;
+}
+
+.resaltado{
+  background-color: white !important;
 }
