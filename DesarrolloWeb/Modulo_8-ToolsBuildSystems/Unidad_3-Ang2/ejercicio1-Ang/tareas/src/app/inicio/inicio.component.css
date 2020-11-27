@@ -1,0 +1,12 @@
+.inicio-data{
+  width: 100%;
+  display: flex;
+}
+
+.left-data{
+  width: 40%;
+}
+
+.right-data{
+  width: 60%;
+}

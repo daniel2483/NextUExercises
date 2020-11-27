@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<div class="contenedor-grupos">
+  <div class="body-container">
+    <h3>{{ titleGroups }}</h3>
+    <hr>
+    <table>
+      <tr>
+        <td *ngFor="let grupos of listaGrupos"><div class="icons {{ grupos.icono }}"><i></i></div></td>
+      </tr>
+      <tr>
+        <td *ngFor="let grupos of listaGrupos"><div class="text">{{ grupos.nombre }}</div></td>
+      </tr>
+    </table>
+
+    <div class="footer"><i class="fas fa-users"></i></div>
+  </div>
+</div>

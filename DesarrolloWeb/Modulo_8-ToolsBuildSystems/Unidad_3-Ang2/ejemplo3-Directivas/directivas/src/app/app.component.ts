@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directivas';
+  tituloMostrado = true;
+  listaNombres = ['Juan','Pedro','Daniel','Andrés','Alejandro'];
+
+  // Directiva Estructural
+  buttonClicked(){
+    this.tituloMostrado = !this.tituloMostrado;
+  }
 }

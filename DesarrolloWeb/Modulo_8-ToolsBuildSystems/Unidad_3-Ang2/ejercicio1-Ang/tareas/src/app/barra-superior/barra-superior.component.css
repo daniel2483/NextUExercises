@@ -1,0 +1,43 @@
+.container{
+  width:100%;
+  height:4em;
+  background-color: #757575;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 6px rgba(255, 255, 255, 0.2);
+}
+
+.logo-container{
+  width: 10%;
+  color: white;
+}
+
+.logo-container h3{
+  color: white;
+  height: 20px;
+  display: inline;
+  padding-left: 15px
+}
+
+.menu{
+  width: 60%;
+  background-color: #757575;
+  color: white;
+  vertical-align: middle;
+}
+
+.menu ul{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.menu ul li {
+  color: white;
+  font-size: 1.3em;
+  display: inline;
+  padding: 7%;
+}

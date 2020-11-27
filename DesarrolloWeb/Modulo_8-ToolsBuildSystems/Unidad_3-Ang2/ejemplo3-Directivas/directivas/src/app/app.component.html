@@ -1,0 +1,13 @@
+<!-- Ejemplo Directiva de atributo-->
+<h1 [ngClass] = "{fondo: true, borde: true}" [ngStyle]="{color: 'white'}">
+  {{ title }}
+</h1>
+
+<!-- Ejemplo Directivas Estructurales -->
+<h2 *ngIf="tituloMostrado">Hola Directiva Estructural</h2>
+
+<button (click)="buttonClicked()" name="button">Botón</button>
+
+<ul>
+  <li *ngFor="let nombre of listaNombres">{{ nombre }}</li>
+</ul>

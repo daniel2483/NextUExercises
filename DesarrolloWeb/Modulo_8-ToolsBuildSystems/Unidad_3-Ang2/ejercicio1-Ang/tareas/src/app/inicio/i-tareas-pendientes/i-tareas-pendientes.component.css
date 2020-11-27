@@ -1,0 +1,77 @@
+.contenedor-pendientes{
+  height: 90%;
+  background-color: white;
+  border-radius: 1px;
+  margin-left: 12%;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 7%;
+  width: 90%;
+  box-shadow: 1px 1px 5px 6px rgba(255, 255, 255, 0.2);
+}
+
+.body-container{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.footer-container {
+    position: relative;
+    margin-top: 35%;
+    background-color: #6dccde;
+    padding: 35px;
+    border-radius: 1px;
+    width: auto;
+
+}
+
+
+h3{
+  color: #6dccde;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+hr{
+  color: #6dccde;
+  font-style: normal;
+}
+
+ul li{
+  padding-top: 10px;
+  color: #6dccde;
+  border: 1px solid #ebebe0;
+  display: flex;
+}
+
+ul{
+  list-style-type: none;
+  display: inline;
+}
+
+.icons {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.footer-container > .icons{
+  padding: 10px;
+  margin-bottom: 15px;
+  float: right;
+  margin-right: 0px;
+  margin-top: -15px;
+}
+
+.text{
+  display: inline;
+  font-size: 1.2em;
+}
