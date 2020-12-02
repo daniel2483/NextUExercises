@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<div class="contenedor-hoy">
+  <div class="body-container">
+    <h3>{{ titleHoy }} <i class="far fa-calendar-times"></i></h3>
+    <hr>
+    <ul>
+      <li *ngFor="let tareas of listaTareasHoy"><div class="icons"><i class="fas fa-star"></i></div><div class="text">{{ tareas }}</div></li>
+</ul>
+  </div>
+</div>
