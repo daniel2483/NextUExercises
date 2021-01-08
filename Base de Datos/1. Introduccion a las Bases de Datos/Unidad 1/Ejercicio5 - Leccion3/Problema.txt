@@ -1,0 +1,55 @@
+ Desafío práctico
+
+Una agencia de actores, desea tener una base de datos que guarde la información de todos los detalles del actor, 
+a fin de poder realizar búsquedas muy específicas sobre los actores.
+
+De un actor, queremos almacenar su nombre, color de: cabello, piel, ojos, su fecha de nacimiento, peso, altura, raza, 
+género (masculino / femenino) y una descripción general de habilidades, por ejemplo (puede manejar un avión, sabe tocar 
+piano, puede cantar).
+
+Así mismo, se requiere información acerca de los idiomas que maneja (puede ser más de uno) y el nivel (básico, intermedio, 
+avanzado) con el que lo habla.
+
+Finalmente se quiere almacenar una galería multimedia del actor, donde se pueden tener archivos asociados al autor (audios, 
+imágenes o videos) con su respectiva descripción.
+
+
+Identifica las entidades, atributos y tipos para este caso de estudio. Además, utiliza un estándar para los nombres y defínelo.
+
+
+Entidad Actor
+	id: int
+	nombre: string
+	color_cabello: enum
+	color_piel: enum
+	color_ojos: enum
+	fecha_de_nacimiento: date
+	peso: float
+	altura: float
+	raza: enum
+	genero: enum
+	descripcion_gral_habilidades: string
+
+Entidad Idiomas
+	id: int
+	actor_id: int
+	idioma: enum
+	nivel_hablado: 
+
+Entidad galeria de Audios
+	id
+	actor_id
+	audio
+	descrpcion
+
+Entidad galeria de imagenes
+	id
+	actor_id
+	imagen
+	descripcion
+
+Entidad galeria de videos
+	id
+	actor_id
+	video
+	descripcion
