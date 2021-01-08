@@ -1,0 +1,41 @@
+Una cadena de hoteles desea crear una aplicación para permitir reservar habitaciones. 
+Existen varios tipos de habitaciones: individual, doble, familiar (dos adultos y hasta tres niños)
+y suite (dos dormitorios con un matrimonial y el otro con dos camas individuales).
+
+Las habitaciones pueden ser para fumadores o no fumadores. Para el Hotel es importante saber de 
+sus clientes: Nombre de quién reserva, país de origen, números de personas, vienen con mascota o no, 
+y el periodo de la estadía. Para el Cliente es importante saber la dirección del hotel, el nombre y 
+si hay disponibilidad para un periodo determinado según sus condiciones (fumador o no y cantidad de personas).
+
+Identifica y agrupa los datos asociados que sean relevantes para la aplicación que se desea desarrollar 
+en el contexto antes descrito.
+
+
+cantidad de personas adultas
+cantidad de personas menores de edad
+fecha de ingreso, fecha de salida
+Area de fumadores o no fumadores
+Nombre de la persona quien hace la reservacion
+Poseen mascota si o no
+
+
+Solucion:
+RETROALIMENTACIÓNA continuación te presentamos una solución sugerida, es importante reconocer elcontexto de los datos, 
+y crear grupos que puedan ser flexibles a futuro permitiendonuevos datos
+•Hotel 
+oNombre 
+oDirección 
+•Habitaciones 
+o?Número 
+o? No fumadores y fumadores 
+•Tipo de habitación 
+oNombre 
+oCapacidad 
+•Reservación 
+oFecha de entrada 
+oFecha de salida 
+oCantidad de personas 
+oLleva Mascotas 
+•Cliente 
+oNombre 
+oPaís de Origen
