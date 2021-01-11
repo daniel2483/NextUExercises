@@ -1,0 +1,48 @@
+Tabla 1 - estudiante:
+- estudiante_id - int
+- nombre - varchar
+- apellido - varchar
+
+Tabla 2 - calificacion:
+- tarea - varchar
+- fecha_entrega - date
+- calificacion - int
+- estudiante_id - int
+
+* El estudiante de Luis (Nombre) Aguilar (Apellido) y ID (123) 
+obtuvo la calificación de 50 puntos en la Tarea 1 entregada el 
+16 de marzo de 2018.
+
+Tabla 1
+   		 ----------------------
+estudiante_id-->| 123			|
+nombre 	     -->| Luis			|
+apellido     -->| Aguilar		|
+   		 -----------------------
+
+Tabla 2
+   		 ----------------------
+tarea	     -->| Tarea 1		|
+fecha_entrega-->| 2018-03-16		|
+calificacion -->| 50			|
+estudiante_id-->| 123			|
+   		 -----------------------
+
+* La estudiante de Manuela (Nombre) Silva (Apellido) y ID (567) obtuvo 
+la calificación de 90 puntos en la Tarea 1 entregada el 15 de marzo 
+de 2018.
+
+Tabla 1
+   		 ----------------------
+estudiante_id-->| 567			|
+nombre 	     -->| Manuela		|
+apellido     -->| Silvia		|
+   		 -----------------------
+
+Tabla 2
+   		 ----------------------
+tarea	     -->| Tarea 1		|
+fecha_entrega-->| 2018-03-15		|
+calificacion -->| 90			|
+estudiante_id-->| 567			|
+   		 -----------------------
