@@ -1,0 +1,21 @@
+SELECT * FROM boletos JOIN personas ON boletos.persona_id=personas.id
+
+SELECT nombre,fecha FROM boletos JOIN personas ON boletos.persona_id=personas.id
+
+SELECT nombre,fecha FROM boletos JOIN personas ON boletos.persona_id=personas.id ORDER BY fecha DESC
+
+SELECT nombre,fecha FROM boletos,personas WHERE boletos.persona_id=personas.id
+
+SELECT * FROM boletos,personas
+
+SELECT * FROM boletos JOIN personas ON personas.id=boletos.persona_id JOIN rutas ON rutas.id=boletos.ruta_id
+
+SELECT nombre,origen,destino,fecha,hora FROM boletos JOIN personas ON personas.id=boletos.persona_id JOIN rutas ON rutas.id=boletos.ruta_id
+
+SELECT nombre,origen,destino,fecha,hora FROM boletos JOIN personas ON personas.id=boletos.persona_id JOIN rutas ON rutas.id=boletos.ruta_id WHERE origen="NY"
+
+
+
+
+
+
