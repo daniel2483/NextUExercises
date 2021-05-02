@@ -1,0 +1,118 @@
+Taller: Interactuando con PSQL
+
+En este taller podrás comenzar a interactuar con PostgreSQL a través de la línea de comandos o terminal.
+
+El comando que vas a usar es psql. En Windows, ejecuta el archivo psql.exe
+
+Realiza los siguientes pasos:
+
+    Entra a tu Postgres con el comando:
+
+    psql -u postgres -W -h localhost
+
+    Coloca tu clave
+    Lista las bases de datos con \l
+    Crea tu base de datos con:
+
+    CREATE DATABASE prueba;
+
+    Cámbiate de base de datos con \c prueba;
+    Crea una tabla con:
+
+    CREATE TABLE usuarios (id SERIAL, nombre VARCHAR, PRIMARY KEY(id));
+
+    Inserta varios registros
+    Lista los registros
+    Abandona el terminal con \q
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla: puedes usar la consulta \d+ usuarios para ver la tabla usuarios
+    Consulta registros: verifica tus registros con un SELECT * FROM usuariosy luego presiona q para salir
+
+¡Muy bien! Has logrado interactuar con PostgreSQL a través de psql.
+
+Respuesta del log:
+
+C:\Users\xxxxx>psql -u postgres -W -h localhost
+psql: illegal option -- u
+Try "psql --help" for more information.
+
+C:\Users\jrodrigue253>psql -U postgres -W -h localhost
+Password:
+psql (13.2)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \l
+                                                 List of databases
+   Name    |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges
+-----------+----------+----------+----------------------------+----------------------------+-----------------------
+ postgres  | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0 | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+           |          |          |                            |                            | postgres=CTc/postgres
+ template1 | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+           |          |          |                            |                            | postgres=CTc/postgres
+(3 rows)
+
+
+postgres=# CREATE DATABASE prueba;
+CREATE DATABASE
+postgres=# \c prueba;
+Password:
+You are now connected to database "prueba" as user "postgres".
+prueba=# CREATE TABLE usuarios (id SERIAL, nombre VARCHAR, PRIMARY KEY(id));
+CREATE TABLE
+prueba=# INSERT INTO usuarios (nombre) VALUES (‘Luis’);
+prueba'# INSERT INTO usuarios (nombre) VALUES ('Luis');
+prueba'# \q
+
+C:\Users\xxxx>psql -U postgres -W -h localhost
+Password:
+psql (13.2)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \c prueba;
+Password:
+You are now connected to database "prueba" as user "postgres".
+prueba=# INSERT INTO usuarios (nombre) VALUES ('Luis');
+INSERT 0 1
+prueba=# INSERT INTO usuarios (nombre) VALUES ('Daniel');
+INSERT 0 1
+prueba=# INSERT INTO usuarios (nombre) VALUES ('Ricardo');
+INSERT 0 1
+prueba=# INSERT INTO usuarios (nombre) VALUES ('Rolo');
+INSERT 0 1
+prueba=# INSERT INTO usuarios (nombre) VALUES ('Sebastian');
+INSERT 0 1
+prueba=# \d+
+                                    List of relations
+ Schema |      Name       |   Type   |  Owner   | Persistence |    Size    | Description
+--------+-----------------+----------+----------+-------------+------------+-------------
+ public | usuarios        | table    | postgres | permanent   | 16 kB      |
+ public | usuarios_id_seq | sequence | postgres | permanent   | 8192 bytes |
+(2 rows)
+
+
+prueba=# SELECT * FROM usuarios
+prueba-# ;
+ id |  nombre
+----+-----------
+  1 | Luis
+  2 | Daniel
+  3 | Ricardo
+  4 | Rolo
+  5 | Sebastian
+(5 rows)
+
+
+prueba=#
+
