@@ -1,0 +1,22 @@
+Taller: Usando PGAdmin
+
+En este taller podrás comenzar a interactuar con PostgreSQL a través del terminal gráfico PgAdmin.
+
+Si aún no tienes el software instalado, te invitamos a visitar el sitio Web de PgAdmin, descargar la aplicación y comenzar a familiarizarte con el software.
+
+Realiza los siguientes pasos:
+
+    Crea una conexión que se llame local que apunte a localhost, utilizando tu clave.
+    Entra a la conexión y crea una base de datos de prueba.
+    Luego entra a la base de datos y crea la tabla producto con (id y precio).
+    Entra al modo edición de registros y agrega varios registros.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Entra a la herramienta para hacer consultas.
+    Realiza la consulta con SELECT * FROM productos y verifica que tengas tus registros.
+
+¡Muy bien! Has logrado interactuar con PostgreSQL a través de PgAdmin, esta herramienta es muy útil y fácil de usar.

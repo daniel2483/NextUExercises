@@ -1,0 +1,25 @@
+CREATE TABLE tipo_usuarios (
+    id SERIAL,
+    descripcion VARCHAR NOT NULL,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO tipo_usuarios (descripcion) VALUES ('Admin');
+INSERT INTO tipo_usuarios (descripcion) VALUES ('Analista');
+
+CREATE TABLE usuarios (
+    id SERIAL,
+    nombre VARCHAR NOT NULL,
+    tipo_usuario_id INTEGER REFERENCES tipo_usuarios,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO usuarios (nombre,tipo_usuario_id) VALUES ('Luis',1);
+INSERT INTO usuarios (nombre,tipo_usuario_id) VALUES ('Ana',1);
+INSERT INTO usuarios (nombre,tipo_usuario_id) VALUES ('Carla',2);
+INSERT INTO usuarios (nombre,tipo_usuario_id) VALUES ('Pedro',2);
+INSERT INTO usuarios (nombre,tipo_usuario_id) VALUES ('Juan',2);
+INSERT INTO usuarios (nombre,tipo_usuario_id) VALUES ('Carmen',1);
+
+
+

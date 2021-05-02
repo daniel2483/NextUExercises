@@ -1,0 +1,22 @@
+Triggers
+
+Los triggers son un mecanismo útil en el proceso de ejecutar ciertas acciones cuando ocurre una condición determinada (por ejemplo la actualización de un registro en nuestra tabla). En este ejercicio vamos a crear un trigger que calcule automáticamente el descuento basado en el 5% del precio normal. Vamos a trabajar con la tabla productos que se muestra a continuación:
+
+Productos:
+id (clave primaria) 	SERIAL
+nombre 	VARCHAR NOT NULL
+código 	INTEGER
+precio 	REAL
+descuento 	REAL
+precio_final 	REAL
+
+El usuario creará un registro y solo rellenará el nombre, código y precio. Luego el descuento (10%) y el precio final (precio - descuento) serán calculados.
+
+Realiza los siguientes pasos:
+
+    Crea la tabla productos
+    Crea una función (actualizando_descuento) que asigne el descuento y el precio_final
+    Crea un trigger (actualizar_descuento) que active la función descrita en (2), antes de hacer un INSERT o UPDATE del campo precio
+    Inserta registros y verifica el cambio realizando un SELECT luego de insertar
+
+Recuerda que puedes usar la herramienta gráfica para PostgreSQL: PgAdmin
