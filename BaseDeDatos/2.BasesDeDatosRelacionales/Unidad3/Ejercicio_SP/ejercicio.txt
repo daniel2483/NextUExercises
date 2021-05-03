@@ -1,0 +1,22 @@
+Stored Procedures
+
+Los procedimientos o Stored Procedures son un mecanismo útil en el proceso de ejecutar ciertas acciones determinadas por nosotros. Aunque no están explícitamente soportados en PostgreSQL, se pueden implementar usando funciones. En este ejercicio deseamos que crees una función que aplique el descuento a todos los productos, basado en un valor x% dado. Vamos a trabajar con la tabla productos que se muestra a continuación:
+
+Productos:
+id (clave primaria) 	SERIAL
+nombre 	VARCHAR NOT NULL
+codigo 	INTEGER
+precio 	REAL
+descuento 	REAL
+precio_final 	REAL
+
+El administrador podrá llamar a esta función con un número entero entre 0 y 100, que será el porcentaje de descuento a aplicar.
+
+Realiza los siguientes pasos:
+
+    Crea la tabla productos
+    Crea una función (aplicar_descuento) que asigne el descuento y el precio_final dado el porcentaje_de_descuento. Esta función debe retornar void (Return void)
+    Inserta registros
+    Aplica el descuento llamando a tu función aplicar_descuento
+
+Recuerda que puedes usar la herramienta gráfica para PostgreSQL: PgAdmin
