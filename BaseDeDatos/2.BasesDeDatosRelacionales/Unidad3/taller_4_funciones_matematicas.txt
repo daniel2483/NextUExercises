@@ -1,0 +1,36 @@
+Taller: Funciones Matemáticas
+
+PostgreSQL tiene una amplia gama de funciones matemáticas. En este taller te invitamos a probar algunas de estas funciones.
+
+Supongamos que la empresa ABC construye platos de baterías. Ella te ha encomendado crear una base de datos con una tabla de los modelos de platos.
+
+Para lograrlo, realiza los siguientes pasos:
+
+    Crea la tabla platos con los campos:
+
+        id SERIAL
+        modelo VARCHAR
+        radio REAL
+
+    Inserta registros con los siguientes valores:
+
+    id 	modelo 	radio
+    1 	A1 	5
+    2 	A2 	8
+    Crea una consulta para calcular el área de los platos:
+
+    SELECT *, pi()*radio*radio FROM platos
+
+    Crea una consulta para filtrar los platos cuya circunferencia sea mayor que 10:
+
+    SELECT * FROM platos WHERE 2*pi()*radio > 10
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Áreas: Verifica que las áreas son 25*PI y 64*PI
+    Filtrado de platos: Debe devolver 0 registros porque supera esas circunferencias
+
+Ahora estamos listos para seguir explorando sobre las funciones matemáticas. Recuerda que siempre puedes ir al manual de PostgreSQL para encontrar más información sobre dichas funciones.
