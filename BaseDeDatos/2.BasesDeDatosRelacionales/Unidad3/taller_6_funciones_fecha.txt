@@ -1,0 +1,34 @@
+Taller: Funciones de Fecha
+
+PostgreSQL tiene una amplia gama de funciones para trabajar con los datos tipo fecha.  En este taller te invitamos a probar algunas de dichas funciones.
+
+Realiza los siguientes pasos:
+
+    Crea la tabla eventos con los campos:
+        id SERIAL
+        nombre VARCHAR
+        fecha_inicio DATE
+        fecha_fin DATE
+    Inserta un registro con valores:
+        id=1
+        nombre=A1
+        fecha_inicio=’2019-01-03’
+        fecha_fin=’2019-03-03’
+    Crea una consulta para calcular la cantidad de días entre inicio y fin:
+
+    SELECT fecha_fin - fecha_inicio FROM eventos
+
+    Crea una consulta para filtrar los eventos que inician el mes de enero, usando:
+
+    SELECT * FROM eventos WHERE extract (month from fecha_inicio) =1
+
+
+Puntos de verificación
+
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Días: Verifica que la cantidad de días es efectivamente la diferencia entra las dos fechas.
+    Filtrado de eventos: Debe devolver un solo registro. Puedes cambiar el mes en la condición para lo cual arrojará 0 registros.
+
+Ahora estamos listos para seguir explorando sobre las funciones de fecha que provee PostgreSQL. Recuerda que siempre puedes ir al manual de Postgres para encontrar más información sobre dichas funciones.
