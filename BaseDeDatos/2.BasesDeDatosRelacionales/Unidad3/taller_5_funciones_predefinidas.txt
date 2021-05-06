@@ -1,0 +1,34 @@
+Aprende haciendo
+Taller: Funciones de String
+
+PostgreSQL tiene una amplia gama de funciones para trabajar con los datos tipo string. En este taller te invitamos a probar algunas de estas funciones.
+
+En esta ocasión trabajaremos con una empresa que envía mensajes. La empresa te encomienda crear una base de datos con una tabla de los mensajes. Para lograrlo, realiza los siguientes pasos:
+
+    Crea la tabla mensajes con los campos:
+
+        id SERIAL
+        envia
+        recibe
+        mensaje
+
+    Inserta registros con los siguientes valores:
+
+    id 	envia 	recibe 	mensaje
+    1 	luiS 	ana 	Hola k tal?
+    2 	anA 	luis 	Aquí y tu k tal?
+    3 	Ana 	Luis 	Responde por favor
+    Crea una consulta para reemplazar “k tal” por “que tal”.
+    Crea una consulta para colocar los campos envia y recibe siempre en minúsculas.
+    Crea una consulta que muestre el largo de cada mensaje.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Reemplazo: Recuerda que debes actualizar los datos con UPDATE y verifica que se reemplazaron de manera correcta.
+    Campos envia y recibe: Recuerda iniciar los valores usando palabras que tengan letras en mayúsculas y minúsculas, para verificar que al realizar el cambio las palabras resultantes tengan todas las letras en minúsculas.
+    Largo del mensaje: Cuenta los caracteres de cada mensaje y verifica el largo (LENGHT) con tu resultado.
+
+Ahora estamos listos para seguir explorando sobre las funciones de string que provee PostgreSQL. Recuerda que siempre puedes ir al manual de PostgreSQL para encontrar más información sobre dichas funciones.
