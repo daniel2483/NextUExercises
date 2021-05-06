@@ -1,0 +1,23 @@
+Desafío práctico
+Vistas
+
+Las vistas permiten visualizar parte de la columnas de una tabla, y se implementan a su vez como tablas. En esta ocasión trabajaremos creando vistas.
+
+Tenemos un torneo de jugadores en línea y se han creado dos tablas, las cuales se encuentran a continuación:
+
+Jugadores:
+id (clave primaria) 	SERIAL
+nombre 	VARCHAR NOT NULL
+puntos 	INTEGER
+equipo_id 	INTEGER
+dias_jugados 	INTEGER
+
+Equipos:
+id (clave primaria) 	SERIAL
+nombre 	VARCHAR NOT NULL
+
+Realiza vistas para la página principal del juego con los siguientes datos:
+
+    novatos: Los nombres y puntos de los jugadores novatos (días jugados < 7) ordenados de mayor a menor de acuerdo al número de puntos.
+    equipos_con_puntos: Lista de los nombres de los equipos con sus puntos (vista materializada).
+
