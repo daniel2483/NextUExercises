@@ -1,0 +1,31 @@
+Taller: Restricciones
+
+La idea de este taller es lograr crear una base de datos más robusta a través del uso de restricciones (o constraints en inglés). Vamos a trabajar con la tabla productos, la cual se encuentra a continuación:
+
+Productos:
+id 	SERIAL
+nombre 	VARCHAR NOT NULL
+codigo 	integer
+precio 	real
+precio_descuento 	real
+
+Realiza los siguientes pasos:
+
+    Crea la tabla productos
+    Agrega una restricción (constraint) para hacer el código único
+    Agrega una restricción (constraint) para hacer el precio mayor que 0
+    Agrega una restricción (constraint) para hacer el precio_descuento mayor que 0
+    Agrega una restricción (constraint) para hacer el precio mayor que el precio de descuento
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla: Revisa que tenga todos los campos.
+    Código único: Intenta insertar dos registros con el mismo código, la restricción (constraint) funciona si no permite guardar.
+    Precio mayor que 0: Intenta insertar un registro con precio negativo, la restricción (constraint) funciona si no permite guardar.
+    Precio de descuento mayor que 0: Intenta insertar un registro con precio de descuento negativo, la restricción (constraint) funciona si no permite guardar.
+    Precio mayor que precio de descuento: Intenta insertar un registro con precio menor que el precio de descuento, la restricción (constraint) funciona si no permite guardar.
+
+Las restricciones proporcionan un mecanismo para mantener los datos limpios y la base de datos robusta. PostgreSQL proporciona un conjunto de restricciones bastante completo.
