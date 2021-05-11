@@ -1,0 +1,88 @@
+Taller: Definiendo Usuarios y Permisos para empresa en MySQL
+
+MySQL tiene ciertos comandos y sentencias para definir usuarios y sus correspondientes permisos, los cuales hemos estudiado anteriormente. El objetivo de este taller es que logres definir usuarios y permisos para la tabla productos de una empresa en MySQL. La tabla productos se encuentra a continuación:
+
+Productos:
+id (clave primaria) 	INT AUTOINCREMENTAL
+nombre 	VARCHAR(256) NOT NULL
+código 	INT
+precio 	FLOAT
+
+Realiza los siguientes pasos:
+
+    Crea la tabla productos.
+    Crea un usuario llamado ‘cliente’ con clave ‘miclavecliente’.
+    Crea permisos para ‘cliente’ de solo SELECT para la tabla ‘productos’.
+    Crea un usuario llamado ‘gerente’ con clave ‘miclavegerente’.
+    Crea permisos para ‘gerente’ de todos los privilegios para la tabla ‘productos’.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla: Revisa que tenga todos los campos.
+    Conectáte con el usuario ‘cliente’.
+    Realiza un SELECT y verifica que funciona.
+    Realiza un INSERT y verifica que no está permitido.
+    Vuelve a conectarte pero ahora con el usuario ‘gerente’.
+    Realiza un SELECT y verifica que funciona.
+    Realiza un INSERT y verifica que también funciona.
+
+Los permisos son necesarios, en particular, cuando existen múltiples tipos de usuarios conectándose a la base de datos. 
+
+****************************
+Revisión:
+****************************
+
+#####################################################
+- Usuario cliente:
+
+Enter password: **************
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 10.3.14-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use tienda;
+Database changed
+MariaDB [tienda]> SELECT * FROM tienda.productos;
+Empty set (0.011 sec)
+
+MariaDB [tienda]> INSERT INTO tienda.productos (nombre,codigo,precio) VALUES ('Test',1223,800.7);
+ERROR 1142 (42000): INSERT command denied to user 'cliente'@'localhost' for table 'productos'
+MariaDB [tienda]>
+
+
+##############################################################
+Usuario gerente:
+
+Enter password: **************
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 11
+Server version: 10.3.14-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use tienda;
+Database changed
+MariaDB [tienda]> SELECT * FROM tienda.productos;
+Empty set (0.000 sec)
+
+MariaDB [tienda]> INSERT INTO tienda.productos (nombre,codigo,precio) VALUES ('Test',1223,800.7);
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [tienda]> SELECT * FROM tienda.productos;
++----+--------+--------+--------+
+| id | nombre | codigo | precio |
++----+--------+--------+--------+
+|  1 | Test   |   1223 |  800.7 |
++----+--------+--------+--------+
+1 row in set (0.000 sec)
+
+MariaDB [tienda]>
