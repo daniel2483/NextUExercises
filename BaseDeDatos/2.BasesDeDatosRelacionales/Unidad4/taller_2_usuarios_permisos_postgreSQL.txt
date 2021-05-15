@@ -1,0 +1,36 @@
+
+Aprende haciendo
+Taller: Definiendo Usuarios y Permisos en PostgreSQL
+
+PostgreSQL tiene ciertos comandos y sentencias para definir usuarios y sus correspondientes permisos, los cuales hemos estudiado previamente. En este taller definiremos usuarios y permisos para la tabla obras de arte en PostgreSQL.
+
+obras_de_arte:
+id (clave primaria) 	SERIAL
+título 	VARCHAR NOT NULL
+autor 	VARCHAR NOT NULL
+
+Realiza los siguientes pasos, puedes usar la línea de comando o PgAdmin:
+
+    Crea la tabla ‘obras_de_arte’.
+    Crea un usuario llamado ‘visitante’ con clave ‘visitante123’.
+    Crea permisos para el usuario ‘visitante’ de solo SELECT para la tabla ‘obras_de_arte’.
+    Crea un usuario llamado ‘admin’ con clave ‘admin123’.
+    Crea permisos para ‘admin’ de todos los privilegios para la tabla ‘obras_de_arte’.
+
+Recuerda que puedes usar el ambiente gráfico PgAdmin para realizar el taller. Mientras estás realizando el mismo destaca las diferencias y similitudes con respecto a MySQL.
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla; revisa que tenga todos los campos.
+    Conectáte con el usuario ‘visitante’.
+    Realiza un SELECT y verifica que funciona.
+    Realiza un INSERT y verifica que no está permitido.
+    Vuelve a conectarte pero ahora con el usuario ‘admin’.
+    Realiza un INSERT y verifica que funciona.
+
+Los permisos son necesarios, en particular, cuando existen múltiples tipos de usuarios conectándose a la base de datos.
+
+Piensa acerca de las diferencias y similitudes de este taller versus el equivalente en MySQL.
+

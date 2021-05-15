@@ -1,0 +1,26 @@
+Desafío práctico
+Aplicando políticas de seguridad en el banco
+
+MySQL tiene ciertos comandos y sentencias para definir usuarios y sus correspondientes permisos, los cuales hemos estudiado previamente. Ahora usaremos nuestros conocimientos para definir usuarios y permisos en un banco.
+
+El banco tiene una base de datos en MySQL con dos tablas descritas a continuación:
+
+clientes:
+id (clave primaria) 	INT AUTOINCREMENTAL
+nombre 	VARCHAR(256) NOT NULL
+
+cuentas:
+id (clave primaria) 	INT AUTOINCREMENTAL
+nombre 	VARCHAR(256) NOT NULL
+saldo 	FLOAT
+cliente_id 	INT
+
+Realiza los siguientes pasos:
+
+    Crea las tablas clientes y cuentas dentro de una base de datos llamada ‘mi_empresa’.
+    Inserta 1 cliente y 2 cuentas asociadas a él.
+    Crea un usuario llamado ‘externo’ con clave ‘abcdef’.
+    Crea permisos para ‘externo’ de solo SELECT para la tabla ‘clientes’.
+    Crea un usuario llamado ‘interno’ con clave ‘123456’.
+    Crea permisos para ‘interno’ de todos los privilegios para la tabla ‘clientes’ y ‘cuentas’.
+
