@@ -1,0 +1,32 @@
+Aprende haciendo
+Taller: Respaldando datos de la empresa en MySQL
+
+El objetivo de este taller es que practiques realizando un respaldo a tu base de datos usando MySQL. En este taller respaldaremos la base de datos de la empresa (mi_empresa).
+
+Primero debemos tener la tabla productos, aunque vas a respaldar toda la base de datos.
+
+Productos:
+id (clave primaria) 	INT AUTOINCREMENTAL
+nombre 	VARCHAR(256) NOT NULL
+código 	INT
+precio 	FLOAT
+
+Realiza los siguientes pasos:
+
+    Crea la tabla ‘productos’.
+    Inserta registros en ella.
+    Respalda la base de datos ‘mi_empresa’.
+    Crea una nueva base de datos ‘tu_empresa’.
+    Recupera los datos en ‘tu_empresa’.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla: Revisa que tenga todos los campos.
+    Haz un SELECT para ver los registros que insertaste.
+    Una vez respaldado abre el contenido del archivo de respaldo.
+    Recupera los datos y mira la tabla en la base de datos nueva con un SELECT.
+
+El respaldo y recuperación son funciones indispensables para salvaguardar nuestros datos. Son particularmente útiles, en ambientes de desarrollo.

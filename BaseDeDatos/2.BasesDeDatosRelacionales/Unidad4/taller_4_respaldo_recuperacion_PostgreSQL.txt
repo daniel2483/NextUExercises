@@ -1,0 +1,33 @@
+Taller: Respaldando datos en PostgreSQL
+
+El objetivo de este taller es que practiques realizando un respaldo a tu base de datos usando PostgreSQL.
+
+Vamos a realizar el respaldo y recuperación de una base de datos en PostgreSQL. Para lo cual, debemos, primero, crear una base de datos llamada ‘supertv’ con la tabla ‘programas’ como está descrita a continuación:
+
+programas:
+id (clave primaria) 	SERIAL
+nombre 	VARCHAR(256) NOT NULL
+duración 	INTEGER
+logo_url 	VARCHAR(256) NOT NULL
+
+Ahora, realiza los siguientes pasos:
+
+    Crea la tabla programas.
+    Inserta registros en ella: id = 1, nombre = ‘estrellas’, duración = 60, logo_url = ‘est.png’
+    Respalda la base de datos ‘supertv’.
+    Crea una nueva base de datos ‘supertv_nueva’.
+    Recupera los datos en ‘supertv_nueva’.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla; revisa que tenga todos los campos.
+    Haz un SELECT para ver los registros que insertaste.
+    Una vez respaldada la base de datos ‘supertv’, abre el contenido del archivo de respaldo.
+    Recupera los datos y consulta la tabla en la base de datos nueva con un SELECT.
+
+El respaldo y la recuperación son funciones indispensables para salvaguardar nuestros datos. Son particularmente útiles, en ambientes de desarrollo.
+
+Es importante acotar que el respaldo en PostgreSQL es más eficiente que en MySQL.
