@@ -1,0 +1,33 @@
+Aprende haciendo
+Taller: Importar/Exportar Datos de la empresa con MySQL
+
+El objetivo de este taller es practicar con las operaciones de exportar los datos de una tabla para su posterior importación en MySQL. Primero debemos tener la tabla productos, que es la tabla con la que trabajaremos.
+
+Recuerda que usaremos la herramienta MySQL Workbench para realizar estas tareas.
+
+Productos:
+id (clave primaria) 	INT AUTOINCREMENTAL
+nombre 	VARCHAR(256) NOT NULL
+código 	INT
+precio 	FLOAT
+
+Realiza los siguientes pasos:
+
+    Crea la tabla productos.
+    Inserta 2 registros en ella.
+    Exporta los datos de la tabla en formato CSV a un archivo productos.csv.
+    Borra los datos de la tabla. Puedes usar TRUNCATE TABLE productos.
+    Importa los datos en tu tabla desde el archivo productos.csv.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla: Revisa que tenga todos los campos.
+    Haz un SELECT antes de exportar para ver los registros que insertaste.
+    Abre el archivo productos.csv y verifica que el contenido corresponda efectivamente con los registros correctos.
+    Luego de eliminar, realiza un SELECT para verificar que la tabla está vacía.
+    Luego de importar, realiza un SELECT para ver los registros que se importaron.
+
+Las operaciones de importar/exportar son funciones útiles para compartir datos. Particularmente en ambientes de desarrollo y cuando queremos compartir nuestras tablas con otras aplicaciones o con otras bases de datos en otros sistemas manejadores de bases de datos. 
