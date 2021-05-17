@@ -1,0 +1,28 @@
+Aprende haciendo
+Taller: Monitoreando el servidor PostgreSQL
+
+El objetivo de este taller es practicar con el monitoreo de un servidor PostgreSQL. La idea es conectarnos a un servidor PostgreSQL y ver algunos indicadores importantes. Recuerda que estos pasos los debes hacer con el PgAdmin.
+
+Realiza los siguientes pasos:
+
+    Conéctate al servidor PostgreSQL.
+    Identifica el número de sesiones.
+    Observa en detalle cada una de las sesiones.
+    Detén un query.
+    Elimina una sesión (KILL).
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Identifica el número de conexiones:
+
+
+    Verifica las sesiones:
+
+
+    Detén un QUERY usando botón cuadrado (STOP) y elimina una conexión usando el botón con la x:
+
+
+Has logrado observar algunos parámetro de rendimiento del servidor PostgreSQL. Continúa  familiarizándote con el PgAdmin para poder monitorear otros parámetros de la base de datos.

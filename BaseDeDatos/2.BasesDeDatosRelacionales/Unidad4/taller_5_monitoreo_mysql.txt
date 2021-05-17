@@ -1,0 +1,27 @@
+Taller: Monitoreando el servidor MySQL
+
+El objetivo de este taller es practicar con el monitoreo de un servidor MySQL. La idea es conectarnos a un servidor MySQL y ver algunos indicadores importantes. Recuerda que estos pasos los debes hacer con el MySQL Workbench.
+
+Realiza los siguientes pasos:
+
+    Conéctate al servidor MySQL.
+    Identifica el número de conexiones.
+    Observa en detalle cada una de las conexiones.
+    Elimina un query (KILL).
+    Elimina una conección (KILL).
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Identifica el número de conexiones:
+
+
+    Verifica en la sección “Client Connections” y observa las conexiones:
+
+
+    Elimina un QUERY usando botón derecho y Elimina una Conexión usando botón derecho:
+
+
+Has logrado observar algunos parámetro de rendimiento del servidor MySQL. Anímate a seguir familiarizándote con el MySQL Workbench para poder monitorear otros parámetros de la base de datos. 
