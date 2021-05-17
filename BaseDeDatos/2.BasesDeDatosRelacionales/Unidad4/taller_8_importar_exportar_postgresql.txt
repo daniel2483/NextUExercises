@@ -1,0 +1,36 @@
+Aprende haciendo
+Taller: Importar/Exportar datos con PostgreSQL
+
+El objetivo de este taller es practicar con las operaciones de exportar los datos de una tabla para su posterior importación en PostgreSQL.
+
+Comenzaremos creando la tabla destinos, que utilizaremos para realizar nuestras actividades. Y recuerda que usaremos la herramienta PgAdmin para realizar estas tareas.
+
+destinos:
+id (clave primaria) 	SERIAL
+nombre 	VARCHAR(256) NOT NULL
+país 	VARCHAR
+
+Realiza los siguientes pasos:
+
+    Crea la tabla destinos.
+    Inserta 2 registros en ella:
+    id = 1, nombre = ‘Ciudad de México’, país = ‘México’
+    id = 2, nombre = ‘Rio de Janeiro’, país = ‘Brasil’
+    Exporta los datos de la tabla en formato CSV a un archivo destinos.csv.
+    Borra los datos de la tabla. Puedes usar TRUNCATE TABLE destinos..
+    Importa los datos en tu tabla desde el archivo destinos.csv.
+
+
+Puntos de verificación
+
+Para confirmar que tu experiencia ha sido llevada a cabo con éxito, revisa los siguientes puntos:
+
+    Verifica la tabla; revisa que tenga todos los campos.
+    Realiza un SELECT antes de exportar para ver los registros que insertaste.
+    Abre el archivo destinos.csv y verifica que el contenido se corresponda efectivamente con los registros correctos.
+    Luego de eliminar, realiza un SELECT para verificar que la tabla está vacía.
+    Luego de importar, realiza un SELECT para ver los registros que se importaron.
+
+Las operaciones de importar/exportar son funciones útiles para compartir datos. Particularmente en ambientes de desarrollo y cuando queremos compartir nuestras tablas con otras aplicaciones o con otras bases de datos, en otros sistemas manejadores de base de datos.
+
+Piensa acerca de las diferencias y similitudes de este taller versus el equivalente en MySQL.
