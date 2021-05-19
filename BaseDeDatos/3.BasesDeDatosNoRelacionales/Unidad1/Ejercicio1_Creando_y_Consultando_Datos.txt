@@ -1,0 +1,21 @@
+mongo
+
+show collections
+
+db.categorias.find()
+
+db.tareas.find()
+
+db.tareas.insert([{nombre: "Tarea2"}, {nombre: "Tarea3", detale: "dt"}])
+
+db.tareas.find({nombre: "Tarea3", detale: "dt"})
+
+db.tareas.find({ $or: [{nombre: "Tarea2"},{nombre: "Tarea3"}])
+
+db.tareas.find()
+
+db.tareas.find({fecha_limite: null})
+
+db.tareas.deleteMany({fecha_limite: null})
+
+db.tareas.find()
