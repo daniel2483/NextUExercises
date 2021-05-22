@@ -1,0 +1,24 @@
+Taller: Datos del Cine
+
+Con este taller buscamos que te familiarices con las operaciones en MongoDB para crear una base de datos, insertar algunos datos y consultar el contenido de la base de datos.
+
+Tenemos una nueva aplicación que mostrará datos de las películas que sean populares. Deseamos que nos ayudes a implementar la misma y te hemos encomendado las tareas de guardar y consultar los datos de las películas. Para ello debes cumplir los siguientes requerimientos:
+
+    Crear la base de datos `app`.
+    Crear una colección llamada `películas`.
+    Insertar los siguientes documentos:
+
+    nombre 	puntos 	genero
+    El mar negro 	5 	comedia
+    Vive 	NULL 	comedia
+    Ayer te vi 	NULL 	drama
+    Consultar las películas que no tengan puntos.
+
+
+Puntos de verificación:
+
+    Verifica la base de datos: puedes usar la línea de comandos o el programa Mongo Compass
+    Verifica la colección y sus documentos con un find() general como el siguiente comando: db.peliculas.find()
+    La consulta de las películas que no tengan puntos debe retornar los documentos (b) y (c).
+
+Esperamos hayas disfrutado de este taller y te sientas más seguro(a) ejecutando las operaciones básicas de creación de una base de datos, inserción de datos y consulta de objetos en MongoDB.
