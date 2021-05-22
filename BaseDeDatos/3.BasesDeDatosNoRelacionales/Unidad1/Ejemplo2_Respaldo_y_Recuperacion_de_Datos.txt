@@ -1,0 +1,20 @@
+mongodump -d productividad
+
+ls
+
+cd dump/
+
+ls
+
+cd productividad/
+
+cd ..
+
+ls
+
+cd .. 
+
+ls
+
+cat ejemplo.json
+
