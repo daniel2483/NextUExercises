@@ -1,0 +1,31 @@
+Aprende haciendo
+Taller: Respaldo/Recuperación de Datos
+
+Bienvenido, en este taller practicaremos operaciones para realizar un respaldo y recuperación básica de nuestra base de datos.
+
+En esta ocasión trabajaremos con la base de datos entrevistas, la cual contiene documentos relacionados con los ciudadanos. En ella se encuentran preguntas cuyas respuestas son verdadero o falso.
+
+Para completar esta actividad en necesario que lleves a cabo los siguientes pasos:
+
+    Crea la base de datos encuestas y la colección ciudadanos.
+    Inserta los siguientes documentos:
+
+    nombre 	respuesta1 	respuesta2
+    luis 	false 	true
+    ana 	false 	false
+    maría 	false 	NULL
+    Realiza un dump de los datos.
+    Elimina la base de datos.
+    Recupera la base de datos.
+
+
+Puntos de Verificación
+
+Recuerda que puedes usar la línea de comando o Mongo Compass, o ambos, para realizar las siguientes tareas:
+
+    Verifica la colección y base de datos
+    Consulta la colección una vez introducidos los documentos y debes ver 3 documentos.
+    Verifica que el directorio de dump se creó con una carpeta interna correspondiente a tu base de datos
+    Una vez recuperada la base de datos vuelve a hacer la consulta para ver los 3 documentos.
+
+¡Felicidades! Has logrado respaldar y recuperar tu base de datos.
