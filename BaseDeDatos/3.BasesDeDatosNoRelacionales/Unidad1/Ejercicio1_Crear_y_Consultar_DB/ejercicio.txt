@@ -1,0 +1,17 @@
+Desafío práctico
+Creando y Consultando
+
+Te damos la bienvenida a este ejercicio, donde podrás crear una base de datos en MongoDB, y luego de insertar algunos datos tendrás la oportunidad de realizar algunas consultas.
+
+Asumamos que tenemos una nueva balanza que permite registrar diariamente el peso del dueño, esta balanza guarda los datos en una base de datos MongoDB.
+
+En este ejercicio manipularemos los datos en función de las pruebas conceptuales de la balanza por parte del equipo de pruebas. Para ello debes realizar lo siguiente:
+
+    Importar la base de datos: Descomprime el archivo e importa los datos de la carpeta dump.
+    Agregar 2 mediciones:
+        día: 3, peso: 23
+        día: 4
+    Consultar las mediciones.
+    Exportar las mediciones en formato JSON con Mongo Compass.
+
+Esperamos hayas disfrutado del ejercicio a medida que refuerzas tus conocimientos en las operaciones para el manejo de base de datos MongoDB.
