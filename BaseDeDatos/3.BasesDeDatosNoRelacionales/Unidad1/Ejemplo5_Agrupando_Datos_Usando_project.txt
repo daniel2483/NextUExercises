@@ -1,0 +1,22 @@
+mongo
+
+use ciencia
+
+ db.experimentos.find()
+
+ db.experimentos.find().pretty()
+
+ db.experimentos.find().count()
+
+ db.experimentos.find().distinct("medida_1")
+
+ db.experimentos.find().distinct("medida_2")
+
+ db.experimentos.find()
+
+ db.experimentos.aggregate([ { $project: {descripcion: 1} } ])
+
+ db.experimentos.aggregate([ { $project: {descripcion: 1, _id: 0} } ])
+
+ db.experimentos.aggregate([ { $project: {descripcion: 1, _id: 0, suma: { $add: ["medida_1", "medida_2"]}} } ])
+

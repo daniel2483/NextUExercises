@@ -1,0 +1,24 @@
+mongo
+
+use productividad
+
+db.usuarios.find()
+
+db.usuarios.find({nombre: "ruiz"})
+
+db.usuarios.find({nombre: {$regex: /ruiz/}})
+
+db.usuarios.find({nombre: {$regex: /Ruiz/}})
+
+db.usuarios.find({nombre: {$regex: /Ruiz/i }})
+
+db.usuarios.find({nombre: {$regex: / Ruiz/i }})
+
+db.usuarios.createIndex({nombre: "text"})
+
+db.usuarios.find({$text: {$search: "ruiz"}})
+
+db.usuarios.createIndex({edad: 1})
+
+db.usuarios.createIndex({nombre: 1}, {unique: true})
+

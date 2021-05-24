@@ -1,0 +1,18 @@
+mongo
+
+use ciencia
+
+db.experimentos.find()
+
+db.experimentos.aggregate([{ $group: { _id: "$medida_2" } }])
+
+db.experimentos.aggregate([{ $group: { _id: "$medida_2", total: { $sum: "$medida_1" } } }])
+
+db.experimentos.aggregate([{ $group: { _id: "$medida_2", total: { $avg: "$medida_1" } } }])
+
+db.experimentos.aggregate([{ $group: { _id: "$medida_2", total: { $sum: 1 } } }])
+
+db.experimentos.aggregate([{ $match: { medida_2: 5 } }, { $group: { _id: "$medida_2", total: { $sum: 1 } } }])
+
+db.experimentos.aggregate([{ $match: { medida_2: { $gt: 0 } } }, { $group: { _id: "$medida_2", total: { $sum: 1 } } }])
+
