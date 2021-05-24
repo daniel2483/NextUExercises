@@ -1,0 +1,22 @@
+mongo
+
+use productividad
+
+db.usuarios.find().pretty()
+
+db.usuarios.find().sort({ nombre: 1 }).pretty()
+
+db.usuarios.find().sort({ nombre: -1 }).pretty()
+
+db.usuarios.find().sort({ nombre: -1 }).limit(2).pretty()
+
+db.usuarios.find({}, { nombre: 1 })
+
+db.usuarios.find({}, { nombre: 1, _id: 0 })
+
+db.usuarios.find({}, { nombre: 0 })
+
+db.usuarios.find({ nombre: "ana ruiz" })
+
+db.usuarios.find({ nombre: { $ne: "ana ruiz" }})
+

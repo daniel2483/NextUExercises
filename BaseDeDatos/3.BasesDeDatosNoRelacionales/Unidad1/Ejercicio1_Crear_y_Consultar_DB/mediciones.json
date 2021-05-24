@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "5b0cda7d5100e017b0e69d99"
+  },
+  "dia": 3,
+  "peso": 25
+},{
+  "_id": {
+    "$oid": "5b0cdaa45100e017b0e69d9a"
+  },
+  "dia": 2,
+  "peso": 22
+},{
+  "_id": {
+    "$oid": "60abceface6eb193c8870f74"
+  },
+  "dia": 3,
+  "peso": 23
+},{
+  "_id": {
+    "$oid": "60abcf04ce6eb193c8870f75"
+  },
+  "dia": 4
+}]
