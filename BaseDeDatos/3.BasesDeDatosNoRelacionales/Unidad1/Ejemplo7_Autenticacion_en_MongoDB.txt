@@ -1,0 +1,19 @@
+mongo -u root -p 123123 admin
+
+
+db.carros.find()
+
+dg.getUsers();
+
+dg.createUser({user: "test1", pwd: "123123", roles: ["read"]});
+
+dg.createUser({user: "test1", pwd: "123123", roles: [{role: "read", db: "carros"}]});
+
+dg.getUsers();
+
+exit
+
+
+mongo -u test1 -p 123123 admin
+
+db.carros.insert({color: "negro"})
