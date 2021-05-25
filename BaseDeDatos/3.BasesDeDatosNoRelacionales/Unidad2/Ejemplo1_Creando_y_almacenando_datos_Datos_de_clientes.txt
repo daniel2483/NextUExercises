@@ -1,0 +1,18 @@
+curl
+
+curl -X GET http://127.0.0.01:5984/
+
+curl -X GET http://127.0.0.01:5984/_all_dbs
+
+curl -X PUT http://127.0.0.01:5984/demo
+
+curl -X PUT http://127.0.0.01:5984/demo
+
+curl -X GET http://127.0.0.01:5984/demo/_all_docs
+
+curl -X GET http://127.0.0.01:5984/<id>
+
+
+
+
+
