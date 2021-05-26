@@ -1,0 +1,23 @@
+curl -X PUT http://127.0.0.01:5984/registro
+
+curl -X GET http://127.0.0.01:5984/_all_docs
+
+curl -X GET http://127.0.0.01:5984/_uuids
+
+curl -X GET http://127.0.0.01:5984/_uuids
+
+curl -X GET http://127.0.0.01:5984/_uuids?count=5
+
+curl -X PUT http://127.0.0.01:5984/registro/<id> -d '{"nombre": "luis", "edad": 20, "tipo": "usuario"}'
+
+curl -X GET http://127.0.0.01:5984/_all_docs
+
+curl -X GET http://127.0.0.01:5984/_all_docs?include_docs=true
+
+curl -X PUT http://127.0.0.01:5984/registro/<id> -d '{"nombre": "luis", "edad": 10, "tipo": "usuario": _rev: <id-rev>}
+
+curl -X GET http://127.0.0.01:5984/registro/<id>
+
+curl -X DELETE http://127.0.0.01:5984/registro/<id>?rev=<id-rev>
+
+'
