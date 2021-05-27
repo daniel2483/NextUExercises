@@ -1,0 +1,58 @@
+{
+  "selector":{
+    "edad": 15,
+    "nombre": "ana"
+  }
+}
+
+{
+  "selector":{
+    "edad": {
+      "$gt": 5
+    }
+  },
+  "fields": ["nombre"]
+}
+
+
+{
+  "selector":{
+    "edad": {
+      "$gt": 5
+    }
+  }
+}
+
+{
+  "selector":{
+    "edad": {
+      "$gt": 5
+    }
+  },
+  "sort": [{
+    "nombre": "asc"
+  }]
+}
+
+
+{
+  "index":{
+    "fields": [
+      "nombre"
+    ]
+  },
+  "name": "foo-json-index",
+  "type": "json"
+}
+
+{
+  "index":{
+    "fields": [
+      "nombre",
+      "edad"
+    ]
+  },
+  "name": "foo-json-index",
+  "type": "json"
+}
+
