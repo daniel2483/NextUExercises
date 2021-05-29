@@ -1,0 +1,33 @@
+function(doc) {
+  emit(doc._id, 1);
+}
+
+function(doc) {
+  if (doc.genero == "f"){
+    emit(doc._id, 1);
+  }
+}
+
+function(doc) {
+  if (doc.genero == "f"){
+    emit(doc._id, doc.edad);
+  }
+}
+
+function(doc) {
+  if (doc.genero == "f"){
+    emit(doc._id, 2019 - doc.edad);
+  }
+}
+
+function(doc) {
+  emit(doc.genero, doc.edad);
+}
+
+function(key, values){
+  return sum(values)/values.length;
+}
+
+
+
+
