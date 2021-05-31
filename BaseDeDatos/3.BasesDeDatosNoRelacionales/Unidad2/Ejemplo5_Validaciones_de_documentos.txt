@@ -1,0 +1,7 @@
+function(newDoc, oldDoc, userCtx){
+  if (!newDoc.nombre){
+    throw({forbidden: "Nombre es obligatorio"});
+  }
+}
+
+

@@ -1,0 +1,32 @@
+{
+  "docs": [{
+    "_id": "8552",
+    "nombre": "luis",
+    "edad": 10,
+    "tipo": "usuario",
+    "genero": "m"
+  },
+  {
+    "_id": "8553",
+    "nombre": "ana",
+    "edad": 12,
+    "tipo": "usuario",
+    "genero": "f"
+  },
+  {
+    "_id": "8554",
+    "nombre": "marta",
+    "edad": 15,
+    "tipo": "usuario",
+    "genero": "f"
+  }
+  ]
+}
+
+curl -X GET http://127.0.0.01:5984/registro/_all_docs
+
+curl -X GET http://127.0.0.01:5984/registro/_bulk_docs -H "Content-Type: application/json" @dump.txt
+
+curl -X GET http://127.0.0.01:5984/registro/_all_docs
+
+curl -X GET http://127.0.0.01:5984/registro/_all_docs?include_docs=true

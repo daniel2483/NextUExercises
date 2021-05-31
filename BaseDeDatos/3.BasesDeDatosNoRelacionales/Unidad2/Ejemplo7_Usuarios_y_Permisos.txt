@@ -1,0 +1,7 @@
+curl -X GET http://127.0.0.01:5984/_all_dbs
+
+curl -X GET http://127.0.0.01:5984/registro/_all_docs
+
+curl -X GET http://gerente:123123@127.0.0.01:5984/registro/_all_docs
+
+curl -X GET http://gerente:1231234@127.0.0.01:5984/registro/_all_docs
