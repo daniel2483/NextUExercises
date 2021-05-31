@@ -1,0 +1,23 @@
+redis-cli
+
+PING
+
+PING "Hola"
+
+PING
+
+SET id-1 "Luis"
+
+GET id-1
+
+GET id-2
+
+exit
+
+GET id-1
+
+FLUSHALL
+
+GET id-1
+
+exit
