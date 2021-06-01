@@ -1,0 +1,40 @@
+redis-cli
+
+SET jugador-1 "Luis; 20"
+
+SET jugador-2 "Ana; 30"
+
+SET jugador-1 "Luis; 25"
+
+GET jugador-1
+
+DEL jugador-2
+
+GET jugador-2
+
+GET jugador-1
+
+RENAME jugador-1 jugador-001
+
+GET jugador-1
+
+GET jugador-001
+
+SET tormenta-activa "true" EX 10
+
+GET tormenta-activa
+
+GET tormenta-activa
+
+
+SET tormenta-activa "true" EX 100
+
+GET tormenta-activa
+
+GET tormenta-activa
+
+TTL tormenta-activa
+
+exit
+
+
