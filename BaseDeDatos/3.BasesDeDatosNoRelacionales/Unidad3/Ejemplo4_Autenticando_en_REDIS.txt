@@ -1,0 +1,43 @@
+redis-cli
+
+SET A 123
+
+SET B 456
+
+GET A
+
+GET B
+
+INFO
+
+CONFIG GET requirepass
+
+CONFIG SET requirepass "abcdef"
+
+EXIT
+
+redis-cli
+
+GET A
+
+SET C 123456
+
+AUTH abcdef
+
+SET C 123456
+
+GET A
+
+GET B
+
+GET C
+
+CONFIG SET requirepass ""
+
+EXIT
+
+redis-cli
+
+GET A
+
+EXIT

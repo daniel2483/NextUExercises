@@ -1,0 +1,32 @@
+redis-cli
+
+FLUSHALL
+
+SET A 123
+
+SET nombre-1 luis
+
+SET nombre-2 ana
+
+EXIT
+
+GET nombre-1
+
+GET nombre-2
+
+GET A
+
+CONFIG GET dir
+
+CONFIG GET dbfilename
+
+SAVE
+
+EXIT
+
+ls
+
+pwd
+
+cat dump.rdb
+
