@@ -1,0 +1,52 @@
+redis-cli
+
+MSET contador 1 saludo Hola
+
+GET contador
+
+INCR contador
+
+GET contador
+
+APPEND saludo " Mundo"
+
+GET saludo
+
+TYPE saludo
+
+TYPE contador
+
+RPUSH lista-1 "a" "b"
+
+LRANGE lista-1 0 10
+
+RPUSH lista-1 "c"
+
+LRANGE lista-1 0 10
+
+RPUSH lista-1 "d"
+
+LRANGE lista-1 0 10
+
+LPOP lista-1
+
+LRANGE lista-1 0 10
+
+HMSET usuario-1 nombre luis edad 20
+
+HGET  usuario-1 nombre
+
+HINCRBY usuario-1 edad 2
+
+HGET usuario edad
+
+SADD colores "azul" "verde" "rojo"
+
+SMEMBERS colores
+
+SISMEMBER colores "azul"
+
+SISMEMBER colores "blanco"
+
+
+
