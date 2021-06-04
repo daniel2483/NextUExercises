@@ -1,0 +1,86 @@
+# Pseudocodigo
+
+read(cryto1)
+valor1 = read(cantidadCrypto1)
+read(cryto2)
+valor2 = read(cantidadCrypto2)
+read(cryto3)
+valor3 = read(cantidadCrypto3)
+
+
+if valor1 > valor2 then 
+	if valor1 > valor3 then
+		print valor1
+		if valor 2 > valor3 then
+			print valor2
+			print valor3
+		else
+			print valor3
+			print valor2
+		endif
+	else
+		print valor3
+		print valor1
+		print valor2
+	endif
+elseif valor2 > valor3 then
+	print valor2
+	if valor3 > valor1 then
+		print valor3
+		print valor1
+	else
+		print valor1
+		print valor3
+	endif
+else
+	print valor3
+	print valor2
+	print valor1
+
+endif
+
+
+123
+132
+321
+231
+213
+312
+
+# Solucion
+
+string cripto1, cripto2, crpto3
+int cant1, cant2, cant3
+cripto1 = read(“ingrese el nombre la primera moneda: “)
+cripto2 = read(“ingrese el nombre la segunda moneda: “)
+cripto3 = read(“ingrese el nombre la tercer moneda: “)
+cant1 = int(read(“Ingrese la cantidad de la primera moneda: “))
+cant2 = int(read(“Ingrese la cantidad de la segunda moneda: “))
+cant3 = int(read(“Ingrese la cantidad de la tercer moneda: “))
+if cant1 > cant2 y cant1 > cant3 then
+print(cripto1+”: “+cant1)
+if cant2 > cant3 then
+print(cripto2+”: “+cant2)
+print(cripto3+”: “+cant3)
+else
+print(cripto3+”: “+cant3)
+print(cripto2+”: “+cant2)
+endif
+elseif cant2 > cant1 y cant2 > cant3
+print(cripto2+”: “+cant2)
+if cant1 > cant3 then
+print(cripto1+”: “+cant1)
+print(cripto3+”: “+cant3)
+else
+print(cripto3+”: “+cant3)
+print(cripto1+”: “+cant1)
+endif
+else
+print(cripto3+”: “+cant3)
+if cant1 > cant2 then
+print(cripto1+”: “+cant1)
+print(cripto2+”: “+cant2)
+else
+print(cripto2+”: “+cant2)
+print(cripto1+”: “+cant1)
+

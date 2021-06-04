@@ -1,0 +1,27 @@
+RETROALIMENTACIÓN
+
+¡Felicitaciones! Nos contenta mucho apreciar tu esfuerzo a través de tus soluciones
+algorítmicas. En esta oportunidad pusiste en práctica el uso de funciones definidas por el
+programador en tu solución. Ahora te ofrecemos, como referencia comparativa, nuestra
+propuesta de solución.
+
+funcion capturar_moneda():float
+string cripto
+float cant, cotiz
+cripto = read(“ingrese el nombre la moneda: “)
+cant = float(read(“Ingrese la cantidad de la moneda: “))
+cotiz = float(read(“Ingrese la cotización en USD de la
+moneda: “))
+retorna cant * cotiz
+finfuncion
+
+
+float valor
+int i
+i=0
+valor=0.0
+while i < 5 do
+ valor = valor + capturar_moneda()
+ i=1+1
+endwhile
+print(“Usted tiene “+valor+” Dólares Americanos”)
