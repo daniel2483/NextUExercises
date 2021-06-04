@@ -141,10 +141,10 @@
 
 ## 2- Bases de Datos Relacionales
 
-¡Bienvenido a clase!
-1. Introducción
-2. Objetivos y expectativas
-3. Conoce al equipo de instrucción
+	¡Bienvenido a clase!
+	1. Introducción
+	2. Objetivos y expectativas
+	3. Conoce al equipo de instrucción
 
 	UNIDAD 1: Profundizando en Base de Datos Relacionales
 	1. UNIDAD 1: Introducción
